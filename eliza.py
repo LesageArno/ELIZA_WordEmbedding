@@ -167,16 +167,17 @@ class Eliza:
         elif parts[0].startswith('@'): #Si le mot est un synonyme
             root = parts[0][1:] #On prend la famille de mot @family -> family
             if not root in self.synons: #Si la famille de mot est inconnu, on renvoie une erreur si'lon est pas sur un paramètre étendu
-                if self.SYNON_EXTENT == False:
+                if not self.SYNON_EXTENT:
                     raise ValueError("Unknown synonym root {}".format(root))
                 elif (self.word2vec.cosineSimilarity(root.lower(), words[0]) if self.word2vec.cosineSimilarity(root.lower(), words[0]) is not None else 0) >= self.SEUIL:
                     if self.SYNONLOGS:
                         self.synonlist.append((root, words[0], round(self.word2vec.cosineSimilarity(root.lower(), words[0]),3)))
                 else:
                     return False
-            else:
-                if not words[0].lower() in self.synons[root]: #Si le premier mot n'est pas dans la liste de synonyme, on renvoie False
-                    return False
+            #else supprimé le 12/07/2023 à 13h23
+            #self.synons[root] -> self.synons.get(root,[])
+            if (not words[0].lower() in self.synons.get(root,[])) and not self.SYNON_EXTENT: #Si le premier mot n'est pas dans la liste de synonyme, on renvoie False
+                return False
             results.append([words[0]])
             return self._match_decomp_r(parts[1:], words[1:], results) #Renvoie à match_decomp
         
