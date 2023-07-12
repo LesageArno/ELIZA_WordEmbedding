@@ -1,0 +1,50 @@
+#https://www.geeksforgeeks.org/numpy-vector-multiplication/
+import numpy as np
+import time
+import pickle
+
+class VecorialComparison:
+    def __init__(self,dict_path = "word_embeded_dict.pkl") -> None:
+        print("Loading files...")
+        time.sleep(1.5)
+        begin = time.time()
+
+        with open(dict_path,"rb") as f:
+            self.dicVec = pickle.load(f)
+        print("Loaded in",round(time.time()-begin,3),"seconds") #5 secondes pour charger les données
+    
+    def cosineSimilarity(self, word1 = str, word2 = str) -> float:
+        """_summary_
+
+        Args:
+            source (dict): _description_. Put the file loaded with pickle (word_embeded_dict.pkl).
+            word1 (_str_): _description_ word n°1.
+            word2 (_str_): _description_ word n°2.
+
+        Returns:
+            float: _description_ Compute cosine similarity with the formula A∙B/(||A||∙||B||)
+        """
+    
+        vec1 = np.array(list(map(float,self.dicVec[word1].split(" ")))) #On convertie les mots en matrice de 100 ligne et 1 colonne (vecteur colonne)
+        vec2 = np.array(list(map(float,self.dicVec[word2].split(" "))))
+    
+        dot_prod = np.dot(vec1,vec2) #euclidian dot product A∙B = Σa₁b₁
+        vecnorm1 = np.linalg.norm(vec1)
+        vecnorm2 = np.linalg.norm(vec2) #magnitude // norme du vecteur
+    
+        cosine_similarity = dot_prod/(vecnorm1*vecnorm2) #https://en.wikipedia.org/wiki/Cosine_similarityimport 
+    
+        return(cosine_similarity)
+
+    def maxCosineSimilarity(self,keys_list,word):
+        maxCosine = 0
+        bestKey = ""
+        for key in keys_list:
+            if key.rstrip() in ["xnone","xforeign"]:
+                continue
+            else:
+                cosine = self.cosineSimilarity(self.dicVec,key.rstrip(),word)
+                maxCosine = cosine if cosine > maxCosine else maxCosine #On remplace si le cos est plus grand
+                if self.cosineSimilarity(self.dicVec,key.rstrip(),word) == maxCosine:
+                    bestKey = key.rstrip()
+        return [bestKey, maxCosine]

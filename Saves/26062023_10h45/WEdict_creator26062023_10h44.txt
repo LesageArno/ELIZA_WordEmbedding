@@ -1,0 +1,39 @@
+#https://stacktuts.com/how-to-load-a-pre-trained-word2vec-model-file-and-reuse-it-in-python
+#https://stackoverflow.com/questions/45310409/using-a-word2vec-model-pre-trained-on-wikipedia
+#https://stackoverflow.com/questions/19201290/how-to-save-a-dictionary-to-a-file
+
+import time
+import numpy as np
+import pickle
+
+begin = time.time()
+
+countline = 0
+dictionary = dict()
+
+with open("enwiki_20180420_100d.txt","r",encoding="utf-8") as file: #On lit le fichier de word_embeding 
+    file.readline() #On retire la première ligne
+    while True:
+        line = file.readline()
+        form = line.rstrip().split(" ",1) #On sépare la liste en deux partie : [key, vector] 
+        
+        if line == "":
+            break
+        else:
+            countline+=1
+            if (countline%10000 == 0):
+                print(countline,time.time()-begin)
+                
+            if form[0].startswith("ENTITY/"):
+                dictionary[form[0].removeprefix("ENTITY/").replace("_"," ").lower()] = form[1] #Entity/United_States -> united states
+            else:
+                dictionary[form[0]] = form[1]
+
+print(time.time()-begin) #A peu près 10 secondes pour créer le dictionnaire
+print(countline)
+
+with open("word_embeded_dict.pkl","wb") as f: #On enregistre le dictionnaire avec pickle
+    pickle.dump(dictionary, f)
+
+#format : {mot <str>:vecteur <str>}
+
