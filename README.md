@@ -34,3 +34,6 @@ while True:
     print(response)
 print(eliza.final())
 ```
+# links for Word2Vec:
+- GloVe: http://web.archive.org/web/20230410222048/https://downloads.cs.stanford.edu/nlp/data/glove.6B.zip
+- Wikipedia2Vec: http://wikipedia2vec.s3.amazonaws.com/models/en/2018-04-20/enwiki_20180420_100d.txt.bz2
