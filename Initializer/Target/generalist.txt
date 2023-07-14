@@ -1,0 +1,39 @@
+initial: How do you do. Please tell me your problem.
+final: Goodbye. Thank you for talking to me.
+quit: bye
+pre: dont don't
+post: am are
+synon: belief feel think believe wish
+key: i
+  decomp: * i @desire *
+    reasmb: What would it mean to you if you got (3)?
+key: i
+  decomp: * i @SYMPTOMS *
+    reasmb: Can you describe the symptoms you're experiencing?
+key: i
+  decomp: * i @PAIN *
+    reasmb: Please tell me more about the pain you're feeling in your (3).
+key: i
+  decomp: * i @MEDICAL_HISTORY *
+    reasmb: Tell me about your medical history. Have you had any previous conditions?
+key: i
+  decomp: * i @ALLERGIES *
+    reasmb: Do you have any known allergies? It's important for us to know.
+key: i
+  decomp: * i @MEDICATIONS *
+    reasmb: Are you currently taking any medications? Please list them.
+key: i
+  decomp: * i @LIFESTYLE *
+    reasmb: How would you describe your daily lifestyle? Exercise, diet, etc.?
+key: i
+  decomp: * i @FAMILY_HISTORY *
+    reasmb: Do you have a family history of any medical conditions? If yes, please provide details.
+key: DOCTOR
+  decomp: * DOCTOR *
+    reasmb: I will be your doctor today. You're in good hands.
+key: APPOINTMENT
+  decomp: * APPOINTMENT *
+    reasmb: Yes, you have an appointment. We'll get to the bottom of your concerns.
+key: MY
+  decomp: * MY *
+    reasmb: Tell me more about your (2).
