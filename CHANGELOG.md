@@ -95,3 +95,4 @@ keys = {}
 [1.] Bug synonymes partiellement patch
 [2.] Détection d'un bug dans la gestion des ponctuations (test. ≠ test), le mot n'est pas détecté s'il est collé avec une ponctuation, bug réglé
 - Résolution du problème par la suppression des ponctuations dans les mots.
+[3.] Création d'un prototype de source pour la médecine généraliste
