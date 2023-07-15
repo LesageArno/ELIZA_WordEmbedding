@@ -37,7 +37,7 @@ class Action:
         Action.no += 1
 
 class Eliza:
-    def __init__(self, TARGET = "doctor",SEUIL = 0.7, WEIGHTED = True, LOG = False, 
+    def __init__(self, TARGET = "doctor.txt",SEUIL = 0.7, WEIGHTED = True, LOG = False, 
                  MATCHLOGS = False, SYNON_EXTENT = False, SYNONLOGS = True):
         self.initials = []
         self.finals = []
@@ -56,12 +56,9 @@ class Eliza:
         self.SYNONLOGS = SYNONLOGS
         
         if self.SYNONLOGS:
-            self.synonlist =  []
+            self.synonlist = []
         
-        if self.SYNON_EXTENT == False:
-            self.TARGET = TARGET + ".txt"
-        else:
-            self.TARGET = "SynonExtended" + TARGET + ".txt"
+        self.TARGET = TARGET
         
     def initialize(self, WEdict = "glove", entity_form = False, header = False):
         """Fonction d'initialisation de ELIZA
@@ -108,13 +105,13 @@ class Eliza:
                 elif tag == 'quit': 
                     self.quits.append(content) #Règle déclancheuse de fin
                 elif tag == 'pre':
-                    parts = content.split(' ') #Règle de présubstitution
+                    parts = content.split(';') #Règle de présubstitution
                     self.pres[parts[0]] = parts[1:]
                 elif tag == 'post':
-                    parts = content.split(' ') #Règle de postsubstitution
+                    parts = content.split(';') #Règle de postsubstitution
                     self.posts[parts[0]] = parts[1:]
                 elif tag == 'synon':
-                    parts = content.split(' ') #Règle de synonymes (défini les familles de mots)
+                    parts = content.split(';') #Règle de synonymes (défini les familles de mots)
                     self.synons[parts[0]] = parts
 
                 elif tag == 'key': #Règle mot déclancheur (mot important pour le programme)
@@ -173,11 +170,13 @@ class Eliza:
                     if self.SYNONLOGS:
                         self.synonlist.append((root, words[0], round(self.word2vec.cosineSimilarity(root.lower(), words[0]),3)))
                 else:
+                    #...
                     return False
-            #else supprimé le 12/07/2023 à 13h23
-            #self.synons[root] -> self.synons.get(root,[])
-            if (not words[0].lower() in self.synons.get(root,[])) and not self.SYNON_EXTENT: #Si le premier mot n'est pas dans la liste de synonyme, on renvoie False
-                return False
+            
+            else:
+                #self.synons[root] -> self.synons.get(root,[])
+                if (not words[0].lower() in self.synons.get(root,[])) and not self.SYNON_EXTENT: #Si le premier mot n'est pas dans la liste de synonyme, on renvoie False
+                    return False
             results.append([words[0]])
             return self._match_decomp_r(parts[1:], words[1:], results) #Renvoie à match_decomp
         
@@ -275,9 +274,15 @@ class Eliza:
         text = re.sub(r'\s*\.+\s*', ' . ', text) #Transforme les ",,;;;...." en " ,  ;  . "
         text = re.sub(r'\s*,+\s*', ' , ', text)
         text = re.sub(r'\s*;+\s*', ' ; ', text)
+        text = text.replace(".","")
+        text = text.replace(",","")
+        text = text.replace(";","")
+        text = text.replace("?","")
+        text = text.replace("!","")
+        
         if self.LOG: log.debug('After punctuation cleanup: %s', text)
 
-        words = [w for w in text.split(' ') if w] #Créé une liste de string <=> text.split(' ') dans la plupart des cas
+        words = [w for w in text.split(' ') if w] #Créé une liste de string <=> text.split(' ') si le mot n'est pas vide
         if self.LOG: log.debug('Input: %s', words)
 
         words = self._sub(words, self.pres) #On exécute la pré-substitution
@@ -303,8 +308,8 @@ class Eliza:
             if subject:
                 subject_string += " " + w 
                 continue
-
-            cosin = self.word2vec.maxCosineSimilarity(list(self.keys.keys()), w.lower()) #Pour chaque mot, on calcule le maxCosSim
+            
+            cosin = self.word2vec.maxCosineSimilarity(list(self.keys.keys()), w.lower()) #Pour chaque mot, on calcule le maxCosSi,
             if not cosin is None and cosin[1] >= self.SEUIL: 
                 if self.MATCHLOGS:
                     with open("Logs\\Matchslog.txt","a",encoding="utf-8") as matchslog: #On indique dans les logs que le matchs est validé
@@ -375,8 +380,8 @@ class Eliza:
             with open("Logs\\synonlog.txt","a") as f:
                 f.write(str(self.synonlist)+"\n")
         
-def main(WEdict = "glove", TARGET = "doctor", SEUIL = 0.7, WEIGHTED = True, LOG = False, 
-         MATCHLOGS = False, SYNON_EXTENT = True, SYNONLOGS = False): #Lancement d'Eliza
+def main(WEdict = "glove", TARGET = "doctor.txt", SEUIL = 0.7, WEIGHTED = True, LOG = False, 
+         MATCHLOGS = False, SYNON_EXTENT = False, SYNONLOGS = False): #Lancement d'Eliza
     logging.basicConfig(filename="Logs\\Elizalog.log",level=logging.DEBUG,encoding='utf-8') #On génère un log d'eliza
     eliza = Eliza(TARGET = TARGET, SEUIL = SEUIL, WEIGHTED = WEIGHTED, LOG = LOG, 
                   MATCHLOGS = MATCHLOGS, SYNON_EXTENT = SYNON_EXTENT, SYNONLOGS = SYNONLOGS) #LOG = True pour avoir les log (il y en a beaucoups)

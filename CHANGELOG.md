@@ -96,3 +96,6 @@ keys = {}
 [2.] Détection d'un bug dans la gestion des ponctuations (test. ≠ test), le mot n'est pas détecté s'il est collé avec une ponctuation, bug réglé
 - Résolution du problème par la suppression des ponctuations dans les mots.
 [3.] Création d'un prototype de source pour la médecine généraliste
+#### 15/07/2023 ####
+[1.] Détection des cibles de manières automatiques, doctor.txt n'est plus le seul choix possible, de la même manière, les fichier en SynonymExtend doivent être de préférence précédé de SE et doivent être placé dans le fichier target
+[2.] Changement de la gestion des synonymes, le séparateur est ";" au lieu de " ", permet les synonymes en plusieurs mots. On fait la même chose pour la cohérence pour les règles de substitutions
