@@ -1,39 +1,53 @@
-initial: How do you do. Please tell me your problem.
-final: Goodbye. Thank you for talking to me.
-quit: bye
-pre: dont don't
-post: am are
-synon: belief feel think believe wish
-key: i
-  decomp: * i @desire *
-    reasmb: What would it mean to you if you got (3)?
-key: i
-  decomp: * i @SYMPTOMS *
-    reasmb: Can you describe the symptoms you're experiencing?
-key: i
-  decomp: * i @PAIN *
-    reasmb: Please tell me more about the pain you're feeling in your (3).
-key: i
-  decomp: * i @MEDICAL_HISTORY *
-    reasmb: Tell me about your medical history. Have you had any previous conditions?
-key: i
-  decomp: * i @ALLERGIES *
-    reasmb: Do you have any known allergies? It's important for us to know.
-key: i
-  decomp: * i @MEDICATIONS *
-    reasmb: Are you currently taking any medications? Please list them.
-key: i
-  decomp: * i @LIFESTYLE *
-    reasmb: How would you describe your daily lifestyle? Exercise, diet, etc.?
-key: i
-  decomp: * i @FAMILY_HISTORY *
-    reasmb: Do you have a family history of any medical conditions? If yes, please provide details.
-key: DOCTOR
-  decomp: * DOCTOR *
-    reasmb: I will be your doctor today. You're in good hands.
-key: APPOINTMENT
-  decomp: * APPOINTMENT *
-    reasmb: Yes, you have an appointment. We'll get to the bottom of your concerns.
-key: MY
-  decomp: * MY *
-    reasmb: Tell me more about your (2).
+initial: Could you please provide detailed information about your current health condition, including any symptoms or concerns you may be experiencing? Feel free to elaborate on any relevant medical history, recent changes, or specific areas of discomfort or pain.
+final: Thank you for sharing your detailed health information. Your input will greatly assist in providing you with the best possible care.
+quit: quit
+pre: dont;don't
+pre: cant;can't
+pre: wont;won't
+pre: recollect;remember
+pre: maybe;perhaps
+pre: how;what
+pre: when;what
+pre: certainly;yes
+pre: machine;computer
+pre: computers;computer
+pre: were;was
+pre: you're;you are
+pre: i'm;i am
+pre: same;alike
+post: am;are
+post: your;my
+post: me;you
+post: myself;yourself
+post: i;you
+post: you;I
+post: my;your
+post: i'm;you are
+synon: belief;feel;think;believe;wish
+synon: family;mother;mom;father;dad;sister;brother;wife;children;child
+synon: desire;want;need
+synon: cannot;can't
+synon: be;am;is;are;was
+synon: pain;ache;discomfort
+synon: sickness;ailment;illness
+synon: diagnosis;determination;identification
+synon: treatment;therapy
+synon: prescription;medication;drug
+synon: symptom;indication;manifestation;symptoms
+synon: doctor;physician;practitioner
+synon: specialist;expert
+synon: hospital;medical center;clinic
+synon: injury;trauma;wound
+synon: surgery;operation;procedure
+synon: examination;evaluation
+synon: diabetes;diabetes mellitus
+synon: hypertension;high blood pressure
+synon: arthritis;joint inflammation
+synon: pneumonia;lung infection
+synon: headache;migraine;severe headache
+synon: allergy;hypersensitivity reaction
+synon: infection;disease;illness
+synon: cancer;malignancy tumor;tumor
+synon: stroke;cerebrovascular accident
+synon: depression;major depressive disorder
+synon: anxiety;anxiety disorder
