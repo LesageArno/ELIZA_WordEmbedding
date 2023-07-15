@@ -99,3 +99,4 @@ keys = {}
 #### 15/07/2023 ####
 [1.] Détection des cibles de manières automatiques, doctor.txt n'est plus le seul choix possible, de la même manière, les fichier en SynonymExtend doivent être de préférence précédé de SE et doivent être placé dans le fichier target
 [2.] Changement de la gestion des synonymes, le séparateur est ";" au lieu de " ", permet les synonymes en plusieurs mots. On fait la même chose pour la cohérence pour les règles de substitutions
+[3.] Suite génération generalist.txt avec GPT
