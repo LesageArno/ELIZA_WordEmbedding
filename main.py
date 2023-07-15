@@ -1,5 +1,6 @@
 import customtkinter as ctk
 import eliza
+import os
 
 class App(ctk.CTk):
     def __init__(self):
@@ -11,8 +12,9 @@ class App(ctk.CTk):
         self.labelmenue = ctk.CTkLabel(self, text = "ELIZA", font = ctk.CTkFont("Arial BLACK"))
         self.optionmenue = ctk.CTkOptionMenu(self,values = ["glove", "enwiki"], anchor = "w", 
                                              font = ctk.CTkFont("Arial"))
-        self.target = ctk.CTkOptionMenu(self,values = ["doctor"], anchor = "w", 
-                                             font = ctk.CTkFont("Arial"))
+        self.target = ctk.CTkOptionMenu(self,values = os.listdir("Initializer\\Target"), anchor = "w", 
+                                             font = ctk.CTkFont("Arial"), command = self.target_call_back)
+        self.target.set("doctor.txt")
         self.weighted = ctk.CTkSwitch(self, text = "Pondérer", font = ctk.CTkFont("Arial"))
         
         self.seuil = ctk.CTkEntry(self, placeholder_text = "Seuil", font = ctk.CTkFont("Arial"))
@@ -48,6 +50,12 @@ class App(ctk.CTk):
     def final_call_back(self):
         self.destroy()
     
+    def target_call_back(self, buffer):
+        if self.target.get().startswith("SE"):
+            self.synonextend.select()
+        else:
+            self.synonextend.deselect()
+    
     def eliza_call_back(self):
         if self.seuil.get() == "":
             seuil = 0
@@ -55,12 +63,12 @@ class App(ctk.CTk):
             try:
                 seuil = float(self.seuil.get())
                 eliza.main(WEdict = self.optionmenue.get(), SEUIL = seuil, WEIGHTED = bool(self.weighted.get()),
-                           LOG = bool(self.log.get()),MATCHLOGS = bool(self.matchlog.get()),
-                           TARGET = self.target.get(),SYNON_EXTENT = bool(self.synonextend.get()),
+                           LOG = bool(self.log.get()), MATCHLOGS = bool(self.matchlog.get()),
+                           TARGET = self.target.get(), SYNON_EXTENT = bool(self.synonextend.get()),
                            SYNONLOGS = bool(self.synonlog.get()))
-            except ValueError:
-                print(f"Valeur de seuil incorrecte : {self.seuil.get()}")
-        
+            except:
+                if input("Error : do you want to restart ? (y/n) : ") == "y":
+                    self.eliza_call_back()
         
     
     
