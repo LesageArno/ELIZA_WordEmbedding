@@ -26,13 +26,13 @@ def initialize(self):
 eliza.initialize()
 ```
 - Initialisation de Eliza avec le nouveau programme Word2Vec (téléchargement et chargement du jeu de données)
-[2.] Création de creator.py
+```[2.] Création de creator.py```
 - Fichier de chargement des données (transformation du Wiki2Vec en dictionnaire) puis téléchargement du dictionnaire (pour éviter  la latence)
-[3.] Création de WEdict_comparison_class.py
+```[3.] Création de WEdict_comparison_class.py```
 - Classe pour faire les calculs du cosinusSimilarity et du maxCosinus, charge aussi le dictionnaire précedement créé.
-[4.] Création de Elizalog.log
+```[4.] Création de Elizalog.log```
 - Permet de savoir comment le code agis réélement et cela en direct (debug++)
-[5.] Identification des zones à modifier pour adapter le code
+```[5.] Identification des zones à modifier pour adapter le code```
 - Dans respond : 
 ```python
 keys = [self.keys[w.lower()] for w in words if w.lower() in self.keys]
