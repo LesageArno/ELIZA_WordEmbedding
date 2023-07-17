@@ -16,7 +16,7 @@ class VecorialComparison:
         elif WEdict == "enwiki":
             dict_path = __file__.removesuffix("WE_vectorial_comparison_class.py")+"Word2VecPreloaded\\WEenwiki_dict.pkl"
         else:
-            dict_path = WEdict
+            dict_path = __file__.removesuffix("WE_vectorial_comparison_class.py")+"Word2VecPreloaded\\"+"WE"+WEdict+"_dict.pkl"
         
         print("Loading files...")
         time.sleep(0.5)

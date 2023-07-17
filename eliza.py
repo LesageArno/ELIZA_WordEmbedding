@@ -381,12 +381,13 @@ class Eliza:
                 f.write(str(self.synonlist)+"\n")
         
 def main(WEdict = "glove", TARGET = "doctor.txt", SEUIL = 0.7, WEIGHTED = True, LOG = False, 
-         MATCHLOGS = False, SYNON_EXTENT = False, SYNONLOGS = False): #Lancement d'Eliza
+         MATCHLOGS = False, SYNON_EXTENT = False, SYNONLOGS = False, 
+         entity_form = False, header = False): #Lancement d'Eliza
     logging.basicConfig(filename="Logs\\Elizalog.log",level=logging.DEBUG,encoding='utf-8') #On génère un log d'eliza
     eliza = Eliza(TARGET = TARGET, SEUIL = SEUIL, WEIGHTED = WEIGHTED, LOG = LOG, 
                   MATCHLOGS = MATCHLOGS, SYNON_EXTENT = SYNON_EXTENT, SYNONLOGS = SYNONLOGS) #LOG = True pour avoir les log (il y en a beaucoups)
     eliza.load()
-    eliza.initialize(WEdict)
+    eliza.initialize(WEdict, entity_form = entity_form, header = header)
     eliza.run()
 
 if __name__ == '__main__':

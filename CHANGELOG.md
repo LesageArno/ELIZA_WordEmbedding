@@ -144,3 +144,9 @@ keys = {}
 ```
 [1.] Rédaction du README.md
 [2.] Mise en forme du CHANGELOG.md
+```
+#### 17/07/2023 ####
+```
+[1.] Ouverture du code pour la prise en charge d'autres sources de WordEmbeding
+[2.] Rédaction du README.md
+```

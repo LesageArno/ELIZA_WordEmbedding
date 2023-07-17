@@ -1,378 +1,682 @@
 INFO:eliza:Loading files...
 INFO:eliza:Succes
-INFO:eliza:Session du 2023/7/7 16:54:42
-DEBUG:eliza:After punctuation cleanup: I was arrest for a crime , that i didn't commit
-DEBUG:eliza:Input: ['I', 'was', 'arrest', 'for', 'a', 'crime', ',', 'that', 'i', "didn't", 'commit']
-DEBUG:eliza:After pre-substitution: ['I', 'was', 'arrest', 'for', 'a', 'crime', ',', 'that', 'i', "didn't", 'commit']
-INFO:eliza:[('was', 2.0), ('i', 1.0), ('what', 0.881), ('because', 0.749), ('no', 0.721)]
-DEBUG:eliza:[<eliza.Key object at 0x00000244FF1CFE20>, <eliza.Key object at 0x00000244FF1CFFA0>, <eliza.Key object at 0x00000244FFDD8AC0>, <eliza.Key object at 0x00000244FFDD8B80>, <eliza.Key object at 0x00000244FFDD8760>]
-DEBUG:eliza:parts : ['*', '@was', '@i', '*'] | words : ['I', 'was', 'arrest', 'for', 'a', 'crime', ',', 'that', 'i', "didn't", 'commit'] | results : []
-DEBUG:eliza:11
-DEBUG:eliza:parts : ['@was', '@i', '*'] | words : [] | results : [['I', 'was', 'arrest', 'for', 'a', 'crime', ',', 'that', 'i', "didn't", 'commit']]
-DEBUG:eliza:10
-DEBUG:eliza:parts : ['@was', '@i', '*'] | words : ['commit'] | results : [['I', 'was', 'arrest', 'for', 'a', 'crime', ',', 'that', 'i', "didn't"]]
-DEBUG:eliza:9
-DEBUG:eliza:parts : ['@was', '@i', '*'] | words : ["didn't", 'commit'] | results : [['I', 'was', 'arrest', 'for', 'a', 'crime', ',', 'that', 'i']]
-DEBUG:eliza:8
-DEBUG:eliza:parts : ['@was', '@i', '*'] | words : ['i', "didn't", 'commit'] | results : [['I', 'was', 'arrest', 'for', 'a', 'crime', ',', 'that']]
-DEBUG:eliza:7
-DEBUG:eliza:parts : ['@was', '@i', '*'] | words : ['that', 'i', "didn't", 'commit'] | results : [['I', 'was', 'arrest', 'for', 'a', 'crime', ',']]
-DEBUG:eliza:parts : ['@i', '*'] | words : ['i', "didn't", 'commit'] | results : [['I', 'was', 'arrest', 'for', 'a', 'crime', ','], ['that']]
-DEBUG:eliza:parts : ['*'] | words : ["didn't", 'commit'] | results : [['I', 'was', 'arrest', 'for', 'a', 'crime', ','], ['that'], ['i']]
-DEBUG:eliza:2
-DEBUG:eliza:parts : [] | words : [] | results : [['I', 'was', 'arrest', 'for', 'a', 'crime', ','], ['that'], ['i'], ["didn't", 'commit']]
-DEBUG:eliza:Decomp matched: ['*', '@was', '@i', '*']
-DEBUG:eliza:Decomp results: [['I', 'was', 'arrest', 'for', 'a', 'crime', ','], ['that'], ['i'], ["didn't", 'commit']]
-DEBUG:eliza:Decomp results after posts: [['you', 'was', 'arrest', 'for', 'a', 'crime', ','], ['that'], ['you'], ["didn't", 'commit']]
-DEBUG:eliza:index : 0 | result : ['What', 'if', 'you', 'were', '(4)', '?'] | index % len(decomp.reasmbs) : 0
-DEBUG:eliza:Using reassembly: ['What', 'if', 'you', 'were', '(4)', '?']
-DEBUG:eliza:['What', 'if', 'you', 'were', '(4)', '?'] | [['you', 'was', 'arrest', 'for', 'a', 'crime', ','], ['that'], ['you'], ["didn't", 'commit']]
-INFO:eliza:Decomp matched: ['*', '@was', '@i', '*']
-INFO:eliza:Reasmb match : ['What', 'if', 'you', 'were', '(4)', '?']
-DEBUG:eliza:Output from key: ['What', 'if', 'you', 'were', "didn't", 'commit', '?']
-DEBUG:eliza:After punctuation cleanup: yes , they thought that i killed the guy , but i just hid the body undergroung after torturing him , he die by himself . 
-DEBUG:eliza:Input: ['yes', ',', 'they', 'thought', 'that', 'i', 'killed', 'the', 'guy', ',', 'but', 'i', 'just', 'hid', 'the', 'body', 'undergroung', 'after', 'torturing', 'him', ',', 'he', 'die', 'by', 'himself', '.']
-DEBUG:eliza:After pre-substitution: ['yes', ',', 'they', 'thought', 'that', 'i', 'killed', 'the', 'guy', ',', 'but', 'i', 'just', 'hid', 'the', 'body', 'undergroung', 'after', 'torturing', 'him', ',', 'he', 'die', 'by', 'himself', '.']
-INFO:eliza:[('if', 2.195), ('was', 1.7), ('everybody', 1.415), ('yes', 1.0), ('i', 1.0), ('what', 0.881), ('why', 0.875), ('are', 0.85), ('you', 0.839), ('because', 0.719)]
-DEBUG:eliza:[<eliza.Key object at 0x00000244FF1CF220>, <eliza.Key object at 0x00000244FF1CFE20>, <eliza.Key object at 0x00000244FFDD8E80>, <eliza.Key object at 0x00000244FFDD86A0>, <eliza.Key object at 0x00000244FF1CFFA0>, <eliza.Key object at 0x00000244FFDD8AC0>, <eliza.Key object at 0x00000244FFDD8C40>, <eliza.Key object at 0x00000244FF1CFC40>, <eliza.Key object at 0x00000244FFDD84C0>, <eliza.Key object at 0x00000244FFDD8B80>]
-DEBUG:eliza:parts : ['*', '@if', '*'] | words : ['yes', ',', 'they', 'thought', 'that', 'i', 'killed', 'the', 'guy', ',', 'but', 'i', 'just', 'hid', 'the', 'body', 'undergroung', 'after', 'torturing', 'him', ',', 'he', 'die', 'by', 'himself', '.'] | results : []
-DEBUG:eliza:26
-DEBUG:eliza:parts : ['@if', '*'] | words : [] | results : [['yes', ',', 'they', 'thought', 'that', 'i', 'killed', 'the', 'guy', ',', 'but', 'i', 'just', 'hid', 'the', 'body', 'undergroung', 'after', 'torturing', 'him', ',', 'he', 'die', 'by', 'himself', '.']]
-DEBUG:eliza:25
-DEBUG:eliza:parts : ['@if', '*'] | words : ['.'] | results : [['yes', ',', 'they', 'thought', 'that', 'i', 'killed', 'the', 'guy', ',', 'but', 'i', 'just', 'hid', 'the', 'body', 'undergroung', 'after', 'torturing', 'him', ',', 'he', 'die', 'by', 'himself']]
-DEBUG:eliza:24
-DEBUG:eliza:parts : ['@if', '*'] | words : ['himself', '.'] | results : [['yes', ',', 'they', 'thought', 'that', 'i', 'killed', 'the', 'guy', ',', 'but', 'i', 'just', 'hid', 'the', 'body', 'undergroung', 'after', 'torturing', 'him', ',', 'he', 'die', 'by']]
+INFO:eliza:Session du 2023/7/7 11:36:13
+DEBUG:eliza:After punctuation cleanup: I am going to give birth to a baby in three days i'm so happy my life is finaly going to change 
+DEBUG:eliza:Input: ['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', "i'm", 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change']
+DEBUG:eliza:After pre-substitution: ['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change']
+INFO:eliza:[('if', 2.318), ('my', 2.0), ('was', 1.511), ('am', 1.0), ('because', 0.893), ('you', 0.865), ('i', 0.794), ('can', 0.776), ('no', 0.721), ('what', 0.714)]
+DEBUG:eliza:[<eliza.Key object at 0x000001B1F83DCFD0>, <eliza.Key object at 0x000001B1F83DE590>, <eliza.Key object at 0x000001B1F83DDBD0>, <eliza.Key object at 0x000001B1F83DD8D0>, <eliza.Key object at 0x000001B1F83DE8F0>, <eliza.Key object at 0x000001B1F83DE230>, <eliza.Key object at 0x000001B1F83DDD50>, <eliza.Key object at 0x000001B1F83DE710>, <eliza.Key object at 0x000001B1F83DE4D0>, <eliza.Key object at 0x000001B1F83DE830>]
+DEBUG:eliza:parts : ['*', 'if', '*'] | words : ['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : []
 DEBUG:eliza:23
-DEBUG:eliza:parts : ['@if', '*'] | words : ['by', 'himself', '.'] | results : [['yes', ',', 'they', 'thought', 'that', 'i', 'killed', 'the', 'guy', ',', 'but', 'i', 'just', 'hid', 'the', 'body', 'undergroung', 'after', 'torturing', 'him', ',', 'he', 'die']]
+DEBUG:eliza:parts : ['if', '*'] | words : [] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change']]
 DEBUG:eliza:22
-DEBUG:eliza:parts : ['@if', '*'] | words : ['die', 'by', 'himself', '.'] | results : [['yes', ',', 'they', 'thought', 'that', 'i', 'killed', 'the', 'guy', ',', 'but', 'i', 'just', 'hid', 'the', 'body', 'undergroung', 'after', 'torturing', 'him', ',', 'he']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to']]
 DEBUG:eliza:21
-DEBUG:eliza:parts : ['@if', '*'] | words : ['he', 'die', 'by', 'himself', '.'] | results : [['yes', ',', 'they', 'thought', 'that', 'i', 'killed', 'the', 'guy', ',', 'but', 'i', 'just', 'hid', 'the', 'body', 'undergroung', 'after', 'torturing', 'him', ',']]
-DEBUG:eliza:parts : ['*'] | words : ['die', 'by', 'himself', '.'] | results : [['yes', ',', 'they', 'thought', 'that', 'i', 'killed', 'the', 'guy', ',', 'but', 'i', 'just', 'hid', 'the', 'body', 'undergroung', 'after', 'torturing', 'him', ','], ['he']]
-DEBUG:eliza:4
-DEBUG:eliza:parts : [] | words : [] | results : [['yes', ',', 'they', 'thought', 'that', 'i', 'killed', 'the', 'guy', ',', 'but', 'i', 'just', 'hid', 'the', 'body', 'undergroung', 'after', 'torturing', 'him', ','], ['he'], ['die', 'by', 'himself', '.']]
-DEBUG:eliza:Decomp matched: ['*', '@if', '*']
-DEBUG:eliza:Decomp results: [['yes', ',', 'they', 'thought', 'that', 'i', 'killed', 'the', 'guy', ',', 'but', 'i', 'just', 'hid', 'the', 'body', 'undergroung', 'after', 'torturing', 'him', ','], ['he'], ['die', 'by', 'himself', '.']]
-DEBUG:eliza:Decomp results after posts: [['yes', ',', 'they', 'thought', 'that', 'you', 'killed', 'the', 'guy', ',', 'but', 'you', 'just', 'hid', 'the', 'body', 'undergroung', 'after', 'torturing', 'him', ','], ['he'], ['die', 'by', 'himself', '.']]
-DEBUG:eliza:index : 0 | result : ['Do', 'you', 'think', 'its', 'likely', 'that', '(3)', '?'] | index % len(decomp.reasmbs) : 0
-DEBUG:eliza:Using reassembly: ['Do', 'you', 'think', 'its', 'likely', 'that', '(3)', '?']
-DEBUG:eliza:['Do', 'you', 'think', 'its', 'likely', 'that', '(3)', '?'] | [['yes', ',', 'they', 'thought', 'that', 'you', 'killed', 'the', 'guy', ',', 'but', 'you', 'just', 'hid', 'the', 'body', 'undergroung', 'after', 'torturing', 'him', ','], ['he'], ['die', 'by', 'himself', '.']]
-INFO:eliza:Decomp matched: ['*', '@if', '*']
-INFO:eliza:Reasmb match : ['Do', 'you', 'think', 'its', 'likely', 'that', '(3)', '?']
-DEBUG:eliza:Output from key: ['Do', 'you', 'think', 'its', 'likely', 'that', 'die', 'by', 'himself', '?']
-DEBUG:eliza:After punctuation cleanup: Why not , it's not my fault , he was going to beat my cat , and no one else than me have the right to do this to my cat . 
-DEBUG:eliza:Input: ['Why', 'not', ',', "it's", 'not', 'my', 'fault', ',', 'he', 'was', 'going', 'to', 'beat', 'my', 'cat', ',', 'and', 'no', 'one', 'else', 'than', 'me', 'have', 'the', 'right', 'to', 'do', 'this', 'to', 'my', 'cat', '.']
-DEBUG:eliza:After pre-substitution: ['Why', 'not', ',', "it's", 'not', 'my', 'fault', ',', 'he', 'was', 'going', 'to', 'beat', 'my', 'cat', ',', 'and', 'no', 'one', 'else', 'than', 'me', 'have', 'the', 'right', 'to', 'do', 'this', 'to', 'my', 'cat', '.']
-INFO:eliza:[('if', 2.324), ('my', 2.0), ('was', 2.0), ('everyone', 1.806), ('why', 1.0), ('you', 0.9), ('are', 0.878), ('what', 0.855), ('no', 0.809), ('can', 0.776), ('because', 0.776)]
-DEBUG:eliza:[<eliza.Key object at 0x00000244FF1CF220>, <eliza.Key object at 0x00000244FFDD8820>, <eliza.Key object at 0x00000244FF1CFE20>, <eliza.Key object at 0x00000244FFDD8DC0>, <eliza.Key object at 0x00000244FFDD8C40>, <eliza.Key object at 0x00000244FFDD84C0>, <eliza.Key object at 0x00000244FF1CFC40>, <eliza.Key object at 0x00000244FFDD8AC0>, <eliza.Key object at 0x00000244FFDD8760>, <eliza.Key object at 0x00000244FFDD89A0>, <eliza.Key object at 0x00000244FFDD8B80>]
-DEBUG:eliza:parts : ['*', '@if', '*'] | words : ['Why', 'not', ',', "it's", 'not', 'my', 'fault', ',', 'he', 'was', 'going', 'to', 'beat', 'my', 'cat', ',', 'and', 'no', 'one', 'else', 'than', 'me', 'have', 'the', 'right', 'to', 'do', 'this', 'to', 'my', 'cat', '.'] | results : []
-DEBUG:eliza:32
-DEBUG:eliza:parts : ['@if', '*'] | words : [] | results : [['Why', 'not', ',', "it's", 'not', 'my', 'fault', ',', 'he', 'was', 'going', 'to', 'beat', 'my', 'cat', ',', 'and', 'no', 'one', 'else', 'than', 'me', 'have', 'the', 'right', 'to', 'do', 'this', 'to', 'my', 'cat', '.']]
-DEBUG:eliza:31
-DEBUG:eliza:parts : ['@if', '*'] | words : ['.'] | results : [['Why', 'not', ',', "it's", 'not', 'my', 'fault', ',', 'he', 'was', 'going', 'to', 'beat', 'my', 'cat', ',', 'and', 'no', 'one', 'else', 'than', 'me', 'have', 'the', 'right', 'to', 'do', 'this', 'to', 'my', 'cat']]
-DEBUG:eliza:30
-DEBUG:eliza:parts : ['@if', '*'] | words : ['cat', '.'] | results : [['Why', 'not', ',', "it's", 'not', 'my', 'fault', ',', 'he', 'was', 'going', 'to', 'beat', 'my', 'cat', ',', 'and', 'no', 'one', 'else', 'than', 'me', 'have', 'the', 'right', 'to', 'do', 'this', 'to', 'my']]
-DEBUG:eliza:29
-DEBUG:eliza:parts : ['@if', '*'] | words : ['my', 'cat', '.'] | results : [['Why', 'not', ',', "it's", 'not', 'my', 'fault', ',', 'he', 'was', 'going', 'to', 'beat', 'my', 'cat', ',', 'and', 'no', 'one', 'else', 'than', 'me', 'have', 'the', 'right', 'to', 'do', 'this', 'to']]
-DEBUG:eliza:28
-DEBUG:eliza:parts : ['@if', '*'] | words : ['to', 'my', 'cat', '.'] | results : [['Why', 'not', ',', "it's", 'not', 'my', 'fault', ',', 'he', 'was', 'going', 'to', 'beat', 'my', 'cat', ',', 'and', 'no', 'one', 'else', 'than', 'me', 'have', 'the', 'right', 'to', 'do', 'this']]
-DEBUG:eliza:parts : ['*'] | words : ['my', 'cat', '.'] | results : [['Why', 'not', ',', "it's", 'not', 'my', 'fault', ',', 'he', 'was', 'going', 'to', 'beat', 'my', 'cat', ',', 'and', 'no', 'one', 'else', 'than', 'me', 'have', 'the', 'right', 'to', 'do', 'this'], ['to']]
-DEBUG:eliza:3
-DEBUG:eliza:parts : [] | words : [] | results : [['Why', 'not', ',', "it's", 'not', 'my', 'fault', ',', 'he', 'was', 'going', 'to', 'beat', 'my', 'cat', ',', 'and', 'no', 'one', 'else', 'than', 'me', 'have', 'the', 'right', 'to', 'do', 'this'], ['to'], ['my', 'cat', '.']]
-DEBUG:eliza:Decomp matched: ['*', '@if', '*']
-DEBUG:eliza:Decomp results: [['Why', 'not', ',', "it's", 'not', 'my', 'fault', ',', 'he', 'was', 'going', 'to', 'beat', 'my', 'cat', ',', 'and', 'no', 'one', 'else', 'than', 'me', 'have', 'the', 'right', 'to', 'do', 'this'], ['to'], ['my', 'cat', '.']]
-DEBUG:eliza:Decomp results after posts: [['Why', 'not', ',', "it's", 'not', 'your', 'fault', ',', 'he', 'was', 'going', 'to', 'beat', 'your', 'cat', ',', 'and', 'no', 'one', 'else', 'than', 'you', 'have', 'the', 'right', 'to', 'do', 'this'], ['to'], ['your', 'cat', '.']]
-DEBUG:eliza:index : 1 | result : ['Do', 'you', 'wish', 'that', '(3)', '?'] | index % len(decomp.reasmbs) : 1
-DEBUG:eliza:Using reassembly: ['Do', 'you', 'wish', 'that', '(3)', '?']
-DEBUG:eliza:['Do', 'you', 'wish', 'that', '(3)', '?'] | [['Why', 'not', ',', "it's", 'not', 'your', 'fault', ',', 'he', 'was', 'going', 'to', 'beat', 'your', 'cat', ',', 'and', 'no', 'one', 'else', 'than', 'you', 'have', 'the', 'right', 'to', 'do', 'this'], ['to'], ['your', 'cat', '.']]
-INFO:eliza:Decomp matched: ['*', '@if', '*']
-INFO:eliza:Reasmb match : ['Do', 'you', 'wish', 'that', '(3)', '?']
-DEBUG:eliza:Output from key: ['Do', 'you', 'wish', 'that', 'your', 'cat', '?']
-DEBUG:eliza:After punctuation cleanup: His highness is called Erika IV from the duché of Norway , be honored to talk to his slave . 
-DEBUG:eliza:Input: ['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.']
-DEBUG:eliza:After pre-substitution: ['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.']
-INFO:eliza:[('my', 1.52), ('was', 1.447), ('because', 0.776), ('can', 0.776), ('why', 0.757)]
-DEBUG:eliza:[<eliza.Key object at 0x00000244FFDD8820>, <eliza.Key object at 0x00000244FF1CFE20>, <eliza.Key object at 0x00000244FFDD8B80>, <eliza.Key object at 0x00000244FFDD89A0>, <eliza.Key object at 0x00000244FFDD8C40>]
-DEBUG:eliza:parts : ['*', '@my', '*'] | words : ['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.'] | results : []
+DEBUG:eliza:parts : ['if', '*'] | words : ['to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going']]
 DEBUG:eliza:20
-DEBUG:eliza:parts : ['@my', '*'] | words : [] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly']]
 DEBUG:eliza:19
-DEBUG:eliza:parts : ['@my', '*'] | words : ['.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is']]
 DEBUG:eliza:18
-DEBUG:eliza:parts : ['@my', '*'] | words : ['slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life']]
 DEBUG:eliza:17
-DEBUG:eliza:parts : ['@my', '*'] | words : ['his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to']]
-DEBUG:eliza:parts : ['*'] | words : ['slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['his']]
-DEBUG:eliza:2
-DEBUG:eliza:parts : [] | words : [] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['his'], ['slave', '.']]
-DEBUG:eliza:Decomp matched: ['*', '@my', '*']
-DEBUG:eliza:Decomp results: [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['his'], ['slave', '.']]
-DEBUG:eliza:Decomp results after posts: [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['his'], ['slave', '.']]
-DEBUG:eliza:index : 0 | result : ['Lets', 'discuss', 'further', 'why', 'your', '(3)', '.'] | index % len(decomp.reasmbs) : 0
-DEBUG:eliza:Using reassembly: ['Lets', 'discuss', 'further', 'why', 'your', '(3)', '.']
-DEBUG:eliza:['Lets', 'discuss', 'further', 'why', 'your', '(3)', '.'] | [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['his'], ['slave', '.']]
-INFO:eliza:Saved to memory: ['Lets', 'discuss', 'further', 'why', 'your', 'slave', '.']
-DEBUG:eliza:parts : ['*', '@my', '*', '@family', '*'] | words : ['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.'] | results : []
-DEBUG:eliza:20
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : [] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.']]
-DEBUG:eliza:19
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave']]
-DEBUG:eliza:18
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his']]
-DEBUG:eliza:17
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to']]
-DEBUG:eliza:parts : ['*', '@family', '*'] | words : ['slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['his']]
-DEBUG:eliza:2
-DEBUG:eliza:parts : ['@family', '*'] | words : [] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['his'], ['slave', '.']]
-DEBUG:eliza:1
-DEBUG:eliza:parts : ['@family', '*'] | words : ['.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['his'], ['slave']]
-DEBUG:eliza:0
-DEBUG:eliza:parts : ['@family', '*'] | words : ['slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['his'], []]
+DEBUG:eliza:parts : ['if', '*'] | words : ['life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my']]
 DEBUG:eliza:16
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['to', 'his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy']]
 DEBUG:eliza:15
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['talk', 'to', 'his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so']]
 DEBUG:eliza:14
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['to', 'talk', 'to', 'his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am']]
 DEBUG:eliza:13
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['honored', 'to', 'talk', 'to', 'his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i']]
 DEBUG:eliza:12
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days']]
 DEBUG:eliza:11
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : [',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three']]
 DEBUG:eliza:10
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in']]
 DEBUG:eliza:9
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby']]
 DEBUG:eliza:8
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a']]
 DEBUG:eliza:7
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to']]
 DEBUG:eliza:6
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['His', 'highness', 'is', 'called', 'Erika', 'IV']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth']]
 DEBUG:eliza:5
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['His', 'highness', 'is', 'called', 'Erika']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give']]
 DEBUG:eliza:4
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['His', 'highness', 'is', 'called']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to']]
 DEBUG:eliza:3
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['His', 'highness', 'is']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going']]
 DEBUG:eliza:2
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['His', 'highness']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am']]
 DEBUG:eliza:1
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['His']]
+DEBUG:eliza:parts : ['if', '*'] | words : ['am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I']]
 DEBUG:eliza:0
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], []]
-DEBUG:eliza:Decomp did not match: ['*', '@my', '*', '@family', '*']
-DEBUG:eliza:parts : ['*', '@my', '*'] | words : ['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.'] | results : []
+DEBUG:eliza:parts : ['if', '*'] | words : ['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [[]]
+DEBUG:eliza:Decomp did not match: ['*', 'if', '*']
+DEBUG:eliza:parts : ['*', 'my', '*'] | words : ['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : []
+DEBUG:eliza:23
+DEBUG:eliza:parts : ['my', '*'] | words : [] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change']]
+DEBUG:eliza:22
+DEBUG:eliza:parts : ['my', '*'] | words : ['change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to']]
+DEBUG:eliza:21
+DEBUG:eliza:parts : ['my', '*'] | words : ['to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going']]
 DEBUG:eliza:20
-DEBUG:eliza:parts : ['@my', '*'] | words : [] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave', '.']]
+DEBUG:eliza:parts : ['my', '*'] | words : ['going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly']]
 DEBUG:eliza:19
-DEBUG:eliza:parts : ['@my', '*'] | words : ['.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his', 'slave']]
+DEBUG:eliza:parts : ['my', '*'] | words : ['finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is']]
 DEBUG:eliza:18
-DEBUG:eliza:parts : ['@my', '*'] | words : ['slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to', 'his']]
+DEBUG:eliza:parts : ['my', '*'] | words : ['is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life']]
 DEBUG:eliza:17
-DEBUG:eliza:parts : ['@my', '*'] | words : ['his', 'slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to']]
-DEBUG:eliza:parts : ['*'] | words : ['slave', '.'] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['his']]
-DEBUG:eliza:2
-DEBUG:eliza:parts : [] | words : [] | results : [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['his'], ['slave', '.']]
-DEBUG:eliza:Decomp matched: ['*', '@my', '*']
-DEBUG:eliza:Decomp results: [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['his'], ['slave', '.']]
-DEBUG:eliza:Decomp results after posts: [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['his'], ['slave', '.']]
-DEBUG:eliza:index : 0 | result : ['Your', '(3)', '?'] | index % len(decomp.reasmbs) : 0
-DEBUG:eliza:Using reassembly: ['Your', '(3)', '?']
-DEBUG:eliza:['Your', '(3)', '?'] | [['His', 'highness', 'is', 'called', 'Erika', 'IV', 'from', 'the', 'duché', 'of', 'Norway', ',', 'be', 'honored', 'to', 'talk', 'to'], ['his'], ['slave', '.']]
-INFO:eliza:Decomp matched: ['*', '@my', '*']
-INFO:eliza:Reasmb match : ['Your', '(3)', '?']
-DEBUG:eliza:Output from key: ['Your', 'slave', '?']
-DEBUG:eliza:After punctuation cleanup: Like i said no one can attack Erika IV without going over my body
-DEBUG:eliza:Input: ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body']
-DEBUG:eliza:After pre-substitution: ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body']
-INFO:eliza:[('like', 10.0), ('my', 2.0), ('i', 1.0), ('can', 1.0), ('you', 0.865), ('no', 0.843), ('because', 0.717)]
-DEBUG:eliza:[<eliza.Key object at 0x00000244FFDD9240>, <eliza.Key object at 0x00000244FFDD8820>, <eliza.Key object at 0x00000244FF1CFFA0>, <eliza.Key object at 0x00000244FFDD89A0>, <eliza.Key object at 0x00000244FFDD84C0>, <eliza.Key object at 0x00000244FFDD8760>, <eliza.Key object at 0x00000244FFDD8B80>]
-DEBUG:eliza:parts : ['*', '@be', '*', '@like', '*'] | words : ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : []
-DEBUG:eliza:14
-DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : [] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body']]
-DEBUG:eliza:13
-DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my']]
-DEBUG:eliza:12
-DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over']]
-DEBUG:eliza:11
-DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going']]
-DEBUG:eliza:10
-DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without']]
-DEBUG:eliza:9
-DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV']]
-DEBUG:eliza:8
-DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika']]
-DEBUG:eliza:7
-DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack']]
+DEBUG:eliza:parts : ['my', '*'] | words : ['life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my']]
+DEBUG:eliza:16
+DEBUG:eliza:parts : ['my', '*'] | words : ['my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy']]
+DEBUG:eliza:parts : ['*'] | words : ['life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy']]
 DEBUG:eliza:6
-DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can']]
-DEBUG:eliza:5
-DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one']]
-DEBUG:eliza:4
-DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no']]
-DEBUG:eliza:3
-DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said']]
-DEBUG:eliza:2
-DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i']]
-DEBUG:eliza:1
-DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like']]
-DEBUG:eliza:0
-DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [[]]
-DEBUG:eliza:Decomp did not match: ['*', '@be', '*', '@like', '*']
-DEBUG:eliza:parts : ['*', '@my', '*'] | words : ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : []
-DEBUG:eliza:14
-DEBUG:eliza:parts : ['@my', '*'] | words : [] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body']]
-DEBUG:eliza:13
-DEBUG:eliza:parts : ['@my', '*'] | words : ['body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my']]
-DEBUG:eliza:12
-DEBUG:eliza:parts : ['@my', '*'] | words : ['my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over']]
-DEBUG:eliza:parts : ['*'] | words : ['body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['my']]
-DEBUG:eliza:1
-DEBUG:eliza:parts : [] | words : [] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['my'], ['body']]
-DEBUG:eliza:Decomp matched: ['*', '@my', '*']
-DEBUG:eliza:Decomp results: [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['my'], ['body']]
-DEBUG:eliza:Decomp results after posts: [['Like', 'you', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['your'], ['body']]
-DEBUG:eliza:index : 1 | result : ['Earlier', 'you', 'said', 'your', '(3)', '.'] | index % len(decomp.reasmbs) : 1
-DEBUG:eliza:Using reassembly: ['Earlier', 'you', 'said', 'your', '(3)', '.']
-DEBUG:eliza:['Earlier', 'you', 'said', 'your', '(3)', '.'] | [['Like', 'you', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['your'], ['body']]
-INFO:eliza:Saved to memory: ['Earlier', 'you', 'said', 'your', 'body', '.']
-DEBUG:eliza:parts : ['*', '@my', '*', '@family', '*'] | words : ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : []
-DEBUG:eliza:14
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : [] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body']]
-DEBUG:eliza:13
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my']]
-DEBUG:eliza:12
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over']]
-DEBUG:eliza:parts : ['*', '@family', '*'] | words : ['body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['my']]
-DEBUG:eliza:1
-DEBUG:eliza:parts : ['@family', '*'] | words : [] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['my'], ['body']]
-DEBUG:eliza:0
-DEBUG:eliza:parts : ['@family', '*'] | words : ['body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['my'], []]
-DEBUG:eliza:11
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going']]
-DEBUG:eliza:10
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without']]
-DEBUG:eliza:parts : ['*', '@family', '*'] | words : ['over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['going']]
-DEBUG:eliza:3
-DEBUG:eliza:parts : ['@family', '*'] | words : [] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['going'], ['over', 'my', 'body']]
-DEBUG:eliza:2
-DEBUG:eliza:parts : ['@family', '*'] | words : ['body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['going'], ['over', 'my']]
-DEBUG:eliza:1
-DEBUG:eliza:parts : ['@family', '*'] | words : ['my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['going'], ['over']]
-DEBUG:eliza:0
-DEBUG:eliza:parts : ['@family', '*'] | words : ['over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['going'], []]
-DEBUG:eliza:9
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV']]
-DEBUG:eliza:8
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika']]
-DEBUG:eliza:7
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack']]
+DEBUG:eliza:parts : [] | words : [] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to', 'change']]
+DEBUG:eliza:Decomp matched: ['*', 'my', '*']
+DEBUG:eliza:Decomp results: [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to', 'change']]
+DEBUG:eliza:Decomp results after posts: [['you', 'are', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'you', 'are', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to', 'change']]
+DEBUG:eliza:index : 0 | result : ['Lets', 'discuss', 'further', 'why', 'your', '(2)', '.'] | index % len(decomp.reasmbs) : 0
+DEBUG:eliza:Using reassembly: ['Lets', 'discuss', 'further', 'why', 'your', '(2)', '.']
+DEBUG:eliza:['Lets', 'discuss', 'further', 'why', 'your', '(2)', '.'] | [['you', 'are', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'you', 'are', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to', 'change']]
+INFO:eliza:Saved to memory: ['Lets', 'discuss', 'further', 'why', 'your', 'life', 'is', 'finaly', 'going', 'to', 'change', '.']
+DEBUG:eliza:parts : ['*', 'my', '*', '@family', '*'] | words : ['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : []
+DEBUG:eliza:23
+DEBUG:eliza:parts : ['my', '*', '@family', '*'] | words : [] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change']]
+DEBUG:eliza:22
+DEBUG:eliza:parts : ['my', '*', '@family', '*'] | words : ['change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to']]
+DEBUG:eliza:21
+DEBUG:eliza:parts : ['my', '*', '@family', '*'] | words : ['to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going']]
+DEBUG:eliza:20
+DEBUG:eliza:parts : ['my', '*', '@family', '*'] | words : ['going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly']]
+DEBUG:eliza:19
+DEBUG:eliza:parts : ['my', '*', '@family', '*'] | words : ['finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is']]
+DEBUG:eliza:18
+DEBUG:eliza:parts : ['my', '*', '@family', '*'] | words : ['is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life']]
+DEBUG:eliza:17
+DEBUG:eliza:parts : ['my', '*', '@family', '*'] | words : ['life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my']]
+DEBUG:eliza:16
+DEBUG:eliza:parts : ['my', '*', '@family', '*'] | words : ['my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy']]
+DEBUG:eliza:parts : ['*', '@family', '*'] | words : ['life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy']]
 DEBUG:eliza:6
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like', 'i', 'said', 'no', 'one', 'can']]
+DEBUG:eliza:parts : ['@family', '*'] | words : [] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to', 'change']]
 DEBUG:eliza:5
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like', 'i', 'said', 'no', 'one']]
-DEBUG:eliza:4
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like', 'i', 'said', 'no']]
-DEBUG:eliza:3
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like', 'i', 'said']]
-DEBUG:eliza:2
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like', 'i']]
-DEBUG:eliza:1
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like']]
-DEBUG:eliza:parts : ['*', '@family', '*'] | words : ['said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like'], ['i']]
-DEBUG:eliza:12
-DEBUG:eliza:parts : ['@family', '*'] | words : [] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like'], ['i'], ['said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body']]
-DEBUG:eliza:11
-DEBUG:eliza:parts : ['@family', '*'] | words : ['body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like'], ['i'], ['said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my']]
-DEBUG:eliza:10
-DEBUG:eliza:parts : ['@family', '*'] | words : ['my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like'], ['i'], ['said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over']]
-DEBUG:eliza:9
-DEBUG:eliza:parts : ['@family', '*'] | words : ['over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like'], ['i'], ['said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going']]
-DEBUG:eliza:8
-DEBUG:eliza:parts : ['@family', '*'] | words : ['going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like'], ['i'], ['said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without']]
+DEBUG:eliza:parts : ['@family', '*'] | words : ['change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to']]
+DEBUG:eliza:parts : ['*'] | words : [] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to'], ['change']]
+DEBUG:eliza:0
+DEBUG:eliza:parts : [] | words : [] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to'], ['change'], []]
+DEBUG:eliza:Decomp matched: ['*', 'my', '*', '@family', '*']
+DEBUG:eliza:Decomp results: [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to'], ['change'], []]
+DEBUG:eliza:Decomp results after posts: [['you', 'are', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'you', 'are', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to'], ['change'], []]
+DEBUG:eliza:index : 0 | result : ['Tell', 'me', 'more', 'about', 'your', 'family.'] | index % len(decomp.reasmbs) : 0
+DEBUG:eliza:Using reassembly: ['Tell', 'me', 'more', 'about', 'your', 'family.']
+DEBUG:eliza:['Tell', 'me', 'more', 'about', 'your', 'family.'] | [['you', 'are', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'you', 'are', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to'], ['change'], []]
+INFO:eliza:Decomp matched: ['*', 'my', '*', '@family', '*']
+INFO:eliza:Reasmb match : ['Tell', 'me', 'more', 'about', 'your', 'family.']
+DEBUG:eliza:Output from key: ['Tell', 'me', 'more', 'about', 'your', 'family.']
+DEBUG:eliza:After punctuation cleanup: My dream is going to be realized having someone to raise instead of only raising the stack of paper at work
+DEBUG:eliza:Input: ['My', 'dream', 'is', 'going', 'to', 'be', 'realized', 'having', 'someone', 'to', 'raise', 'instead', 'of', 'only', 'raising', 'the', 'stack', 'of', 'paper', 'at', 'work']
+DEBUG:eliza:After pre-substitution: ['My', 'dream', 'is', 'going', 'to', 'be', 'realized', 'having', 'someone', 'to', 'raise', 'instead', 'of', 'only', 'raising', 'the', 'stack', 'of', 'paper', 'at', 'work']
+INFO:eliza:[('dream', 3.0), ('my', 2.0), ('everyone', 1.633), ('was', 1.511), ('you', 0.865), ('no', 0.849), ('can', 0.776), ('because', 0.776), ('i', 0.73), ('what', 0.728)]
+DEBUG:eliza:[<eliza.Key object at 0x000001B1F83DD150>, <eliza.Key object at 0x000001B1F83DE590>, <eliza.Key object at 0x000001B1F83DEB30>, <eliza.Key object at 0x000001B1F83DDBD0>, <eliza.Key object at 0x000001B1F83DE230>, <eliza.Key object at 0x000001B1F83DE4D0>, <eliza.Key object at 0x000001B1F83DE710>, <eliza.Key object at 0x000001B1F83DE8F0>, <eliza.Key object at 0x000001B1F83DDD50>, <eliza.Key object at 0x000001B1F83DE830>]
+DEBUG:eliza:parts : ['*'] | words : ['My', 'dream', 'is', 'going', 'to', 'be', 'realized', 'having', 'someone', 'to', 'raise', 'instead', 'of', 'only', 'raising', 'the', 'stack', 'of', 'paper', 'at', 'work'] | results : []
+DEBUG:eliza:21
+DEBUG:eliza:parts : [] | words : [] | results : [['My', 'dream', 'is', 'going', 'to', 'be', 'realized', 'having', 'someone', 'to', 'raise', 'instead', 'of', 'only', 'raising', 'the', 'stack', 'of', 'paper', 'at', 'work']]
+DEBUG:eliza:Decomp matched: ['*']
+DEBUG:eliza:Decomp results: [['My', 'dream', 'is', 'going', 'to', 'be', 'realized', 'having', 'someone', 'to', 'raise', 'instead', 'of', 'only', 'raising', 'the', 'stack', 'of', 'paper', 'at', 'work']]
+DEBUG:eliza:Decomp results after posts: [['your', 'dream', 'is', 'going', 'to', 'be', 'realized', 'having', 'someone', 'to', 'raise', 'instead', 'of', 'only', 'raising', 'the', 'stack', 'of', 'paper', 'at', 'work']]
+DEBUG:eliza:index : 0 | result : ['What', 'does', 'that', 'dream', 'suggest', 'to', 'you', '?'] | index % len(decomp.reasmbs) : 0
+DEBUG:eliza:Using reassembly: ['What', 'does', 'that', 'dream', 'suggest', 'to', 'you', '?']
+DEBUG:eliza:['What', 'does', 'that', 'dream', 'suggest', 'to', 'you', '?'] | [['your', 'dream', 'is', 'going', 'to', 'be', 'realized', 'having', 'someone', 'to', 'raise', 'instead', 'of', 'only', 'raising', 'the', 'stack', 'of', 'paper', 'at', 'work']]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['What', 'does', 'that', 'dream', 'suggest', 'to', 'you', '?']
+DEBUG:eliza:Output from key: ['What', 'does', 'that', 'dream', 'suggest', 'to', 'you', '?']
+DEBUG:eliza:After punctuation cleanup: Joy fulfillment happiness
+DEBUG:eliza:Input: ['Joy', 'fulfillment', 'happiness']
+DEBUG:eliza:After pre-substitution: ['Joy', 'fulfillment', 'happiness']
+INFO:eliza:[]
+DEBUG:eliza:[]
+INFO:eliza:Output from memory: ['Lets', 'discuss', 'further', 'why', 'your', 'life', 'is', 'finaly', 'going', 'to', 'change', '.']
+DEBUG:eliza:After punctuation cleanup: I am going to be a mother
+DEBUG:eliza:Input: ['I', 'am', 'going', 'to', 'be', 'a', 'mother']
+DEBUG:eliza:After pre-substitution: ['I', 'am', 'going', 'to', 'be', 'a', 'mother']
+INFO:eliza:[('i', 1.0), ('am', 1.0), ('you', 0.865), ('can', 0.864), ('no', 0.721)]
+DEBUG:eliza:[<eliza.Key object at 0x000001B1F83DDD50>, <eliza.Key object at 0x000001B1F83DD8D0>, <eliza.Key object at 0x000001B1F83DE230>, <eliza.Key object at 0x000001B1F83DE710>, <eliza.Key object at 0x000001B1F83DE4D0>]
+DEBUG:eliza:parts : ['*', 'i', '@desire', '*'] | words : ['I', 'am', 'going', 'to', 'be', 'a', 'mother'] | results : []
 DEBUG:eliza:7
-DEBUG:eliza:parts : ['@family', '*'] | words : ['without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like'], ['i'], ['said', 'no', 'one', 'can', 'attack', 'Erika', 'IV']]
+DEBUG:eliza:parts : ['i', '@desire', '*'] | words : [] | results : [['I', 'am', 'going', 'to', 'be', 'a', 'mother']]
 DEBUG:eliza:6
-DEBUG:eliza:parts : ['@family', '*'] | words : ['IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like'], ['i'], ['said', 'no', 'one', 'can', 'attack', 'Erika']]
+DEBUG:eliza:parts : ['i', '@desire', '*'] | words : ['mother'] | results : [['I', 'am', 'going', 'to', 'be', 'a']]
 DEBUG:eliza:5
-DEBUG:eliza:parts : ['@family', '*'] | words : ['Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like'], ['i'], ['said', 'no', 'one', 'can', 'attack']]
+DEBUG:eliza:parts : ['i', '@desire', '*'] | words : ['a', 'mother'] | results : [['I', 'am', 'going', 'to', 'be']]
 DEBUG:eliza:4
-DEBUG:eliza:parts : ['@family', '*'] | words : ['attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like'], ['i'], ['said', 'no', 'one', 'can']]
+DEBUG:eliza:parts : ['i', '@desire', '*'] | words : ['be', 'a', 'mother'] | results : [['I', 'am', 'going', 'to']]
 DEBUG:eliza:3
-DEBUG:eliza:parts : ['@family', '*'] | words : ['can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like'], ['i'], ['said', 'no', 'one']]
+DEBUG:eliza:parts : ['i', '@desire', '*'] | words : ['to', 'be', 'a', 'mother'] | results : [['I', 'am', 'going']]
 DEBUG:eliza:2
-DEBUG:eliza:parts : ['@family', '*'] | words : ['one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like'], ['i'], ['said', 'no']]
+DEBUG:eliza:parts : ['i', '@desire', '*'] | words : ['going', 'to', 'be', 'a', 'mother'] | results : [['I', 'am']]
 DEBUG:eliza:1
-DEBUG:eliza:parts : ['@family', '*'] | words : ['no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like'], ['i'], ['said']]
+DEBUG:eliza:parts : ['i', '@desire', '*'] | words : ['am', 'going', 'to', 'be', 'a', 'mother'] | results : [['I']]
 DEBUG:eliza:0
-DEBUG:eliza:parts : ['@family', '*'] | words : ['said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like'], ['i'], []]
-DEBUG:eliza:0
-DEBUG:eliza:parts : ['@my', '*', '@family', '*'] | words : ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without'], ['Like'], []]
-DEBUG:eliza:Decomp did not match: ['*', '@my', '*', '@family', '*']
-DEBUG:eliza:parts : ['*', '@my', '*'] | words : ['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body'] | results : []
-DEBUG:eliza:14
-DEBUG:eliza:parts : ['@my', '*'] | words : [] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my', 'body']]
-DEBUG:eliza:13
-DEBUG:eliza:parts : ['@my', '*'] | words : ['body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over', 'my']]
-DEBUG:eliza:12
-DEBUG:eliza:parts : ['@my', '*'] | words : ['my', 'body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over']]
-DEBUG:eliza:parts : ['*'] | words : ['body'] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['my']]
+DEBUG:eliza:parts : ['i', '@desire', '*'] | words : ['I', 'am', 'going', 'to', 'be', 'a', 'mother'] | results : [[]]
+DEBUG:eliza:parts : ['@desire', '*'] | words : ['am', 'going', 'to', 'be', 'a', 'mother'] | results : [[]]
+DEBUG:eliza:parts : ['*'] | words : ['going', 'to', 'be', 'a', 'mother'] | results : [[], ['am']]
+DEBUG:eliza:5
+DEBUG:eliza:parts : [] | words : [] | results : [[], ['am'], ['going', 'to', 'be', 'a', 'mother']]
+DEBUG:eliza:Decomp matched: ['*', 'i', '@desire', '*']
+DEBUG:eliza:Decomp results: [[], ['am'], ['going', 'to', 'be', 'a', 'mother']]
+DEBUG:eliza:Decomp results after posts: [[], ['are'], ['going', 'to', 'be', 'a', 'mother']]
+DEBUG:eliza:index : 0 | result : ['What', 'would', 'it', 'mean', 'to', 'you', 'if', 'you', 'got', '(3)', '?'] | index % len(decomp.reasmbs) : 0
+DEBUG:eliza:Using reassembly: ['What', 'would', 'it', 'mean', 'to', 'you', 'if', 'you', 'got', '(3)', '?']
+DEBUG:eliza:['What', 'would', 'it', 'mean', 'to', 'you', 'if', 'you', 'got', '(3)', '?'] | [[], ['are'], ['going', 'to', 'be', 'a', 'mother']]
+INFO:eliza:Decomp matched: ['*', 'i', '@desire', '*']
+INFO:eliza:Reasmb match : ['What', 'would', 'it', 'mean', 'to', 'you', 'if', 'you', 'got', '(3)', '?']
+DEBUG:eliza:Output from key: ['What', 'would', 'it', 'mean', 'to', 'you', 'if', 'you', 'got', 'going', 'to', 'be', 'a', 'mother', '?']
+DEBUG:eliza:After punctuation cleanup: Isn't it beautiful being a mother is all I wanted I need to talk to someone which isn't like the others which respect my dream
+DEBUG:eliza:Input: ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my', 'dream']
+DEBUG:eliza:After pre-substitution: ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my', 'dream']
+INFO:eliza:[('like', 10.0), ('dream', 3.0), ('my', 2.0), ('everyone', 1.633), ('was', 1.511), ('i', 1.0), ('no', 0.814), ('can', 0.776), ('because', 0.769), ('why', 0.757), ('are', 0.757)]
+DEBUG:eliza:[<eliza.Key object at 0x000001B1F83DEFB0>, <eliza.Key object at 0x000001B1F83DD150>, <eliza.Key object at 0x000001B1F83DE590>, <eliza.Key object at 0x000001B1F83DEB30>, <eliza.Key object at 0x000001B1F83DDBD0>, <eliza.Key object at 0x000001B1F83DDD50>, <eliza.Key object at 0x000001B1F83DE4D0>, <eliza.Key object at 0x000001B1F83DE710>, <eliza.Key object at 0x000001B1F83DE8F0>, <eliza.Key object at 0x000001B1F83DE9B0>, <eliza.Key object at 0x000001B1F83DD9F0>]
+DEBUG:eliza:parts : ['*', '@be', '*', '@like', '*'] | words : ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my', 'dream'] | results : []
+DEBUG:eliza:25
+DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : [] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my', 'dream']]
+DEBUG:eliza:24
+DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my']]
+DEBUG:eliza:parts : ['*', '@like', '*'] | words : [] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ['dream']]
+DEBUG:eliza:23
+DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect']]
+DEBUG:eliza:parts : ['*', '@like', '*'] | words : ['dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ['my']]
 DEBUG:eliza:1
-DEBUG:eliza:parts : [] | words : [] | results : [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['my'], ['body']]
-DEBUG:eliza:Decomp matched: ['*', '@my', '*']
-DEBUG:eliza:Decomp results: [['Like', 'i', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['my'], ['body']]
-DEBUG:eliza:Decomp results after posts: [['Like', 'you', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['your'], ['body']]
-DEBUG:eliza:index : 1 | result : ['Why', 'do', 'you', 'say', 'your', '(3)', '?'] | index % len(decomp.reasmbs) : 1
-DEBUG:eliza:Using reassembly: ['Why', 'do', 'you', 'say', 'your', '(3)', '?']
-DEBUG:eliza:['Why', 'do', 'you', 'say', 'your', '(3)', '?'] | [['Like', 'you', 'said', 'no', 'one', 'can', 'attack', 'Erika', 'IV', 'without', 'going', 'over'], ['your'], ['body']]
-INFO:eliza:Decomp matched: ['*', '@my', '*']
-INFO:eliza:Reasmb match : ['Why', 'do', 'you', 'say', 'your', '(3)', '?']
-DEBUG:eliza:Output from key: ['Why', 'do', 'you', 'say', 'your', 'body', '?']
+DEBUG:eliza:parts : ['@like', '*'] | words : [] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ['my'], ['dream']]
+DEBUG:eliza:0
+DEBUG:eliza:parts : ['@like', '*'] | words : ['dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ['my'], []]
+DEBUG:eliza:22
+DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which']]
+DEBUG:eliza:parts : ['*', '@like', '*'] | words : ['my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ['respect']]
+DEBUG:eliza:2
+DEBUG:eliza:parts : ['@like', '*'] | words : [] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ['respect'], ['my', 'dream']]
+DEBUG:eliza:1
+DEBUG:eliza:parts : ['@like', '*'] | words : ['dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ['respect'], ['my']]
+DEBUG:eliza:0
+DEBUG:eliza:parts : ['@like', '*'] | words : ['my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ['respect'], []]
+DEBUG:eliza:21
+DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['which', 'respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others']]
+DEBUG:eliza:parts : ['*', '@like', '*'] | words : ['respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ['which']]
+DEBUG:eliza:3
+DEBUG:eliza:parts : ['@like', '*'] | words : [] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ['which'], ['respect', 'my', 'dream']]
+DEBUG:eliza:2
+DEBUG:eliza:parts : ['@like', '*'] | words : ['dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ['which'], ['respect', 'my']]
+DEBUG:eliza:1
+DEBUG:eliza:parts : ['@like', '*'] | words : ['my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ['which'], ['respect']]
+DEBUG:eliza:0
+DEBUG:eliza:parts : ['@like', '*'] | words : ['respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ['which'], []]
+DEBUG:eliza:20
+DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['others', 'which', 'respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the']]
+DEBUG:eliza:parts : ['*', '@like', '*'] | words : ['which', 'respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ['others']]
+DEBUG:eliza:4
+DEBUG:eliza:parts : ['@like', '*'] | words : [] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ['others'], ['which', 'respect', 'my', 'dream']]
+DEBUG:eliza:3
+DEBUG:eliza:parts : ['@like', '*'] | words : ['dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ['others'], ['which', 'respect', 'my']]
+DEBUG:eliza:2
+DEBUG:eliza:parts : ['@like', '*'] | words : ['my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ['others'], ['which', 'respect']]
+DEBUG:eliza:1
+DEBUG:eliza:parts : ['@like', '*'] | words : ['respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ['others'], ['which']]
+DEBUG:eliza:0
+DEBUG:eliza:parts : ['@like', '*'] | words : ['which', 'respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ['others'], []]
+DEBUG:eliza:19
+DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['the', 'others', 'which', 'respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like']]
+DEBUG:eliza:parts : ['*', '@like', '*'] | words : ['others', 'which', 'respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the']]
+DEBUG:eliza:5
+DEBUG:eliza:parts : ['@like', '*'] | words : [] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], ['others', 'which', 'respect', 'my', 'dream']]
+DEBUG:eliza:4
+DEBUG:eliza:parts : ['@like', '*'] | words : ['dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], ['others', 'which', 'respect', 'my']]
+DEBUG:eliza:3
+DEBUG:eliza:parts : ['@like', '*'] | words : ['my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], ['others', 'which', 'respect']]
+DEBUG:eliza:2
+DEBUG:eliza:parts : ['@like', '*'] | words : ['respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], ['others', 'which']]
+DEBUG:eliza:1
+DEBUG:eliza:parts : ['@like', '*'] | words : ['which', 'respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], ['others']]
+DEBUG:eliza:0
+DEBUG:eliza:parts : ['@like', '*'] | words : ['others', 'which', 'respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], []]
+DEBUG:eliza:parts : ['*'] | words : ['which', 'respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], [], ['others']]
+DEBUG:eliza:4
+DEBUG:eliza:parts : [] | words : [] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], [], ['others'], ['which', 'respect', 'my', 'dream']]
+DEBUG:eliza:Decomp matched: ['*', '@be', '*', '@like', '*']
+DEBUG:eliza:Decomp results: [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], [], ['others'], ['which', 'respect', 'my', 'dream']]
+DEBUG:eliza:Decomp results after posts: [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'you', 'wanted', 'you', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'your'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'you', 'wanted', 'you', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'you', 'wanted', 'you', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'you', 'wanted', 'you', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'you', 'wanted', 'you', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'you', 'wanted', 'you', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], [], ['others'], ['which', 'respect', 'your', 'dream']]
+DEBUG:eliza:index : 0 | result : ['goto', 'alike'] | index % len(decomp.reasmbs) : 0
+DEBUG:eliza:Using reassembly: ['goto', 'alike']
+DEBUG:eliza:Goto key: alike
+DEBUG:eliza:parts : ['*'] | words : ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my', 'dream'] | results : []
+DEBUG:eliza:25
+DEBUG:eliza:parts : [] | words : [] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my', 'dream']]
+DEBUG:eliza:Decomp matched: ['*']
+DEBUG:eliza:Decomp results: [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my', 'dream']]
+DEBUG:eliza:Decomp results after posts: [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'you', 'wanted', 'you', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'your', 'dream']]
+DEBUG:eliza:index : 0 | result : ['In', 'what', 'way', '?'] | index % len(decomp.reasmbs) : 0
+DEBUG:eliza:Using reassembly: ['In', 'what', 'way', '?']
+DEBUG:eliza:['In', 'what', 'way', '?'] | [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'you', 'wanted', 'you', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'your', 'dream']]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['In', 'what', 'way', '?']
+DEBUG:eliza:Output from key: ['In', 'what', 'way', '?']
 INFO:eliza:Loading files...
 INFO:eliza:Succes
-INFO:eliza:Session du 2023/7/7 10:53:15
+INFO:eliza:Session du 2023/7/7 11:41:18
+DEBUG:eliza:After punctuation cleanup: I am going to give birth to a baby in three days  i'm so happy  my life is finaly going to change 
+DEBUG:eliza:Input: ['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', "i'm", 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change']
+DEBUG:eliza:After pre-substitution: ['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change']
+INFO:eliza:[('if', 2.318), ('my', 2.0), ('was', 1.511), ('am', 1.0), ('because', 0.893), ('you', 0.865), ('i', 0.794), ('can', 0.776), ('no', 0.721), ('what', 0.714)]
+DEBUG:eliza:[<eliza.Key object at 0x000001B755AF5F00>, <eliza.Key object at 0x000001B755AF74C0>, <eliza.Key object at 0x000001B755AF6B00>, <eliza.Key object at 0x000001B755AF6800>, <eliza.Key object at 0x000001B755AF7820>, <eliza.Key object at 0x000001B755AF7160>, <eliza.Key object at 0x000001B755AF6C80>, <eliza.Key object at 0x000001B755AF7640>, <eliza.Key object at 0x000001B755AF7400>, <eliza.Key object at 0x000001B755AF7760>]
+DEBUG:eliza:parts : ['*', 'if', '*'] | words : ['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : []
+DEBUG:eliza:23
+DEBUG:eliza:parts : ['if', '*'] | words : [] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change']]
+DEBUG:eliza:22
+DEBUG:eliza:parts : ['if', '*'] | words : ['change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to']]
+DEBUG:eliza:21
+DEBUG:eliza:parts : ['if', '*'] | words : ['to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going']]
+DEBUG:eliza:20
+DEBUG:eliza:parts : ['if', '*'] | words : ['going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly']]
+DEBUG:eliza:19
+DEBUG:eliza:parts : ['if', '*'] | words : ['finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is']]
+DEBUG:eliza:18
+DEBUG:eliza:parts : ['if', '*'] | words : ['is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life']]
+DEBUG:eliza:17
+DEBUG:eliza:parts : ['if', '*'] | words : ['life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my']]
+DEBUG:eliza:16
+DEBUG:eliza:parts : ['if', '*'] | words : ['my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy']]
+DEBUG:eliza:15
+DEBUG:eliza:parts : ['if', '*'] | words : ['happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so']]
+DEBUG:eliza:14
+DEBUG:eliza:parts : ['if', '*'] | words : ['so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am']]
+DEBUG:eliza:13
+DEBUG:eliza:parts : ['if', '*'] | words : ['am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i']]
+DEBUG:eliza:12
+DEBUG:eliza:parts : ['if', '*'] | words : ['i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days']]
+DEBUG:eliza:11
+DEBUG:eliza:parts : ['if', '*'] | words : ['days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three']]
+DEBUG:eliza:10
+DEBUG:eliza:parts : ['if', '*'] | words : ['three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in']]
+DEBUG:eliza:9
+DEBUG:eliza:parts : ['if', '*'] | words : ['in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby']]
+DEBUG:eliza:8
+DEBUG:eliza:parts : ['if', '*'] | words : ['baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a']]
+DEBUG:eliza:7
+DEBUG:eliza:parts : ['if', '*'] | words : ['a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to']]
+DEBUG:eliza:6
+DEBUG:eliza:parts : ['if', '*'] | words : ['to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth']]
+DEBUG:eliza:5
+DEBUG:eliza:parts : ['if', '*'] | words : ['birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give']]
+DEBUG:eliza:4
+DEBUG:eliza:parts : ['if', '*'] | words : ['give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to']]
+DEBUG:eliza:3
+DEBUG:eliza:parts : ['if', '*'] | words : ['to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going']]
+DEBUG:eliza:2
+DEBUG:eliza:parts : ['if', '*'] | words : ['going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am']]
+DEBUG:eliza:1
+DEBUG:eliza:parts : ['if', '*'] | words : ['am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I']]
+DEBUG:eliza:0
+DEBUG:eliza:parts : ['if', '*'] | words : ['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [[]]
+DEBUG:eliza:Decomp did not match: ['*', 'if', '*']
+DEBUG:eliza:parts : ['*', 'my', '*'] | words : ['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : []
+DEBUG:eliza:23
+DEBUG:eliza:parts : ['my', '*'] | words : [] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change']]
+DEBUG:eliza:22
+DEBUG:eliza:parts : ['my', '*'] | words : ['change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to']]
+DEBUG:eliza:21
+DEBUG:eliza:parts : ['my', '*'] | words : ['to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going']]
+DEBUG:eliza:20
+DEBUG:eliza:parts : ['my', '*'] | words : ['going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly']]
+DEBUG:eliza:19
+DEBUG:eliza:parts : ['my', '*'] | words : ['finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is']]
+DEBUG:eliza:18
+DEBUG:eliza:parts : ['my', '*'] | words : ['is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life']]
+DEBUG:eliza:17
+DEBUG:eliza:parts : ['my', '*'] | words : ['life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my']]
+DEBUG:eliza:16
+DEBUG:eliza:parts : ['my', '*'] | words : ['my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy']]
+DEBUG:eliza:parts : ['*'] | words : ['life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy']]
+DEBUG:eliza:6
+DEBUG:eliza:parts : [] | words : [] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to', 'change']]
+DEBUG:eliza:Decomp matched: ['*', 'my', '*']
+DEBUG:eliza:Decomp results: [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to', 'change']]
+DEBUG:eliza:Decomp results after posts: [['you', 'are', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'you', 'are', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to', 'change']]
+DEBUG:eliza:index : 0 | result : ['Lets', 'discuss', 'further', 'why', 'your', '(2)', '.'] | index % len(decomp.reasmbs) : 0
+DEBUG:eliza:Using reassembly: ['Lets', 'discuss', 'further', 'why', 'your', '(2)', '.']
+DEBUG:eliza:['Lets', 'discuss', 'further', 'why', 'your', '(2)', '.'] | [['you', 'are', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'you', 'are', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to', 'change']]
+INFO:eliza:Saved to memory: ['Lets', 'discuss', 'further', 'why', 'your', 'life', 'is', 'finaly', 'going', 'to', 'change', '.']
+DEBUG:eliza:parts : ['*', 'my', '*', '@family', '*'] | words : ['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : []
+DEBUG:eliza:23
+DEBUG:eliza:parts : ['my', '*', '@family', '*'] | words : [] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to', 'change']]
+DEBUG:eliza:22
+DEBUG:eliza:parts : ['my', '*', '@family', '*'] | words : ['change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going', 'to']]
+DEBUG:eliza:21
+DEBUG:eliza:parts : ['my', '*', '@family', '*'] | words : ['to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly', 'going']]
+DEBUG:eliza:20
+DEBUG:eliza:parts : ['my', '*', '@family', '*'] | words : ['going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is', 'finaly']]
+DEBUG:eliza:19
+DEBUG:eliza:parts : ['my', '*', '@family', '*'] | words : ['finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life', 'is']]
+DEBUG:eliza:18
+DEBUG:eliza:parts : ['my', '*', '@family', '*'] | words : ['is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my', 'life']]
+DEBUG:eliza:17
+DEBUG:eliza:parts : ['my', '*', '@family', '*'] | words : ['life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy', 'my']]
+DEBUG:eliza:16
+DEBUG:eliza:parts : ['my', '*', '@family', '*'] | words : ['my', 'life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy']]
+DEBUG:eliza:parts : ['*', '@family', '*'] | words : ['life', 'is', 'finaly', 'going', 'to', 'change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy']]
+DEBUG:eliza:6
+DEBUG:eliza:parts : ['@family', '*'] | words : [] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to', 'change']]
+DEBUG:eliza:5
+DEBUG:eliza:parts : ['@family', '*'] | words : ['change'] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to']]
+DEBUG:eliza:parts : ['*'] | words : [] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to'], ['change']]
+DEBUG:eliza:0
+DEBUG:eliza:parts : [] | words : [] | results : [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to'], ['change'], []]
+DEBUG:eliza:Decomp matched: ['*', 'my', '*', '@family', '*']
+DEBUG:eliza:Decomp results: [['I', 'am', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'i', 'am', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to'], ['change'], []]
+DEBUG:eliza:Decomp results after posts: [['you', 'are', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'you', 'are', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to'], ['change'], []]
+DEBUG:eliza:index : 0 | result : ['Tell', 'me', 'more', 'about', 'your', 'family.'] | index % len(decomp.reasmbs) : 0
+DEBUG:eliza:Using reassembly: ['Tell', 'me', 'more', 'about', 'your', 'family.']
+DEBUG:eliza:['Tell', 'me', 'more', 'about', 'your', 'family.'] | [['you', 'are', 'going', 'to', 'give', 'birth', 'to', 'a', 'baby', 'in', 'three', 'days', 'you', 'are', 'so', 'happy'], ['life', 'is', 'finaly', 'going', 'to'], ['change'], []]
+INFO:eliza:Decomp matched: ['*', 'my', '*', '@family', '*']
+INFO:eliza:Reasmb match : ['Tell', 'me', 'more', 'about', 'your', 'family.']
+DEBUG:eliza:Output from key: ['Tell', 'me', 'more', 'about', 'your', 'family.']
+DEBUG:eliza:After punctuation cleanup: My dream is going to be realized  having someone to raise  instead of only raising the stack of paper at work  
+DEBUG:eliza:Input: ['My', 'dream', 'is', 'going', 'to', 'be', 'realized', 'having', 'someone', 'to', 'raise', 'instead', 'of', 'only', 'raising', 'the', 'stack', 'of', 'paper', 'at', 'work']
+DEBUG:eliza:After pre-substitution: ['My', 'dream', 'is', 'going', 'to', 'be', 'realized', 'having', 'someone', 'to', 'raise', 'instead', 'of', 'only', 'raising', 'the', 'stack', 'of', 'paper', 'at', 'work']
+INFO:eliza:[('dream', 3.0), ('my', 2.0), ('everyone', 1.633), ('was', 1.511), ('you', 0.865), ('no', 0.849), ('can', 0.776), ('because', 0.776), ('i', 0.73), ('what', 0.728)]
+DEBUG:eliza:[<eliza.Key object at 0x000001B755AF6080>, <eliza.Key object at 0x000001B755AF74C0>, <eliza.Key object at 0x000001B755AF7A60>, <eliza.Key object at 0x000001B755AF6B00>, <eliza.Key object at 0x000001B755AF7160>, <eliza.Key object at 0x000001B755AF7400>, <eliza.Key object at 0x000001B755AF7640>, <eliza.Key object at 0x000001B755AF7820>, <eliza.Key object at 0x000001B755AF6C80>, <eliza.Key object at 0x000001B755AF7760>]
+DEBUG:eliza:parts : ['*'] | words : ['My', 'dream', 'is', 'going', 'to', 'be', 'realized', 'having', 'someone', 'to', 'raise', 'instead', 'of', 'only', 'raising', 'the', 'stack', 'of', 'paper', 'at', 'work'] | results : []
+DEBUG:eliza:21
+DEBUG:eliza:parts : [] | words : [] | results : [['My', 'dream', 'is', 'going', 'to', 'be', 'realized', 'having', 'someone', 'to', 'raise', 'instead', 'of', 'only', 'raising', 'the', 'stack', 'of', 'paper', 'at', 'work']]
+DEBUG:eliza:Decomp matched: ['*']
+DEBUG:eliza:Decomp results: [['My', 'dream', 'is', 'going', 'to', 'be', 'realized', 'having', 'someone', 'to', 'raise', 'instead', 'of', 'only', 'raising', 'the', 'stack', 'of', 'paper', 'at', 'work']]
+DEBUG:eliza:Decomp results after posts: [['your', 'dream', 'is', 'going', 'to', 'be', 'realized', 'having', 'someone', 'to', 'raise', 'instead', 'of', 'only', 'raising', 'the', 'stack', 'of', 'paper', 'at', 'work']]
+DEBUG:eliza:index : 0 | result : ['What', 'does', 'that', 'dream', 'suggest', 'to', 'you', '?'] | index % len(decomp.reasmbs) : 0
+DEBUG:eliza:Using reassembly: ['What', 'does', 'that', 'dream', 'suggest', 'to', 'you', '?']
+DEBUG:eliza:['What', 'does', 'that', 'dream', 'suggest', 'to', 'you', '?'] | [['your', 'dream', 'is', 'going', 'to', 'be', 'realized', 'having', 'someone', 'to', 'raise', 'instead', 'of', 'only', 'raising', 'the', 'stack', 'of', 'paper', 'at', 'work']]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['What', 'does', 'that', 'dream', 'suggest', 'to', 'you', '?']
+DEBUG:eliza:Output from key: ['What', 'does', 'that', 'dream', 'suggest', 'to', 'you', '?']
+DEBUG:eliza:After punctuation cleanup: Joy  fulfillment  happiness
+DEBUG:eliza:Input: ['Joy', 'fulfillment', 'happiness']
+DEBUG:eliza:After pre-substitution: ['Joy', 'fulfillment', 'happiness']
+INFO:eliza:[]
+DEBUG:eliza:[]
+INFO:eliza:Output from memory: ['Lets', 'discuss', 'further', 'why', 'your', 'life', 'is', 'finaly', 'going', 'to', 'change', '.']
+DEBUG:eliza:After punctuation cleanup: I am going to be a mother
+DEBUG:eliza:Input: ['I', 'am', 'going', 'to', 'be', 'a', 'mother']
+DEBUG:eliza:After pre-substitution: ['I', 'am', 'going', 'to', 'be', 'a', 'mother']
+INFO:eliza:[('i', 1.0), ('am', 1.0), ('you', 0.865), ('can', 0.864), ('no', 0.721)]
+DEBUG:eliza:[<eliza.Key object at 0x000001B755AF6C80>, <eliza.Key object at 0x000001B755AF6800>, <eliza.Key object at 0x000001B755AF7160>, <eliza.Key object at 0x000001B755AF7640>, <eliza.Key object at 0x000001B755AF7400>]
+DEBUG:eliza:parts : ['*', 'i', '@desire', '*'] | words : ['I', 'am', 'going', 'to', 'be', 'a', 'mother'] | results : []
+DEBUG:eliza:7
+DEBUG:eliza:parts : ['i', '@desire', '*'] | words : [] | results : [['I', 'am', 'going', 'to', 'be', 'a', 'mother']]
+DEBUG:eliza:6
+DEBUG:eliza:parts : ['i', '@desire', '*'] | words : ['mother'] | results : [['I', 'am', 'going', 'to', 'be', 'a']]
+DEBUG:eliza:5
+DEBUG:eliza:parts : ['i', '@desire', '*'] | words : ['a', 'mother'] | results : [['I', 'am', 'going', 'to', 'be']]
+DEBUG:eliza:4
+DEBUG:eliza:parts : ['i', '@desire', '*'] | words : ['be', 'a', 'mother'] | results : [['I', 'am', 'going', 'to']]
+DEBUG:eliza:3
+DEBUG:eliza:parts : ['i', '@desire', '*'] | words : ['to', 'be', 'a', 'mother'] | results : [['I', 'am', 'going']]
+DEBUG:eliza:2
+DEBUG:eliza:parts : ['i', '@desire', '*'] | words : ['going', 'to', 'be', 'a', 'mother'] | results : [['I', 'am']]
+DEBUG:eliza:1
+DEBUG:eliza:parts : ['i', '@desire', '*'] | words : ['am', 'going', 'to', 'be', 'a', 'mother'] | results : [['I']]
+DEBUG:eliza:0
+DEBUG:eliza:parts : ['i', '@desire', '*'] | words : ['I', 'am', 'going', 'to', 'be', 'a', 'mother'] | results : [[]]
+DEBUG:eliza:parts : ['@desire', '*'] | words : ['am', 'going', 'to', 'be', 'a', 'mother'] | results : [[]]
+DEBUG:eliza:parts : ['*'] | words : ['going', 'to', 'be', 'a', 'mother'] | results : [[], ['am']]
+DEBUG:eliza:5
+DEBUG:eliza:parts : [] | words : [] | results : [[], ['am'], ['going', 'to', 'be', 'a', 'mother']]
+DEBUG:eliza:Decomp matched: ['*', 'i', '@desire', '*']
+DEBUG:eliza:Decomp results: [[], ['am'], ['going', 'to', 'be', 'a', 'mother']]
+DEBUG:eliza:Decomp results after posts: [[], ['are'], ['going', 'to', 'be', 'a', 'mother']]
+DEBUG:eliza:index : 0 | result : ['What', 'would', 'it', 'mean', 'to', 'you', 'if', 'you', 'got', '(3)', '?'] | index % len(decomp.reasmbs) : 0
+DEBUG:eliza:Using reassembly: ['What', 'would', 'it', 'mean', 'to', 'you', 'if', 'you', 'got', '(3)', '?']
+DEBUG:eliza:['What', 'would', 'it', 'mean', 'to', 'you', 'if', 'you', 'got', '(3)', '?'] | [[], ['are'], ['going', 'to', 'be', 'a', 'mother']]
+INFO:eliza:Decomp matched: ['*', 'i', '@desire', '*']
+INFO:eliza:Reasmb match : ['What', 'would', 'it', 'mean', 'to', 'you', 'if', 'you', 'got', '(3)', '?']
+DEBUG:eliza:Output from key: ['What', 'would', 'it', 'mean', 'to', 'you', 'if', 'you', 'got', 'going', 'to', 'be', 'a', 'mother', '?']
+DEBUG:eliza:After punctuation cleanup: Isn't it beautiful  being a mother is all I wanted  I need to talk to someone which isn't like the others  which respect my dream  
+DEBUG:eliza:Input: ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my', 'dream']
+DEBUG:eliza:After pre-substitution: ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my', 'dream']
+INFO:eliza:[('like', 10.0), ('dream', 3.0), ('my', 2.0), ('everyone', 1.633), ('was', 1.511), ('i', 1.0), ('no', 0.814), ('can', 0.776), ('because', 0.769), ('why', 0.757), ('are', 0.757)]
+DEBUG:eliza:[<eliza.Key object at 0x000001B755AF7EE0>, <eliza.Key object at 0x000001B755AF6080>, <eliza.Key object at 0x000001B755AF74C0>, <eliza.Key object at 0x000001B755AF7A60>, <eliza.Key object at 0x000001B755AF6B00>, <eliza.Key object at 0x000001B755AF6C80>, <eliza.Key object at 0x000001B755AF7400>, <eliza.Key object at 0x000001B755AF7640>, <eliza.Key object at 0x000001B755AF7820>, <eliza.Key object at 0x000001B755AF78E0>, <eliza.Key object at 0x000001B755AF6920>]
+DEBUG:eliza:parts : ['*', '@be', '*', '@like', '*'] | words : ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my', 'dream'] | results : []
+DEBUG:eliza:25
+DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : [] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my', 'dream']]
+DEBUG:eliza:24
+DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my']]
+DEBUG:eliza:parts : ['*', '@like', '*'] | words : [] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ['dream']]
+DEBUG:eliza:23
+DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect']]
+DEBUG:eliza:parts : ['*', '@like', '*'] | words : ['dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ['my']]
+DEBUG:eliza:1
+DEBUG:eliza:parts : ['@like', '*'] | words : [] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ['my'], ['dream']]
+DEBUG:eliza:0
+DEBUG:eliza:parts : ['@like', '*'] | words : ['dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ['my'], []]
+DEBUG:eliza:22
+DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which']]
+DEBUG:eliza:parts : ['*', '@like', '*'] | words : ['my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ['respect']]
+DEBUG:eliza:2
+DEBUG:eliza:parts : ['@like', '*'] | words : [] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ['respect'], ['my', 'dream']]
+DEBUG:eliza:1
+DEBUG:eliza:parts : ['@like', '*'] | words : ['dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ['respect'], ['my']]
+DEBUG:eliza:0
+DEBUG:eliza:parts : ['@like', '*'] | words : ['my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ['respect'], []]
+DEBUG:eliza:21
+DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['which', 'respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others']]
+DEBUG:eliza:parts : ['*', '@like', '*'] | words : ['respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ['which']]
+DEBUG:eliza:3
+DEBUG:eliza:parts : ['@like', '*'] | words : [] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ['which'], ['respect', 'my', 'dream']]
+DEBUG:eliza:2
+DEBUG:eliza:parts : ['@like', '*'] | words : ['dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ['which'], ['respect', 'my']]
+DEBUG:eliza:1
+DEBUG:eliza:parts : ['@like', '*'] | words : ['my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ['which'], ['respect']]
+DEBUG:eliza:0
+DEBUG:eliza:parts : ['@like', '*'] | words : ['respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ['which'], []]
+DEBUG:eliza:20
+DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['others', 'which', 'respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the']]
+DEBUG:eliza:parts : ['*', '@like', '*'] | words : ['which', 'respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ['others']]
+DEBUG:eliza:4
+DEBUG:eliza:parts : ['@like', '*'] | words : [] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ['others'], ['which', 'respect', 'my', 'dream']]
+DEBUG:eliza:3
+DEBUG:eliza:parts : ['@like', '*'] | words : ['dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ['others'], ['which', 'respect', 'my']]
+DEBUG:eliza:2
+DEBUG:eliza:parts : ['@like', '*'] | words : ['my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ['others'], ['which', 'respect']]
+DEBUG:eliza:1
+DEBUG:eliza:parts : ['@like', '*'] | words : ['respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ['others'], ['which']]
+DEBUG:eliza:0
+DEBUG:eliza:parts : ['@like', '*'] | words : ['which', 'respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ['others'], []]
+DEBUG:eliza:19
+DEBUG:eliza:parts : ['@be', '*', '@like', '*'] | words : ['the', 'others', 'which', 'respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like']]
+DEBUG:eliza:parts : ['*', '@like', '*'] | words : ['others', 'which', 'respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the']]
+DEBUG:eliza:5
+DEBUG:eliza:parts : ['@like', '*'] | words : [] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], ['others', 'which', 'respect', 'my', 'dream']]
+DEBUG:eliza:4
+DEBUG:eliza:parts : ['@like', '*'] | words : ['dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], ['others', 'which', 'respect', 'my']]
+DEBUG:eliza:3
+DEBUG:eliza:parts : ['@like', '*'] | words : ['my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], ['others', 'which', 'respect']]
+DEBUG:eliza:2
+DEBUG:eliza:parts : ['@like', '*'] | words : ['respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], ['others', 'which']]
+DEBUG:eliza:1
+DEBUG:eliza:parts : ['@like', '*'] | words : ['which', 'respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], ['others']]
+DEBUG:eliza:0
+DEBUG:eliza:parts : ['@like', '*'] | words : ['others', 'which', 'respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], []]
+DEBUG:eliza:parts : ['*'] | words : ['which', 'respect', 'my', 'dream'] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], [], ['others']]
+DEBUG:eliza:4
+DEBUG:eliza:parts : [] | words : [] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], [], ['others'], ['which', 'respect', 'my', 'dream']]
+DEBUG:eliza:Decomp matched: ['*', '@be', '*', '@like', '*']
+DEBUG:eliza:Decomp results: [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], [], ['others'], ['which', 'respect', 'my', 'dream']]
+DEBUG:eliza:Decomp results after posts: [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'you', 'wanted', 'you', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'your'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'you', 'wanted', 'you', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'you', 'wanted', 'you', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'you', 'wanted', 'you', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'you', 'wanted', 'you', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the'], ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'you', 'wanted', 'you', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like'], ['the'], [], ['others'], ['which', 'respect', 'your', 'dream']]
+DEBUG:eliza:index : 0 | result : ['goto', 'alike'] | index % len(decomp.reasmbs) : 0
+DEBUG:eliza:Using reassembly: ['goto', 'alike']
+DEBUG:eliza:Goto key: alike
+DEBUG:eliza:parts : ['*'] | words : ["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my', 'dream'] | results : []
+DEBUG:eliza:25
+DEBUG:eliza:parts : [] | words : [] | results : [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my', 'dream']]
+DEBUG:eliza:Decomp matched: ['*']
+DEBUG:eliza:Decomp results: [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'I', 'wanted', 'I', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'my', 'dream']]
+DEBUG:eliza:Decomp results after posts: [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'you', 'wanted', 'you', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'your', 'dream']]
+DEBUG:eliza:index : 0 | result : ['In', 'what', 'way', '?'] | index % len(decomp.reasmbs) : 0
+DEBUG:eliza:Using reassembly: ['In', 'what', 'way', '?']
+DEBUG:eliza:['In', 'what', 'way', '?'] | [["Isn't", 'it', 'beautiful', 'being', 'a', 'mother', 'is', 'all', 'you', 'wanted', 'you', 'need', 'to', 'talk', 'to', 'someone', 'which', "isn't", 'like', 'the', 'others', 'which', 'respect', 'your', 'dream']]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['In', 'what', 'way', '?']
+DEBUG:eliza:Output from key: ['In', 'what', 'way', '?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:42:42
+INFO:eliza:[('was', 1.7), ('my', 1.52), ('because', 0.822), ('no', 0.721)]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['Is', 'that', 'the', 'real', 'reason', '?']
+INFO:eliza:[('i', 0.896), ('what', 0.881), ('perhaps', 0.862), ('because', 0.776)]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['You', 'say', '(1)', '?']
+INFO:eliza:[('if', 2.419), ('my', 1.52), ('why', 0.944), ('i', 0.896), ('because', 0.87), ('no', 0.77), ('perhaps', 0.706)]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['Why', 'do', 'you', 'ask', '?']
+INFO:eliza:[('if', 2.195), ('everyone', 1.601), ('was', 1.562), ('why', 0.944), ('i', 0.896), ('always', 0.867), ('because', 0.769), ('no', 0.721)]
+INFO:eliza:Decomp matched: ['*', '@everyone', '*']
+INFO:eliza:Reasmb match : ['Realy,', '(2)', '?']
+INFO:eliza:[('my', 1.647), ('i', 0.896), ('why', 0.786), ('can', 0.776), ('because', 0.76), ('no', 0.721)]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['Can', 'you', 'elaborate', 'on', 'that', '?']
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 11:50:35
+INFO:__main__:[('name', 15.0), ('was', 1.511), ('what', 1.0), ('your', 1.0)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['I', 'am', 'not', 'interested', 'in', 'names.']
+INFO:__main__:[('name', 15.0), ('was', 1.511), ('what', 1.0), ('your', 1.0)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ["I've", 'told', 'you', 'before,', 'I', "don't", 'care', 'about', 'names', '--', 'please', 'continue.']
+INFO:__main__:[('name', 15.0), ('was', 1.511), ('what', 1.0), ('your', 1.0)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['I', 'am', 'not', 'interested', 'in', 'names.']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 10:22:10
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 10:22:20
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 10:22:32
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 10:22:52
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 10:22:55
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 10:23:10
+INFO:eliza:[('i', 1.0), ('am', 1.0)]
+INFO:eliza:Decomp matched: ['*', 'i', '@desire', '*']
+INFO:eliza:Reasmb match : ['What', 'would', 'it', 'mean', 'to', 'you', 'if', 'you', 'got', '(3)', '?']
+INFO:eliza:[('why', 0.944), ('you', 0.866), ('no', 0.814)]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['Why', 'do', 'you', 'ask', '?']
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 11:6:31
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 11:6:46
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 11:6:57
+INFO:__main__:[('was', 1.431), ('i', 1.0), ('no', 1.0), ('because', 0.78)]
+INFO:__main__:Decomp matched: ['*', 'i', 'was', '*']
+INFO:__main__:Reasmb match : ['Were', 'you', 'really', '?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:25:44
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:13:11
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:14:33
 INFO:eliza:[('was', 2.0), ('i', 1.0), ('what', 0.881), ('because', 0.749), ('no', 0.721)]
-INFO:eliza:Decomp matched: ['*', '@was', '@i', '*']
-INFO:eliza:Reasmb match : ['What', 'if', 'you', 'were', '(4)', '?']
+INFO:eliza:Decomp matched: ['*', 'i', 'was', '*']
+INFO:eliza:Reasmb match : ['Were', 'you', 'really', '?']
 INFO:eliza:[('if', 2.195), ('was', 1.7), ('everybody', 1.415), ('yes', 1.0), ('i', 1.0), ('what', 0.881), ('why', 0.875), ('are', 0.85), ('you', 0.839), ('because', 0.719)]
-INFO:eliza:Decomp matched: ['*', '@if', '*']
-INFO:eliza:Reasmb match : ['Do', 'you', 'think', 'its', 'likely', 'that', '(3)', '?']
+INFO:eliza:Decomp matched: ['*', '@everyone', '*']
+INFO:eliza:Reasmb match : ['Realy,', '(2)', '?']
 INFO:eliza:[('if', 2.324), ('my', 2.0), ('was', 2.0), ('everyone', 1.806), ('why', 1.0), ('you', 0.9), ('are', 0.878), ('what', 0.855), ('no', 0.809), ('can', 0.776), ('because', 0.776)]
-INFO:eliza:Decomp matched: ['*', '@if', '*']
-INFO:eliza:Reasmb match : ['Do', 'you', 'wish', 'that', '(3)', '?']
+INFO:eliza:Saved to memory: ['Lets', 'discuss', 'further', 'why', 'your', 'cat', '.']
+INFO:eliza:Decomp matched: ['*', 'my', '*', '@family', '*']
+INFO:eliza:Reasmb match : ['Tell', 'me', 'more', 'about', 'your', 'family.']
 INFO:eliza:[('my', 1.52), ('was', 1.447), ('because', 0.776), ('can', 0.776), ('why', 0.757)]
-INFO:eliza:Saved to memory: ['Lets', 'discuss', 'further', 'why', 'your', 'slave', '.']
-INFO:eliza:Decomp matched: ['*', '@my', '*']
-INFO:eliza:Reasmb match : ['Your', '(3)', '?']
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['Is', 'that', 'the', 'real', 'reason', '?']
 INFO:eliza:[('like', 10.0), ('my', 2.0), ('i', 1.0), ('can', 1.0), ('you', 0.865), ('no', 0.843), ('because', 0.717)]
-INFO:eliza:Saved to memory: ['Earlier', 'you', 'said', 'your', 'body', '.']
-INFO:eliza:Decomp matched: ['*', '@my', '*']
-INFO:eliza:Reasmb match : ['Why', 'do', 'you', 'say', 'your', '(3)', '?']
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['In', 'what', 'way', '?']
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 11:54:33
+INFO:__main__:[]
+INFO:__main__:Output from xnone: ["I'm", 'not', 'sure', 'I', 'understand', 'you', 'fully.']
+INFO:__main__:[('was', 1.598), ('i', 1.0), ('because', 0.751)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['You', 'say', '(1)', '?']
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 11:56:6
+INFO:__main__:[('like', 10.0), ('if', 2.531), ('i', 1.0), ('are', 0.878), ('can', 0.776), ('no', 0.721)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['You', 'say', '(1)', '?']
 INFO:eliza:Loading files...
 INFO:eliza:Succes
-INFO:eliza:Session du 2023/7/7 10:58:31
-INFO:eliza:[('i', 1.0), ('was', 1.0), ('what', 0.881), ('because', 0.749), ('no', 0.721)]
-INFO:eliza:Decomp matched: ['*', '@i', '*', '@you', '*']
-INFO:eliza:Reasmb match : ['Perhaps', 'in', 'your', 'fantasies', 'we', '(3)', 'each', 'other.']
+INFO:eliza:Session du 2023/7/7 12:4:49
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ["I'm", 'not', 'sure', 'I', 'understand', 'you', 'fully.']
 INFO:eliza:Loading files...
 INFO:eliza:Succes
-INFO:eliza:Session du 2023/7/7 10:58:53
-INFO:eliza:[('was', 2.0), ('i', 1.0), ('what', 0.881), ('because', 0.749), ('no', 0.721)]
-INFO:eliza:Decomp matched: ['*', '@was', '@i', '*']
-INFO:eliza:Reasmb match : ['What', 'if', 'you', 'were', '(4)', '?']
-INFO:eliza:[('if', 2.195), ('was', 1.7), ('everybody', 1.415), ('yes', 1.0), ('i', 1.0), ('what', 0.881), ('why', 0.875), ('are', 0.85), ('you', 0.839), ('because', 0.719)]
-INFO:eliza:Decomp matched: ['*', '@if', '*']
-INFO:eliza:Reasmb match : ['Do', 'you', 'think', 'its', 'likely', 'that', '(3)', '?']
-INFO:eliza:[('if', 2.324), ('my', 2.0), ('was', 2.0), ('everyone', 1.806), ('why', 1.0), ('you', 0.9), ('are', 0.878), ('what', 0.855), ('no', 0.809), ('can', 0.776), ('because', 0.776)]
-INFO:eliza:Decomp matched: ['*', '@if', '*']
-INFO:eliza:Reasmb match : ['Do', 'you', 'wish', 'that', '(3)', '?']
-INFO:eliza:[('my', 1.52), ('was', 1.447), ('because', 0.776), ('can', 0.776), ('why', 0.757)]
-INFO:eliza:Saved to memory: ['Lets', 'discuss', 'further', 'why', 'your', 'slave', '.']
-INFO:eliza:Decomp matched: ['*', '@my', '*']
-INFO:eliza:Reasmb match : ['Your', '(3)', '?']
-INFO:eliza:[('like', 10.0), ('my', 2.0), ('i', 1.0), ('can', 1.0), ('you', 0.865), ('no', 0.843), ('because', 0.717)]
-INFO:eliza:Saved to memory: ['Earlier', 'you', 'said', 'your', 'body', '.']
-INFO:eliza:Decomp matched: ['*', '@my', '*']
-INFO:eliza:Reasmb match : ['Why', 'do', 'you', 'say', 'your', '(3)', '?']
+INFO:eliza:Session du 2023/7/7 11:24:19
+INFO:eliza:[('you', 1.0)]
+INFO:eliza:Decomp matched: ['*', 'you', '*']
+INFO:eliza:Reasmb match : ['We', 'were', 'discussing', 'you', '--', 'not', 'me.']
+INFO:eliza:[('my', 2.0), ('perhaps', 0.862), ('because', 0.74)]
+INFO:eliza:Saved to memory: ['Lets', 'discuss', 'further', 'why', 'your', 'bad', '.']
+INFO:eliza:Decomp matched: ['*', 'my', '*']
+INFO:eliza:Reasmb match : ['Your', '(2)', '?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:47:34
+INFO:eliza:[('you', 1.0)]
+INFO:eliza:Decomp matched: ['*', 'you', '*']
+INFO:eliza:Reasmb match : ['We', 'were', 'discussing', 'you', '--', 'not', 'me.']
+INFO:eliza:[('my', 2.0)]
+INFO:eliza:Saved to memory: ['Lets', 'discuss', 'further', 'why', 'your', 'bad', '.']
+INFO:eliza:Decomp matched: ['*', 'my', '*']
+INFO:eliza:Reasmb match : ['Your', '(2)', '?']
+INFO:eliza:Downloading additional files...
+INFO:eliza:Succes
+INFO:eliza:Loading files...
+INFO:eliza:Loading files...
+INFO:eliza:Loading files...
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:58:13
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ["I'm", 'not', 'sure', 'I', 'understand', 'you', 'fully.']
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['Please', 'go', 'on.']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:59:51
+INFO:eliza:Downloading additional files...
+INFO:eliza:Succes
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:2:14
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ["I'm", 'not', 'sure', 'I', 'understand', 'you', 'fully.']
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['Please', 'go', 'on.']

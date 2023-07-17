@@ -7,7 +7,7 @@ In the initial README.md Wade Brainerd said :
 I feel that it is fairly complete. However there are some holes, as the library was written immediately prior to my discovery of Joseph Weizenbaum's own description of the original program, which is quite detailed, along with the original "doctor" script. Oh well. A copy of that article is provided in the repo as a reference to the correct behavior.
 
 ## Before using ##
-Before using, you must either download the __GloVe WordEmbeding__ (recommended), available at *http://web.archive.org/web/20230410222048/https://downloads.cs.stanford.edu/nlp/data/glove.6B.zip* 
+Before using, you must either download the __GloVe WordEmbeding__ (recommended), available at *http://web.archive.org/web/20230410222048/https://downloads.cs.stanford.edu/nlp/data/glove.6B.zip*   
 or the __ENwiki WordEmbeding__, available at *http://wikipedia2vec.s3.amazonaws.com/models/en/2018-04-20/enwiki_20180420_100d.txt.bz2*.
 
 After unpacking one of these WordEmbeding, put the file (enwiki_20180420_100d.txt|glove.6B.100d.txt) in the ELIZA\Initializer\Word2Vec (you have to keep the name of the file, see ```Architecture```), then just execute __launcher.bat__ or run __main.py__|__eliza.py__
@@ -26,8 +26,6 @@ The total ELIZA_APP file's size is varying from __339 MB__ (GloVe only, if we re
 │   LICENSE
 │   main.py
 │   README.md
-├───.vscode
-│       settings.json
 ├───Debug
 │       I'm tired PWE 070 synon.mp4
 │       PWE 070 synonTrue @madness .png
@@ -49,12 +47,15 @@ The total ELIZA_APP file's size is varying from __339 MB__ (GloVe only, if we re
 │   ├───Word2Vec
 │   │       enwiki_20180420_100d.txt
 │   │       glove.6B.100d.txt
+│   │       test.txt
 │   ├───Word2VecPreloaded
 │   │       WEenwiki_dict.pkl
 │   │       WEglove_dict.pkl
+│   │       WEtest.txt_dict.pkl
 │   └───__pycache__
 │           WEdict_creator.cpython-310.pyc
 │           WE_vectorial_comparison_class.cpython-310.pyc
+│           __init__.cpython-310.pyc
 ├───Logs
 │       Elizalog.log
 │       Matchslog.txt
@@ -97,15 +98,19 @@ The total ELIZA_APP file's size is varying from __339 MB__ (GloVe only, if we re
 ```
 
 ## Usage
-Can be run __interactively__, with these parameters:
-__*WEdict*__ = "glove" (WE you are using)
-__*TARGET*__ = "doctor.txt" (source file with the rules to follow)
-__*SEUIL*__ = 0.7 (threshold of the keyword, keyword must have a cosine similarity greater than the threshold to be kept)
-__*WEIGHTED*__ = True (if the weight in the source file have an impact)
-__*SYNON_EXTENT*__ = False (if unregistred synonyms are accepted)
-__*LOG*__ = False (if we put additionals information to the Elizalog.log file)
-__*MATCHLOGS*__ = False (if we keep a track of the matching)
-__*SYNONLOGS*__ = False (if we keep a track of the synonyms matched [don't work, you can use it with SYNON_EXTENT True for better results])
+Can be run __interactively__, with these parameters:  
+```WEdict``` = "glove" (WE you are using)  
+```TARGET``` = "doctor.txt" (source file with the rules to follow)  
+```SEUIL``` = 0.7 (threshold of the keyword, keyword must have a cosine similarity greater than the threshold to be kept)  
+```WEIGHTED``` = True (if the weight in the source file have an impact)  
+```SYNON_EXTENT``` = False (if unregistred synonyms are accepted)
+```LOG``` = False (if we put additionals information to the Elizalog.log file)  
+```MATCHLOGS``` = False (if we keep a track of the matching)  
+```SYNONLOGS``` = False (if we keep a track of the synonyms matched [don't work, you can use it with SYNON_EXTENT True for better results])  
+  
+__DO NOT TOUCH THE NEXT SETTINGS UNLESS YOU REALY NEED THEM__ (see ```Extension```)  
+```entity_form``` = False (True when you have this kind of form in your WordEmbeding system __ENTITY/...__ VEC,is automatically set to True if the Word Embeding is Enwiki)  
+```header``` = False (True when the first line isn't a line of data, is automatically set to True if the Word Embeding is Enwiki)
 
 ```
 $ python eliza.py
@@ -122,6 +127,16 @@ Goodbye.  Thank you for talking to me.
 import eliza
 
 eliza = eliza.main(WEdict = "glove", TARGET = "doctor.txt", SEUIL = 0.7, WEIGHTED = True, SYNON_EXTENT = False
-                   LOG = False, MATCHLOGS = False, SYNONLOGS = False)
+                   LOG = False, MATCHLOGS = False, SYNONLOGS = False, entity_form = False, header = False)
 ```
 ...or run with parameter interface with __launcher.bat__|__main.py__ 
+
+## Extension ##
+If you want to choose *another* Word Embedding system then, you have to use a text file (.txt) in this format :
+```
+HEADER (optional, information of the document, dimension, no. of line, etc.)
+WORD1 VEC1
+WORD2 VEC2
+...
+```
+Then, put it in the ELIZA\Initializer\Word2Vec folder, and launch with your specification (__WEdict__ must be the name of the file then if your WE system have either header or entity_form)

@@ -23,7 +23,7 @@ class Creator():
         elif Word2Vec == "enwiki":
             file_path = __file__.removesuffix("WEdict_creator.py")+"Word2Vec\\enwiki_20180420_100d.txt"
         else:
-            file_path = Word2Vec
+            file_path = __file__.removesuffix("WEdict_creator.py")+"Word2Vec\\"+Word2Vec
         
         with open(file = file_path, mode = "r", encoding = "utf-8") as file: #On lit le fichier de word_embeding 
             if header == True:

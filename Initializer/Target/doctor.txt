@@ -3,39 +3,39 @@ final: Goodbye.  Thank you for talking to me.
 quit: bye
 quit: goodbye
 quit: quit
-pre: dont don't
-pre: cant can't
-pre: wont won't
-pre: recollect remember
-pre: dreamt dreamed
-pre: dreams dream
-pre: maybe perhaps
-pre: how what
-pre: when what
-pre: certainly yes
-pre: machine computer
-pre: computers computer
-pre: were was
-pre: you're you are
-pre: i'm i am
-pre: same alike
-post: am are
-post: your my
-post: me you
-post: myself yourself
-post: yourself myself
-post: i you
-post: you I
-post: my your
-post: i'm you are
-synon: belief feel think believe wish
-synon: family mother mom father dad sister brother wife children child
-synon: desire want need
-synon: sad unhappy depressed sick
-synon: happy elated glad better
-synon: cannot can't
-synon: everyone everybody nobody noone
-synon: be am is are was
+pre: dont;don't
+pre: cant;can't
+pre: wont;won't
+pre: recollect;remember
+pre: dreamt;dreamed
+pre: dreams;dream
+pre: maybe;perhaps
+pre: how;what
+pre: when;what
+pre: certainly;yes
+pre: machine;computer
+pre: computers;computer
+pre: were;was
+pre: you're;you are
+pre: i'm;i am
+pre: same;alike
+post: am;are
+post: your;my
+post: me;you
+post: myself;yourself
+post: yourself;myself
+post: i;you
+post: you;I
+post: my;your
+post: i'm;you are
+synon: belief;feel;think;believe;wish
+synon: family;mother;mom;father;dad;sister;brother;wife;children;child
+synon: desire;want;need
+synon: sad;unhappy;depressed;sick
+synon: happy;elated;glad;better
+synon: cannot;can't
+synon: everyone;everybody;nobody;noone
+synon: be;am;is;are;was
 
 action:
   trigger: final
