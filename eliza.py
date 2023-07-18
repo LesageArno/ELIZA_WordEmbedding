@@ -296,21 +296,26 @@ class Eliza:
        
         subject_string = ""
         subject = False
+        words_save = words[:]
         for w in words:
             if w.startswith("~"): #Si c'est un sujet, alors on enregistre le sujet et on évalue le sujet plutôt que mots par mots
+                wordindex = words.index(w)
                 subject_string += w[1:]
+                words_save.pop(wordindex)
                 subject = True
                 continue
             elif w.endswith("~"):
                 subject_string += " " + w[:len(w)-1]
                 w = subject_string.rstrip()
+                words_save.pop(wordindex)
+                words_save.insert(wordindex,subject_string)
                 subject = False
             if subject:
-                subject_string += " " + w 
+                subject_string += " " + w
                 continue
             
             cosin = self.word2vec.maxCosineSimilarity(list(self.keys.keys()), w.lower()) #Pour chaque mot, on calcule le maxCosSi,
-            if not cosin is None and cosin[1] >= self.SEUIL: 
+            if (not cosin is None) and cosin[1] >= self.SEUIL: 
                 if self.MATCHLOGS:
                     with open("Logs\\Matchslog.txt","a",encoding="utf-8") as matchslog: #On indique dans les logs que le matchs est validé
                         matchslog.write(f"[o]")
@@ -320,13 +325,22 @@ class Eliza:
                     keys[cosin[0]] = round(cosin[1]*self.keys[cosin[0]].weight,3) #Dans ce cas on enregistre le mot, le poids adapté, si l'option est enclenché
                 else:
                     keys[cosin[0]] = round(cosin[1],3) # Si ce n'est pas pondéré alors, nous arrondissons juste le résultat  
+            
+            elif cosin is None: #Si le mot (principalement groupement de mot) n'est pas reconnu
+                for root, synon in self.synons.items(): #Mais qu'il est dans les synonymes
+                    if w in synon:
+                        keys[root] = self.SEUIL #Alors on l'enregistre quand même sous son root et on lui attribut le poid du seuil
+                        if self.MATCHLOGS:
+                            with open("Logs\\Matchslog.txt","a",encoding="utf-8") as matchslog: #On indique dans les logs que le matchs est validé
+                                matchslog.write(f"[o]")
+                        break
             if self.MATCHLOGS:    
                 with open("Logs\\Matchslog.txt","a",encoding="utf-8") as matchslog: #On enregistre dans les logs le matchs
                     matchslog.write(f"{w} {cosin[0] if not cosin is None else ''} ({round(cosin[1],3) if not cosin is None else ''}) [{round(keys[cosin[0]],3) if not cosin is None and cosin[1] >= self.SEUIL else ''}]\n")
-                
+
         keys = list(map(tuple,sorted(keys.items(), key=lambda x: x[1], reverse=True))) #Finalement on met en ordre
         log.info("%s",keys)
-        keys = [self.keys[key[0]] for key in keys] #On associe la clé à sa clé de classe Key
+        keys = [self.keys[key[0]] for key in keys if key[0].lower() in self.keys] #On associe la clé à sa clé de classe Key
         if self.LOG: log.debug("%s",keys)
         
         
@@ -336,6 +350,8 @@ class Eliza:
         if self.LOG: log.debug('Sorted keys: %s', [(k.word, k.weight) for k in keys])
         """
         output = None
+        
+        words = words_save[:]
 
         for key in keys: #Pour chaques clés dans la liste
             output = self._match_key(words, key) #On cherche une réponse

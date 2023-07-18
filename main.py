@@ -100,7 +100,13 @@ class App(ctk.CTk):
         if self.seuil.get() == "":
             seuil = 0
         else:
-            try:
+            seuil = float(self.seuil.get())
+            eliza.main(WEdict = self.optionmenue.get(), SEUIL = seuil, WEIGHTED = bool(self.weighted.get()),
+                       LOG = bool(self.log.get()), MATCHLOGS = bool(self.matchlog.get()),
+                       TARGET = self.target.get(), SYNON_EXTENT = bool(self.synonextend.get()),
+                       SYNONLOGS = bool(self.synonlog.get()), header = bool(self.header.get()), 
+                       entity_form = bool(self.entity.get()))
+            '''try:
                 seuil = float(self.seuil.get())
                 eliza.main(WEdict = self.optionmenue.get(), SEUIL = seuil, WEIGHTED = bool(self.weighted.get()),
                        LOG = bool(self.log.get()), MATCHLOGS = bool(self.matchlog.get()),
@@ -110,6 +116,7 @@ class App(ctk.CTk):
             except:
                 if input("Error : do you want to restart ? (y/n) : ") == "y":
                     self.eliza_call_back()
+            '''
             
         
     

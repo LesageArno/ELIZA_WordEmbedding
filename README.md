@@ -134,11 +134,37 @@ eliza = eliza.main(WEdict = "glove", TARGET = "doctor.txt", SEUIL = 0.7, WEIGHTE
 ...or run with parameter interface with __launcher.bat__|__main.py__ 
 
 ## Extension ##
-If you want to choose *another* Word Embedding system then, you have to use a text file (.txt) in this format :
+1. if you want to choose *another* Word Embedding system then, you have to use a text file (.txt) in this format :
 ```
 HEADER (optional, information of the document, dimension, no. of line, etc.)
 WORD1 VEC1
 WORD2 VEC2
 ...
 ```
-Then, put it in the ELIZA\Initializer\Word2Vec folder, and launch with your specification (__WEdict__ must be the name of the file then if your WE system have either header or entity_form)
+Then, put it in the __ELIZA\Initializer\Word2Vec__ folder, and launch with your specification (__WEdict__ must be the name of the file then if your WE system have either header or entity_form)  
+
+2. if you want to choose *another* source (doctor.txt, SEdoctor.txt, etc.), you have to put your source file (txt format) in the __ELIZA\Initalizer\Target__ folder. This file need to respect this format to work :  
+```
+initial: ... (1st sentence of the Chatbot, multiple possible)
+
+final: ... (Last sentence of the chatbot, multiple possible)
+
+quit: ... (Trigger to the final, multiple possible)
+
+pre: word;result (Presubstitution of the chatbot, the word is substitute with result, multiple possible)
+
+post: word;result (Postsubstitution of the chatbot, the word is substitute with result, multiple possible)
+
+synon: root;word1;... (Synonymes, root is the main word and the others are the synonymes, multiple possible)
+
+key: [xnone, xforeign, <key>] [weight] (Key to detected in the user sentence, xnone if no keys are detected, xforeign for foreign language, weight is the importance of the word, multiple possible)
+    decomp: [$] [*] [[@]word1] ... (The decomposition to match for the reassambly $ for store in memory, * for an unknown number of word, @ for the root of a synonym list, multiple possible)
+        reasmb: [goto <key>] ... [(int)] ... (Sentence to send, goto to use another key instead of the actual one, int should be replaced by the part of the decomposition you want to integrate (* and @ count for 1), multiple possible)
+
+(optional)
+action: (Roughly the same as key, but use direct answer without decomposition, multiple possible)
+    trigger: [final] (The trigger that will put on the action, final if the action will generate the last sentence)
+        seq: <sentence> (The sentence that will put on the trigger, the user and source file must have the same sentence)
+    actuator: (What is return)
+        seq: <sentence> (The sentence return, multiple possible)
+```

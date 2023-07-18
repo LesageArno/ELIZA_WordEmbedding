@@ -150,3 +150,9 @@ keys = {}
 [1.] Ouverture du code pour la prise en charge d'autres sources de WordEmbeding
 [2.] Rédaction du README.md
 ```
+#### 18/07/2023 ####
+```
+[1.] Rédaction du README.md
+[2.] Prise en charge complète des synonymes avec plusieurs mots en eux (medical center -> hospital)
+[3.] Modification du fonctionnement des vague ~, quand une phrase est ainsi ~mot1 mot2 ...~ alors, nous l'interprétons comme "mot1 mot2 ..." au lieu de ["mot1","mot2",...]
+[4.] Si les roots sont utilisé comme clé (allergy par exemple), si un synonyme est détecté (hypersensitivity reaction par exemple), la clé pourra quand même être déclanché

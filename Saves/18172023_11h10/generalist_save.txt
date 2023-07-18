@@ -1,9 +1,6 @@
 initial: Could you please provide detailed information about your current health condition, including any symptoms or concerns you may be experiencing? Feel free to elaborate on any relevant medical history, recent changes, or specific areas of discomfort or pain.
-
 final: Thank you for sharing your detailed health information. Your input will greatly assist in providing you with the best possible care.
-
 quit: quit
-
 pre: dont;don't
 pre: cant;can't
 pre: wont;won't
@@ -18,7 +15,6 @@ pre: were;was
 pre: you're;you are
 pre: i'm;i am
 pre: same;alike
-
 post: am;are
 post: your;my
 post: me;you
@@ -27,7 +23,6 @@ post: i;you
 post: you;I
 post: my;your
 post: i'm;you are
-
 synon: belief;feel;think;believe;wish
 synon: family;mother;mom;father;dad;sister;brother;wife;children;child
 synon: desire;want;need
@@ -56,14 +51,3 @@ synon: cancer;malignancy tumor;tumor
 synon: stroke;cerebrovascular accident
 synon: depression;major depressive disorder
 synon: anxiety;anxiety disorder
-
-key: allergy 40
-  decomp: i * @allergy
-    reasmb: You gone to an (2)
-
-key: xnone
-  decomp: *
-    reasmb: Why (1)
-key: xforeign
-  decomp: *
-    reasmb: (1)
