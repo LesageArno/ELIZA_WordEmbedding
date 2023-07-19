@@ -1,0 +1,96 @@
+initial: Could you please provide detailed information about your current health condition, including any symptoms or concerns you may be experiencing? Feel free to elaborate on any relevant medical history, recent changes, or specific areas of discomfort or pain.
+
+final: Thank you for sharing your detailed health information. Your input will greatly assist in providing you with the best possible care.
+
+quit: quit
+
+pre: dont;don't
+pre: cant;can't
+pre: wont;won't
+pre: recollect;remember
+pre: maybe;perhaps
+pre: how;what
+pre: when;what
+pre: certainly;yes
+pre: machine;computer
+pre: computers;computer
+pre: were;was
+pre: you're;you are
+pre: i'm;i am
+pre: same;alike
+
+post: am;are
+post: your;my
+post: me;you
+post: myself;yourself
+post: i;you
+post: you;I
+post: my;your
+post: i'm;you are
+
+synon: belief;feel;think;believe;wish
+synon: family;mother;mom;father;dad;sister;brother;wife;children;child
+synon: desire;want;need
+synon: cannot;can't
+synon: be;am;is;are;was
+
+synon: cardiovascular;arrhythmia;bradycardia;chest pain;claudication;palpitations;tachycardia
+synon: gastrointestinal;abdominal pain;bloating;belching;hematemesis;blood in stool;melena;hematochezia;constipation;diarrhea;dysphagia;dyspepsia;fecal incontinence;flatulence;heartburn;nausea;odynophagia;proctalgia fugax;pyrosis;rectal tenesmus;steatorrhea;vomiting
+synon: neurological;abnormal posturing;acalculia;agnosia;alexia;amnesia;anomia;anosognosia;aphasia;apraxia;ataxia;cataplexy;confusion;dysarthria;dysdiadochokinesia;dysgraphia;hallucination;headache;hypokinetic movement disorder;akinesia;bradykinesia;hyperkinetic movement disorder;akathisia;athetosis;ballismus;blepharospasm;chorea;dystonia;fasciculation;muscle cramps;myoclonus;opsoclonus;tic;tremor;flapping tremor;insomnia;Lhermitte's sign;loss of consciousness;syncope;neck stiffness;opisthotonus;paralysis;paresis;paresthesia;prosopagnosia;somnolence
+synon: obstetric;gynaecological;abnormal vaginal bleeding;vaginal bleeding in early pregnancy;miscarriage;vaginal bleeding in late pregnancy;amenorrhea;infertility;painful intercourse;pelvic pain;vaginal discharge
+synon: ocular;amaurosis fugax;amaurosis;blurred vision;dalrymple's sign;double vision;exophthalmos;mydriasis;miosis;nystagmus
+synon: psychiatric;amusia;anhedonia;anxiety;apathy;confabulation;depression;delusion;euphoria;homicidal ideation;irritability;mania;paranoid ideation;phobia;suicidal ideation
+synon: pulmonary;apnea;hypopnea;cough;dyspnea;bradypnea;achypnea;orthopnea;platypnea;trepopnea;hemoptysis;pleuritic chest pain;sputum production
+synon: rheumatologic;arthralgia;back pain;sciatica
+synon: urologic;dysuria;hematospermia;hematuria;impotence;polyuria;retrograde ejaculation;strangury;urethral discharge;urinary frequency;urinary incontinence;urinary retention
+synon: integumentary;alopecia;hirsutism;hypertrichosis;abrasion;anasarca;bleeding into the skin;petechia;purpura;ecchymosis;bruising;blister;edema;itching;janeway lesions;osler's node;laceration;rash;urticaria
+synon: otorhinolaryngology;dry mouth;epistaxis;halitosis;hearing loss;nasal discharge;otalgia;otorrhea;sore throat;toothache;tinnitus;trismus
+
+synon: digestion_sys;mouth;teeth;tongue;lips;salivary glands;parotid glands;submandibular glands;sublingual glands;pharynx;esophagus;stomach;small intestine;duodenum;jejunum;ileum;large intestine;cecum;ascending colon;transverse colon;descending colon;sigmoid colon;rectum;liver;gallbladder;mesentery;pancreas;anal canal;appendix
+synon: respiration_sys;nasal cavity;pharynx;larynx;trachea;bronchi;bronchioles;lungs;muscles of breathing
+synon: urinary_sys;kidneys;ureter;bladder;urethra
+synon: reproduction_sys;ovaries;fallopian tubes;uterus;cervix;placenta;vulva;clitoris;vagina;testes;epididymis;vas deferens;seminal vesicles;prostate;bulbourethral glands;external reproductive organs;penis;scrotum
+synon: cirulatory_sys;heart;arteries;veins;capillaries;lymphatic system;lymphatic vessel;lymph node;bone marrow;thymus;spleen;gut-associated lymphoid tissue;tonsils;interstitium
+synon: nervous_sys;brain;cerebrum;cerebral hemispheres;diencephalon or interbrain;thalamus;hypothalamus;midbrain;cerebellum;pons;medulla oblongata;the spinal cord;the ventricular system;choroid plexus;peripheral nervous system;nerves;cranial nerves;spinal nerves;ganglia;enteric nervous system
+synon: sensory_sys;eye;cornea;iris;ciliary body;lens;retina;ear;outer ear;earlobe;eardrum;middle ear;ossicles;inner ear;cochlea;vestibule of the ear;semicircular canals;olfactory epithelium;tongue;taste buds
+synon: integumentary_sys;mammary glands;skin;subcutaneous tissue
+
+key: symptom
+  decomp: * @symptom *
+    reasmb: .
+key: anamnesis
+  decomp: *
+    reasmb: ..
+key: current_prescription
+  decomp: *
+    reasmb: ...
+key: allergies
+  decomp: *
+    reasmb: ....
+key: lifestyle
+  decomp: *
+    reasmb: .....
+key: appointment
+  decomp: *
+    reasmb: ......
+key: deutsch
+  decomp: *
+    reasmb: goto xforeign
+key: francais
+  decomp: *
+    reasmb: goto xforeign
+key: italiano
+  decomp: *
+    reasmb: goto xforeign
+key: espanol
+  decomp: *
+    reasmb: goto xforeign
+key: xforeign
+  decomp: 
+    reasmb: I apologize, I speak only English.
+key: xnone
+  decomp: *
+    reasmb: I apologize, I'm having trouble understanding your response. Could you please rephrase or provide more details so I can better assist you?
+    reasmb: I'm afraid I didn't quite catch that. Can you kindly elaborate on your previous answer or provide more context?
+    reasmb: I'm sorry, I couldn't process your response fully. Could you please try rephrasing or expanding on your answer?
+

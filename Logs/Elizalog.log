@@ -680,3 +680,341 @@ INFO:eliza:[]
 INFO:eliza:Output from xnone: ["I'm", 'not', 'sure', 'I', 'understand', 'you', 'fully.']
 INFO:eliza:[]
 INFO:eliza:Output from xnone: ['Please', 'go', 'on.']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:18:10
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:19:40
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:21:21
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:21:50
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:23:8
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:24:4
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:25:35
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:28:18
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:28:51
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:29:16
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 11:30:54
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:31:7
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 11:32:7
+INFO:__main__:[('was', 1.441), ('i', 1.0), ('can', 0.776), ('no', 0.721)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['You', 'say', '(1)', '?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:33:48
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:34:26
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:37:8
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:38:48
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:45:8
+INFO:eliza:[('medical center', 0.7)]
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:48:1
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:49:45
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:51:13
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:52:3
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:56:35
+INFO:eliza:[('i', 1.0), ('medical center', 0.7)]
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:5:8
+INFO:eliza:[('i', 1.0), ('hospital', 0.7)]
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 12:6:0
+INFO:__main__:[('i', 1.0), ('what', 0.875), ('why', 0.761)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['You', 'say', '(1)', '?']
+INFO:__main__:[('yes', 1.0), ('because', 0.776)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['You', 'seem', 'to', 'be', 'quite', 'positive.']
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 12:8:5
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 12:8:11
+INFO:__main__:[('i', 1.0), ('what', 0.875), ('because', 0.74)]
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 12:9:34
+INFO:__main__:[('i', 1.0), ('what', 0.875), ('why', 0.778), ('because', 0.74)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['You', 'say', '(1)', '?']
+INFO:__main__:[('yes', 1.0)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['You', 'seem', 'to', 'be', 'quite', 'positive.']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:11:37
+INFO:eliza:[('i', 0.705), ('hospital', 0.7)]
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:14:45
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 12:23:56
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:24:18
+INFO:eliza:[('i', 0.705), ('hospital', 0.7)]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 12:25:46
+INFO:__main__:[('i', 1.0), ('what', 0.875), ('why', 0.761)]
+INFO:__main__:Output from xnone: ["I'm", 'not', 'sure', 'I', 'understand', 'you', 'fully.']
+INFO:__main__:[]
+INFO:__main__:Output from xnone: ['Please', 'go', 'on.']
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 12:28:1
+INFO:__main__:[('i', 1.0), ('what', 0.875), ('because', 0.74)]
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 12:28:52
+INFO:__main__:[('i', 1.0), ('what', 0.875), ('because', 0.74)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['You', 'say', '(1)', '?']
+INFO:__main__:[('perhaps', 0.862)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['You', "don't", 'seem', 'quite', 'certain.']
+INFO:__main__:[('i', 1.0), ('am', 1.0)]
+INFO:__main__:Decomp matched: ['*', 'i', 'am', '*']
+INFO:__main__:Reasmb match : ['Is', 'it', 'because', 'you', 'are', '(2)', 'that', 'you', 'came', 'to', 'me', '?']
+INFO:__main__:[('yes', 1.0)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['You', 'seem', 'to', 'be', 'quite', 'positive.']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:29:46
+INFO:eliza:[('i', 0.705), ('hospital', 0.7)]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:31:13
+INFO:eliza:[('i', 28.214), ('hospital', 0.7)]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:31:37
+INFO:eliza:[('i', 28.214), ('hospital', 0.7)]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:34:14
+INFO:eliza:[('i', 28.214), ('hospital', 0.7)]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:35:30
+INFO:eliza:[('i', 28.214), ('hospital', 0.7)]
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 12:38:13
+INFO:__main__:[('was', 1.53), ('i', 1.0), ('can', 0.776), ('always', 0.712)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['You', 'say', '(1)', '?']
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 12:38:44
+INFO:__main__:[('i', 1.0), ('can', 0.776), ('no', 0.721), ('always', 0.712)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['You', 'say', '(1)', '?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:40:51
+INFO:eliza:[('i', 28.214), ('hospital', 0.7)]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 12:41:26
+INFO:__main__:[('i', 1.0), ('can', 0.776), ('no', 0.721), ('always', 0.712)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['You', 'say', '(1)', '?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:45:23
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:46:10
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 12:47:13
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:47:36
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 12:48:21
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:48:34
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:49:58
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:51:0
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 12:51:20
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:51:33
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:53:56
+INFO:eliza:[('i', 28.214), ('hospital', 0.7)]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:55:26
+INFO:eliza:[('i', 28.214), ('hospital', 0.7)]
+INFO:eliza:Decomp matched: ['i', '*', '@hospital']
+INFO:eliza:Reasmb match : ['You', 'gone', 'to', 'an', '(2)']
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 12:55:56
+INFO:__main__:[('i', 1.0), ('can', 0.776), ('no', 0.721), ('always', 0.712)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['You', 'say', '(1)', '?']
+INFO:__main__:[('yes', 1.0)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['You', 'seem', 'to', 'be', 'quite', 'positive.']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 13:3:2
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['Why', '(1)']
+INFO:eliza:[('allergy', 0.7)]
+INFO:eliza:Decomp matched: ['i', '*', '@allergy']
+INFO:eliza:Reasmb match : ['You', 'gone', 'to', 'an', '(2)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 10:38:36
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['I', 'apologize,', "I'm", 'having', 'trouble', 'understanding', 'your', 'response.', 'Could', 'you', 'please', 'rephrase', 'or', 'provide', 'more', 'details', 'so', 'I', 'can', 'better', 'assist', 'you?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 10:39:31
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['I', 'apologize,', "I'm", 'having', 'trouble', 'understanding', 'your', 'response.', 'Could', 'you', 'please', 'rephrase', 'or', 'provide', 'more', 'details', 'so', 'I', 'can', 'better', 'assist', 'you?']
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ["I'm", 'afraid', 'I', "didn't", 'quite', 'catch', 'that.', 'Can', 'you', 'kindly', 'elaborate', 'on', 'your', 'previous', 'answer', 'or', 'provide', 'more', 'context?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 10:51:51
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['I', 'apologize,', "I'm", 'having', 'trouble', 'understanding', 'your', 'response.', 'Could', 'you', 'please', 'rephrase', 'or', 'provide', 'more', 'details', 'so', 'I', 'can', 'better', 'assist', 'you?']
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ["I'm", 'afraid', 'I', "didn't", 'quite', 'catch', 'that.', 'Can', 'you', 'kindly', 'elaborate', 'on', 'your', 'previous', 'answer', 'or', 'provide', 'more', 'context?']
+INFO:eliza:[('anamnesis', 7.0)]
+INFO:eliza:Decomp matched: ['i', '*']
+INFO:eliza:Reasmb match : ['(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 10:54:51
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['I', 'apologize,', "I'm", 'having', 'trouble', 'understanding', 'your', 'response.', 'Could', 'you', 'please', 'rephrase', 'or', 'provide', 'more', 'details', 'so', 'I', 'can', 'better', 'assist', 'you?']
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ["I'm", 'afraid', 'I', "didn't", 'quite', 'catch', 'that.', 'Can', 'you', 'kindly', 'elaborate', 'on', 'your', 'previous', 'answer', 'or', 'provide', 'more', 'context?']
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ["I'm", 'sorry,', 'I', "couldn't", 'process', 'your', 'response', 'fully.', 'Could', 'you', 'please', 'try', 'rephrasing', 'or', 'expanding', 'on', 'your', 'answer?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 10:55:44
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['I', 'apologize,', "I'm", 'having', 'trouble', 'understanding', 'your', 'response.', 'Could', 'you', 'please', 'rephrase', 'or', 'provide', 'more', 'details', 'so', 'I', 'can', 'better', 'assist', 'you?']
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ["I'm", 'afraid', 'I', "didn't", 'quite', 'catch', 'that.', 'Can', 'you', 'kindly', 'elaborate', 'on', 'your', 'previous', 'answer', 'or', 'provide', 'more', 'context?']
+INFO:eliza:[('anamnesis', 0.7)]
+INFO:eliza:Decomp matched: ['i', '*']
+INFO:eliza:Reasmb match : ['(1)']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:30:35
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['I', 'apologize,', "I'm", 'having', 'trouble', 'understanding', 'your', 'response.', 'Could', 'you', 'please', 'rephrase', 'or', 'provide', 'more', 'details', 'so', 'I', 'can', 'better', 'assist', 'you?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:31:37
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ['I', 'apologize,', "I'm", 'having', 'trouble', 'understanding', 'your', 'response.', 'Could', 'you', 'please', 'rephrase', 'or', 'provide', 'more', 'details', 'so', 'I', 'can', 'better', 'assist', 'you?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:32:25
+INFO:eliza:[('i', 1.0), ('perhaps', 0.592), ('deutsch', 0.215)]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['You', 'say', '(1)', '?']
