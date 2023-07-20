@@ -161,3 +161,9 @@ keys = {}
 ```
 [1.] RESET du protoype de generalist.txt, rédaction de tous les synonymes
 ```
+#### 20/07/2023 ####
+```
+[1.] Prise en charge des commentaires dans les fichiers sources avec le symbole # placé au début de ligne
+[2.] Rédaction de generalistGPTsemi.txt
+[3.] Ajout de la partie discussion dans le README.md
+```

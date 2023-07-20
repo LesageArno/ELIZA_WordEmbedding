@@ -128,10 +128,26 @@ Goodbye.  Thank you for talking to me.
 ```python
 import eliza
 
-eliza = eliza.main(WEdict = "glove", TARGET = "doctor.txt", SEUIL = 0.7, WEIGHTED = True, SYNON_EXTENT = False
-                   LOG = False, MATCHLOGS = False, SYNONLOGS = False, entity_form = False, header = False)
+eliza = eliza.main(WEdict = "glove", TARGET = "doctor.txt", SEUIL = 0.7, WEIGHTED = True, SYNON_EXTENT = False, LOG = False, MATCHLOGS = False, SYNONLOGS = False, entity_form = False, header = False)
 ```
 ...or run with parameter interface with __launcher.bat__|__main.py__ 
+
+## Conversation ##
+If you want to talk with Eliza about events, names, etc. You should use __~sentence~__, thus allowing Eliza to interpret the sentence as a word and not a series of words. This is particullarly efficient with enwiki. This synthax allows the use of multi-worded synonyms (such as depression and major depressive disorder)  
+  
+__Exemple:__
+```
+# Without ~~ using PWE 0.7 Enwiki, doctor.txt
+How do you do.  Please tell me your problem.
+> i saw the collapse of the world trade center.
+You say you saw the collapse of the world trade center ?
+
+# With ~~ using PWE 0.7 Enwiki, doctor.txt
+How do you do.  Please tell me your problem.
+> i saw the ~collapse of the world trade center~.
+Can you elaborate on that ?
+
+```
 
 ## Extension ##
 1. if you want to choose *another* Word Embedding system then, you have to use a text file (.txt) in this format :
@@ -145,6 +161,7 @@ Then, put it in the __ELIZA\Initializer\Word2Vec__ folder, and launch with your 
 
 2. if you want to choose *another* source (doctor.txt, SEdoctor.txt, etc.), you have to put your source file (txt format) in the __ELIZA\Initalizer\Target__ folder. This file need to respect this format to work :  
 ```
+#This is a comment (only at the begining of the line)
 initial: ... (1st sentence of the Chatbot, multiple possible)
 
 final: ... (Last sentence of the chatbot, multiple possible)

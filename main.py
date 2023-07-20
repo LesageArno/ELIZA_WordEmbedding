@@ -74,7 +74,7 @@ class App(ctk.CTk):
     def final_call_back(self):
         self.destroy()
     
-    def target_call_back(self, buffer):
+    def target_call_back(self, buffer): #buffer ne sert à rien, juste à éviter une erreur
         if self.target.get().startswith("SE"):
             self.synonextend.select()
         else:

@@ -95,7 +95,7 @@ class Eliza:
         decomp = None
         with open(f"Initializer\\Target\\{self.TARGET}") as file: #Permet d'interpréter le fichier doctor.txt
             for line in file:
-                if not line.strip(): #Pour chaque ligne, si ce n'est pas un espace ou un \n, on continue le programme
+                if not line.strip() or line.startswith("#"): #Pour chaque ligne, si ce n'est pas un espace ou un \n ou un commentaire, on continue le programme
                     continue
                 tag, content = [part.strip() for part in line.split(':')] #Permet de sparer la règle du contenu
                 if tag == 'initial':

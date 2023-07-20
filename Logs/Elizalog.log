@@ -1018,3 +1018,114 @@ INFO:eliza:Session du 2023/7/7 11:32:25
 INFO:eliza:[('i', 1.0), ('perhaps', 0.592), ('deutsch', 0.215)]
 INFO:eliza:Decomp matched: ['*']
 INFO:eliza:Reasmb match : ['You', 'say', '(1)', '?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 10:55:44
+INFO:eliza:[('i', 1.0), ('are', 0.878)]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['You', 'say', '(1)', '?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 10:56:17
+INFO:eliza:[('i', 1.0)]
+INFO:eliza:Decomp matched: ['*', 'i', 'have', '@cardiovascular', '*']
+INFO:eliza:Reasmb match : ['Have', 'you', 'any', 'relative', 'with', '(2)', 'in', 'your', 'family?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 11:15:4
+INFO:eliza:[('i', 0.716)]
+INFO:eliza:Output from xnone: ['I', 'apologize,', "I'm", 'having', 'trouble', 'understanding', 'your', 'response.', 'Could', 'you', 'please', 'rephrase', 'or', 'provide', 'more', 'details', 'so', 'I', 'can', 'better', 'assist', 'you?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:1:43
+INFO:eliza:[('i', 1.0), ('_cannot', 0.7)]
+INFO:eliza:Decomp matched: ['*', 'i', '@_cannot', '@_simple_action', 'normally', '*']
+INFO:eliza:Reasmb match : ['Since', 'when', 'you', "can't", '(3)', 'normally?']
+INFO:eliza:[('i', 0.704), ('_cannot', 0.7)]
+INFO:eliza:Output from xnone: ['I', 'apologize,', "I'm", 'having', 'trouble', 'understanding', 'your', 'response.', 'Could', 'you', 'please', 'rephrase', 'or', 'provide', 'more', 'details', 'so', 'I', 'can', 'better', 'assist', 'you?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:4:6
+INFO:eliza:[('i', 0.704), ('_cannot', 0.7)]
+INFO:eliza:Output from xnone: ['I', 'apologize,', "I'm", 'having', 'trouble', 'understanding', 'your', 'response.', 'Could', 'you', 'please', 'rephrase', 'or', 'provide', 'more', 'details', 'so', 'I', 'can', 'better', 'assist', 'you?']
+INFO:eliza:[('i', 1.0), ('_cannot', 0.7), ('_simple_action', 0.7)]
+INFO:eliza:Decomp matched: ['*', 'i', '@_cannot', '@_simple_action', '*']
+INFO:eliza:Reasmb match : ['Since', 'when', 'you', "can't", '(3)?']
+INFO:eliza:[('i', 0.817), ('_cannot', 0.7)]
+INFO:eliza:Output from xnone: ["I'm", 'afraid', 'I', "didn't", 'quite', 'catch', 'that.', 'Can', 'you', 'kindly', 'elaborate', 'on', 'your', 'previous', 'answer', 'or', 'provide', 'more', 'context?']
+INFO:eliza:[('i', 1.0), ('_cannot', 0.7), ('_simple_action', 0.7)]
+INFO:eliza:Decomp matched: ['*', 'i', '@_cannot', '@_simple_action', 'normally', '*']
+INFO:eliza:Reasmb match : ['Since', 'when', 'you', "can't", '(3)', 'normally?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:5:59
+INFO:eliza:[('i', 1.0), ('_cannot', 0.7), ('_simple_action', 0.7)]
+INFO:eliza:Decomp matched: ['*', 'i', '@_cannot', '@_simple_action', '*']
+INFO:eliza:Reasmb match : ['Since', 'when', 'you', "can't", '(3)', '?']
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 12:13:21
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:14:17
+INFO:eliza:[('i', 1.0)]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['You', 'say', '(1)', '?']
+INFO:eliza:[('i', 1.0)]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['Can', 'you', 'elaborate', 'on', 'that', '?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:32:18
+INFO:eliza:[('was', 2.0), ('i', 1.0), ('what', 0.881), ('because', 0.749), ('no', 0.721)]
+INFO:eliza:Decomp matched: ['*', 'i', 'was', '*']
+INFO:eliza:Reasmb match : ['Were', 'you', 'really', '?']
+INFO:eliza:[('if', 2.195), ('was', 1.7), ('everybody', 1.415), ('yes', 1.0), ('i', 1.0), ('what', 0.881), ('why', 0.875), ('are', 0.85), ('you', 0.839), ('because', 0.719)]
+INFO:eliza:Decomp matched: ['*', '@everyone', '*']
+INFO:eliza:Reasmb match : ['Realy,', '(2)', '?']
+INFO:eliza:[('if', 2.324), ('my', 2.0), ('was', 2.0), ('everyone', 1.806), ('why', 1.0), ('you', 0.9), ('are', 0.878), ('what', 0.855), ('no', 0.809), ('can', 0.776), ('because', 0.776)]
+INFO:eliza:Saved to memory: ['Lets', 'discuss', 'further', 'why', 'your', 'cat', '.']
+INFO:eliza:Decomp matched: ['*', 'my', '*', '@family', '*']
+INFO:eliza:Reasmb match : ['Tell', 'me', 'more', 'about', 'your', 'family.']
+INFO:eliza:[('my', 1.52), ('was', 1.447), ('because', 0.776), ('can', 0.776), ('why', 0.757)]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['Is', 'that', 'the', 'real', 'reason', '?']
+INFO:eliza:[('like', 10.0), ('my', 2.0), ('i', 1.0), ('can', 1.0), ('you', 0.865), ('no', 0.843), ('because', 0.717)]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['In', 'what', 'way', '?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:33:31
+INFO:eliza:[('if', 2.318), ('my', 2.0), ('was', 1.511), ('am', 1.0), ('because', 0.893), ('you', 0.865), ('i', 0.794), ('can', 0.776), ('no', 0.721), ('what', 0.714)]
+INFO:eliza:Saved to memory: ['Lets', 'discuss', 'further', 'why', 'your', 'life', 'is', 'finaly', 'going', 'to', 'change', '.']
+INFO:eliza:Decomp matched: ['*', 'my', '*', '@family', '*']
+INFO:eliza:Reasmb match : ['Tell', 'me', 'more', 'about', 'your', 'family.']
+INFO:eliza:[('dream', 3.0), ('my', 2.0), ('everyone', 1.633), ('was', 1.511), ('you', 0.865), ('no', 0.849), ('can', 0.776), ('because', 0.776), ('i', 0.73), ('what', 0.728)]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['What', 'does', 'that', 'dream', 'suggest', 'to', 'you', '?']
+INFO:eliza:[]
+INFO:eliza:Output from memory: ['Lets', 'discuss', 'further', 'why', 'your', 'life', 'is', 'finaly', 'going', 'to', 'change', '.']
+INFO:eliza:[('i', 1.0), ('am', 1.0), ('you', 0.865), ('can', 0.864), ('no', 0.721)]
+INFO:eliza:Decomp matched: ['*', 'i', '@desire', '*']
+INFO:eliza:Reasmb match : ['What', 'would', 'it', 'mean', 'to', 'you', 'if', 'you', 'got', '(3)', '?']
+INFO:eliza:[('like', 10.0), ('dream', 3.0), ('my', 2.0), ('everyone', 1.633), ('was', 1.511), ('i', 1.0), ('no', 0.814), ('can', 0.776), ('because', 0.769), ('why', 0.757), ('are', 0.757)]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['In', 'what', 'way', '?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:34:37
+INFO:eliza:[('my', 2.0), ('can', 0.776), ('because', 0.766), ('no', 0.721)]
+INFO:eliza:Saved to memory: ['Lets', 'discuss', 'further', 'why', 'your', 'child', 'die', 'few', 'weeks', 'ago', 'due', 'to', 'a', 'brain', 'cancer', '.']
+INFO:eliza:Decomp matched: ['*', 'my', '*', '@family', '*']
+INFO:eliza:Reasmb match : ['Tell', 'me', 'more', 'about', 'your', 'family.']
+INFO:eliza:[('like', 10.0), ('if', 2.195), ('my', 2.0), ('was', 1.53), ('i', 1.0), ('you', 0.838), ('no', 0.814), ('can', 0.776), ('because', 0.734), ('what', 0.714)]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['In', 'what', 'way', '?']
+INFO:eliza:[('like', 10.0), ('was', 1.53)]
+INFO:eliza:Output from memory: ['Lets', 'discuss', 'further', 'why', 'your', 'child', 'die', 'few', 'weeks', 'ago', 'due', 'to', 'a', 'brain', 'cancer', '.']
+INFO:eliza:[('like', 10.0), ('if', 2.195), ('was', 1.7), ('i', 1.0), ('you', 0.885), ('can', 0.883), ('no', 0.849), ('because', 0.751)]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['What', 'resemblence', 'do', 'you', 'see', '?']
+INFO:eliza:[('if', 3.0), ('was', 1.447), ('i', 1.0), ('you', 0.885), ('can', 0.883), ('are', 0.878), ('why', 0.778), ('because', 0.776), ('no', 0.721)]
+INFO:eliza:Decomp matched: ['*', 'if', '*']
+INFO:eliza:Reasmb match : ['Do', 'you', 'think', 'its', 'likely', 'that', '(2)', '?']

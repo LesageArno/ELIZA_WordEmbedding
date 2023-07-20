@@ -28,51 +28,100 @@ post: you;I
 post: my;your
 post: i'm;you are
 
-synon: belief;feel;think;believe;wish
-synon: family;mother;mom;father;dad;sister;brother;wife;children;child
-synon: desire;want;need
-synon: cannot;can't
-synon: be;am;is;are;was
+synon: _belief;feel;think;believe;wish
+synon: _family;mother;mom;father;dad;sister;brother;wife;children;child
+synon: _desire;want;need
+synon: _cannot;can't
+synon: _be;am;is;are;was
 
-synon: cardiovascular;arrhythmia;bradycardia;chest pain;claudication;palpitations;tachycardia
-synon: gastrointestinal;abdominal pain;bloating;belching;hematemesis;blood in stool;melena;hematochezia;constipation;diarrhea;dysphagia;dyspepsia;fecal incontinence;flatulence;heartburn;nausea;odynophagia;proctalgia fugax;pyrosis;rectal tenesmus;steatorrhea;vomiting
-synon: neurological;abnormal posturing;acalculia;agnosia;alexia;amnesia;anomia;anosognosia;aphasia;apraxia;ataxia;cataplexy;confusion;dysarthria;dysdiadochokinesia;dysgraphia;hallucination;headache;hypokinetic movement disorder;akinesia;bradykinesia;hyperkinetic movement disorder;akathisia;athetosis;ballismus;blepharospasm;chorea;dystonia;fasciculation;muscle cramps;myoclonus;opsoclonus;tic;tremor;flapping tremor;insomnia;Lhermitte's sign;loss of consciousness;syncope;neck stiffness;opisthotonus;paralysis;paresis;paresthesia;prosopagnosia;somnolence
-synon: obstetric;gynaecological;abnormal vaginal bleeding;vaginal bleeding in early pregnancy;miscarriage;vaginal bleeding in late pregnancy;amenorrhea;infertility;painful intercourse;pelvic pain;vaginal discharge
-synon: ocular;amaurosis fugax;amaurosis;blurred vision;dalrymple's sign;double vision;exophthalmos;mydriasis;miosis;nystagmus
-synon: psychiatric;amusia;anhedonia;anxiety;apathy;confabulation;depression;delusion;euphoria;homicidal ideation;irritability;mania;paranoid ideation;phobia;suicidal ideation
-synon: pulmonary;apnea;hypopnea;cough;dyspnea;bradypnea;achypnea;orthopnea;platypnea;trepopnea;hemoptysis;pleuritic chest pain;sputum production
-synon: rheumatologic;arthralgia;back pain;sciatica
-synon: urologic;dysuria;hematospermia;hematuria;impotence;polyuria;retrograde ejaculation;strangury;urethral discharge;urinary frequency;urinary incontinence;urinary retention
-synon: integumentary;alopecia;hirsutism;hypertrichosis;abrasion;anasarca;bleeding into the skin;petechia;purpura;ecchymosis;bruising;blister;edema;itching;janeway lesions;osler's node;laceration;rash;urticaria
-synon: otorhinolaryngology;dry mouth;epistaxis;halitosis;hearing loss;nasal discharge;otalgia;otorrhea;sore throat;toothache;tinnitus;trismus
+synon: _cardiovascular;arrhythmia;bradycardia;chest pain;claudication;palpitations;tachycardia
+synon: _gastrointestinal;abdominal pain;bloating;belching;hematemesis;blood in stool;melena;hematochezia;constipation;diarrhea;dysphagia;dyspepsia;fecal incontinence;flatulence;heartburn;nausea;odynophagia;proctalgia fugax;pyrosis;rectal tenesmus;steatorrhea;vomiting
+synon: _neurological;abnormal posturing;acalculia;agnosia;alexia;amnesia;anomia;anosognosia;aphasia;apraxia;ataxia;cataplexy;confusion;dysarthria;dysdiadochokinesia;dysgraphia;hallucination;headache;hypokinetic movement disorder;akinesia;bradykinesia;hyperkinetic movement disorder;akathisia;athetosis;ballismus;blepharospasm;chorea;dystonia;fasciculation;muscle cramps;myoclonus;opsoclonus;tic;tremor;flapping tremor;insomnia;Lhermitte's sign;loss of consciousness;syncope;neck stiffness;opisthotonus;paralysis;paresis;paresthesia;prosopagnosia;somnolence
+synon: _obstetric;gynaecological;abnormal vaginal bleeding;vaginal bleeding in early pregnancy;miscarriage;vaginal bleeding in late pregnancy;amenorrhea;infertility;painful intercourse;pelvic pain;vaginal discharge
+synon: _ocular;amaurosis fugax;amaurosis;blurred vision;dalrymple's sign;double vision;exophthalmos;mydriasis;miosis;nystagmus
+synon: _psychiatric;amusia;anhedonia;anxiety;apathy;confabulation;depression;delusion;euphoria;homicidal ideation;irritability;mania;paranoid ideation;phobia;suicidal ideation
+synon: _pulmonary;apnea;hypopnea;cough;dyspnea;bradypnea;achypnea;orthopnea;platypnea;trepopnea;hemoptysis;pleuritic chest pain;sputum production
+synon: _rheumatologic;arthralgia;back pain;sciatica
+synon: _urologic;dysuria;hematospermia;hematuria;impotence;polyuria;retrograde ejaculation;strangury;urethral discharge;urinary frequency;urinary incontinence;urinary retention
+synon: _integumentary;alopecia;hirsutism;hypertrichosis;abrasion;anasarca;bleeding into the skin;petechia;purpura;ecchymosis;bruising;blister;edema;itching;janeway lesions;osler's node;laceration;rash;urticaria
+synon: _otorhinolaryngology;dry mouth;epistaxis;halitosis;hearing loss;nasal discharge;otalgia;otorrhea;sore throat;toothache;tinnitus;trismus
 
-synon: digestion_sys;mouth;teeth;tongue;lips;salivary glands;parotid glands;submandibular glands;sublingual glands;pharynx;esophagus;stomach;small intestine;duodenum;jejunum;ileum;large intestine;cecum;ascending colon;transverse colon;descending colon;sigmoid colon;rectum;liver;gallbladder;mesentery;pancreas;anal canal;appendix
-synon: respiration_sys;nasal cavity;pharynx;larynx;trachea;bronchi;bronchioles;lungs;muscles of breathing
-synon: urinary_sys;kidneys;ureter;bladder;urethra
-synon: reproduction_sys;ovaries;fallopian tubes;uterus;cervix;placenta;vulva;clitoris;vagina;testes;epididymis;vas deferens;seminal vesicles;prostate;bulbourethral glands;external reproductive organs;penis;scrotum
-synon: cirulatory_sys;heart;arteries;veins;capillaries;lymphatic system;lymphatic vessel;lymph node;bone marrow;thymus;spleen;gut-associated lymphoid tissue;tonsils;interstitium
-synon: nervous_sys;brain;cerebrum;cerebral hemispheres;diencephalon or interbrain;thalamus;hypothalamus;midbrain;cerebellum;pons;medulla oblongata;the spinal cord;the ventricular system;choroid plexus;peripheral nervous system;nerves;cranial nerves;spinal nerves;ganglia;enteric nervous system
-synon: sensory_sys;eye;cornea;iris;ciliary body;lens;retina;ear;outer ear;earlobe;eardrum;middle ear;ossicles;inner ear;cochlea;vestibule of the ear;semicircular canals;olfactory epithelium;tongue;taste buds
-synon: integumentary_sys;mammary glands;skin;subcutaneous tissue
+synon: _digestion_sys;mouth;teeth;tongue;lips;salivary glands;parotid glands;submandibular glands;sublingual glands;pharynx;esophagus;stomach;small intestine;duodenum;jejunum;ileum;large intestine;cecum;ascending colon;transverse colon;descending colon;sigmoid colon;rectum;liver;gallbladder;mesentery;pancreas;anal canal;appendix
+synon: _respiration_sys;nasal cavity;pharynx;larynx;trachea;bronchi;bronchioles;lungs;muscles of breathing
+synon: _urinary_sys;kidneys;ureter;bladder;urethra
+synon: _reproduction_sys;ovaries;fallopian tubes;uterus;cervix;placenta;vulva;clitoris;vagina;testes;epididymis;vas deferens;seminal vesicles;prostate;bulbourethral glands;external reproductive organs;penis;scrotum
+synon: _cirulatory_sys;heart;arteries;veins;capillaries;lymphatic system;lymphatic vessel;lymph node;bone marrow;thymus;spleen;gut-associated lymphoid tissue;tonsils;interstitium
+synon: _nervous_sys;brain;cerebrum;cerebral hemispheres;diencephalon or interbrain;thalamus;hypothalamus;midbrain;cerebellum;pons;medulla oblongata;the spinal cord;the ventricular system;choroid plexus;peripheral nervous system;nerves;cranial nerves;spinal nerves;ganglia;enteric nervous system
+synon: _sensory_sys;eye;cornea;iris;ciliary body;lens;retina;ear;outer ear;earlobe;eardrum;middle ear;ossicles;inner ear;cochlea;vestibule of the ear;semicircular canals;olfactory epithelium;tongue;taste buds
+synon: _integumentary_sys;mammary glands;skin;subcutaneous tissue
 
-key: symptom
-  decomp: * @symptom *
-    reasmb: .
-key: anamnesis
-  decomp: *
-    reasmb: ..
-key: current_prescription
-  decomp: *
-    reasmb: ...
-key: allergies
-  decomp: *
-    reasmb: ....
-key: lifestyle
-  decomp: *
-    reasmb: .....
-key: appointment
-  decomp: *
-    reasmb: ......
+synon: _feelings;chills;fever;paresthesia;light-headed;dizzy;nauseated;sick;short of breath;sleepy;sweaty;thirsty;tired;weak
+synon: _simple_action;breathe;hear;move one side;bowel action;pass urine;remember;see;sleep;smell things;speak;passing watery bowel;scratching;sweating;swallow;taste properly;walk;write
+#pass at the begining, stop at the begining, normally at the end
+synon: _simple_body_part;abdomen;back;chest;head;pelvis;tooth;leg;arm
+
+
+
+key: i
+  decomp: * i @_cannot pass @_simple_action *
+    reasmb: Since when you can't pass (3)?
+  decomp: * i @_cannot stop @_simple_action *
+    reasmb: Since when you can't stop (3)?
+  decomp: * i @_cannot @_simple_action normally *
+    reasmb: Since when you can't (3) normally?
+  decomp: * i @_cannot @_simple_action *
+    reasmb: Since when you can't (3) ?
+
+  decomp: * i @_feelings *
+    reasmb: Since when you feel (2) ?
+
+  decomp: * i have @_cardiovascular *
+    reasmb: Have you any relative with (2) in your family?
+  decomp: * i have @_gastrointestinal *
+    reasmb: Have you any relative with (2) in your family?
+  decomp: * i have @_neurological *
+    reasmb: Have you any relative with (2) in your family?
+  decomp: * i have @_obstetric *
+    reasmb: Have you any relative with (2) in your family?
+  decomp: * i have @_ocular *
+    reasmb: Have you any relative with (2) in your family?
+  decomp: * i have @_psychiatric *
+    reasmb: Have you any relative with (2) in your family?
+  decomp: * i have @_pulmonary *
+    reasmb: Have you any relative with (2) in your family?
+  decomp: * i have @_rheumatologic *
+    reasmb: Have you any relative with (2) in your family?
+  decomp: * i have @_integumentary *
+    reasmb: Have you any relative with (2) in your family?
+  decomp: * i have @_otorhinolaryngology *
+    reasmb: Have you any relative with (2) in your family?
+
+key: my
+  decomp: * my @_simple_body_part hurts *
+    reasmb: Since when your (2) hurts?
+    reasmb: I appreciate you sharing that your (2) hurts. To assist your doctor during the examination, could you describe the location, severity, and any factors that worsen or alleviate the pain? Any additional details will be valuable for a thorough evaluation.
+  decomp: * my @family have @_cardiovascular *
+    reasmb: Thanks you for saying that your (2) have (3), this will help during the appointment. Have you anything else to declare?
+  decomp: * my @family have @_gastrointestinal *
+    reasmb: Thanks you for saying that your (2) have (3), this will help during the appointment. Have you anything else to declare?
+  decomp: * my @family have @_neurological *
+    reasmb: Thanks you for saying that your (2) have (3), this will help during the appointment. Have you anything else to declare?
+  decomp: * my @family have @_obstetric *
+    reasmb: Thanks you for saying that your (2) have (3), this will help during the appointment. Have you anything else to declare?
+  decomp: * my @family have @_ocular *
+    reasmb: Thanks you for saying that your (2) have (3), this will help during the appointment. Have you anything else to declare?
+  decomp: * my @family have @_psychiatric *
+    reasmb: Thanks you for saying that your (2) have (3), this will help during the appointment. Have you anything else to declare?
+  decomp: * my @family have @_pulmonary *
+    reasmb: Thanks you for saying that your (2) have (3), this will help during the appointment. Have you anything else to declare?
+  decomp: * my @family have @_rheumatologic *
+    reasmb: Thanks you for saying that your (2) have (3), this will help during the appointment. Have you anything else to declare?
+  decomp: * my @family have @_integumentary *
+    reasmb: Thanks you for saying that your (2) have (3), this will help during the appointment. Have you anything else to declare?
+  decomp: * my @family have @_otorhinolaryngology *
+    reasmb: Thanks you for saying that your (2) have (3), this will help during the appointment. Have you anything else to declare?
+
+
 key: deutsch
   decomp: *
     reasmb: goto xforeign
