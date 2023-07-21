@@ -1129,3 +1129,30 @@ INFO:eliza:Reasmb match : ['What', 'resemblence', 'do', 'you', 'see', '?']
 INFO:eliza:[('if', 3.0), ('was', 1.447), ('i', 1.0), ('you', 0.885), ('can', 0.883), ('are', 0.878), ('why', 0.778), ('because', 0.776), ('no', 0.721)]
 INFO:eliza:Decomp matched: ['*', 'if', '*']
 INFO:eliza:Reasmb match : ['Do', 'you', 'think', 'its', 'likely', 'that', '(2)', '?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 10:59:12
+INFO:eliza:[('my', 2.0), ('i', 1.0), ('you', 0.882), ('what', 0.786), ('can', 0.776)]
+INFO:eliza:Saved to memory: ['Lets', 'discuss', 'further', 'why', 'your', 'psychic', 'capabilities', '.']
+INFO:eliza:Decomp matched: ['*', 'my', '*']
+INFO:eliza:Reasmb match : ['Your', '(2)', '?']
+INFO:eliza:Loading files...
+INFO:eliza:Succes
+INFO:eliza:Session du 2023/7/7 12:5:46
+INFO:eliza:[('if', 2.318), ('my', 2.0), ('was', 1.511), ('am', 1.0), ('because', 0.893), ('you', 0.865), ('i', 0.794), ('can', 0.776), ('no', 0.721), ('what', 0.714)]
+INFO:eliza:Saved to memory: ['Lets', 'discuss', 'further', 'why', 'your', 'life', 'is', 'finaly', 'going', 'to', 'change', '.']
+INFO:eliza:Decomp matched: ['*', 'my', '*', '@family', '*']
+INFO:eliza:Reasmb match : ['Tell', 'me', 'more', 'about', 'your', 'family.']
+INFO:eliza:[('dream', 3.0), ('my', 2.0), ('everyone', 1.633), ('was', 1.511), ('you', 0.865), ('no', 0.849), ('can', 0.776), ('because', 0.776), ('i', 0.73), ('what', 0.728)]
+INFO:eliza:Decomp matched: ['*']
+INFO:eliza:Reasmb match : ['What', 'does', 'that', 'dream', 'suggest', 'to', 'you', '?']
+INFO:eliza:[]
+INFO:eliza:Output from memory: ['Lets', 'discuss', 'further', 'why', 'your', 'life', 'is', 'finaly', 'going', 'to', 'change', '.']
+INFO:eliza:[('i', 1.0), ('am', 1.0), ('you', 0.865), ('can', 0.864), ('no', 0.721)]
+INFO:eliza:Decomp matched: ['*', 'i', '@desire', '*']
+INFO:eliza:Reasmb match : ['What', 'would', 'it', 'mean', 'to', 'you', 'if', 'you', 'got', '(3)', '?']
+INFO:eliza:[]
+INFO:eliza:Output from xnone: ["I'm", 'not', 'sure', 'I', 'understand', 'you', 'fully.']
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/7/7 12:35:24

@@ -167,3 +167,7 @@ keys = {}
 [2.] Rédaction de generalistGPTsemi.txt
 [3.] Ajout de la partie discussion dans le README.md
 ```
+#### 21/07/2023 ####
+```
+[1.] main.py commenté
+```

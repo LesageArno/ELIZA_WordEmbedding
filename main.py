@@ -4,15 +4,16 @@ import os
 
 class App(ctk.CTk):
     def __init__(self):
-        super().__init__()
+        ## Configutation de base de l'application ##
+        super().__init__() 
         self.geometry("300x400")
         self.title("ELIZA APP")
         self.wm_resizable(width = False, height = False)
         
+        ## Titre, partie 1 ##
+        self.labelmenue = ctk.CTkLabel(self, text = "ELIZA WE", font = ctk.CTkFont("Arial BLACK"))
         
-        self.labelmenue = ctk.CTkLabel(self, text = "ELIZA", font = ctk.CTkFont("Arial BLACK"))
-        
-        
+        ## Détection des Word2Vec connus et inconnus + chagement de nom des connus ##
         optionmenuevalue = os.listdir("Initializer\\Word2Vec")
         try:
             optionmenuevalue.remove("glove.6B.100d.txt")
@@ -24,34 +25,44 @@ class App(ctk.CTk):
             optionmenuevalue.insert(1,"enwiki")
         except:
             ...
+        
+        ## Liste des Word2Vec ##
         self.optionmenue = ctk.CTkOptionMenu(self,values = optionmenuevalue, anchor = "w", font = ctk.CTkFont("Arial"), command = self.WE_call_back)
         
+        ## Détection et listage automatique des fichiers sources ##
         self.target = ctk.CTkOptionMenu(self,values = os.listdir("Initializer\\Target"), anchor = "w", font = ctk.CTkFont("Arial"), command = self.target_call_back)
         self.target.set("doctor.txt")
         
-        self.weighted = ctk.CTkSwitch(self, text = "Pondérer", font = ctk.CTkFont("Arial"))
-        self.weighted.select()
-              
-        self.seuil = ctk.CTkEntry(self, placeholder_text = "Seuil", font = ctk.CTkFont("Arial"))
-        
-        self.labelsubmenue = ctk.CTkLabel(self, text = "Show", font = ctk.CTkFont("Arial BLACK"))
-        
-        self.log = ctk.CTkCheckBox(self, text = "logging", font = ctk.CTkFont("Arial"))
-        
-        self.matchlog = ctk.CTkCheckBox(self, text = "matching", font = ctk.CTkFont("Arial"))
-        
-        self.synonlog = ctk.CTkCheckBox(self, text = "synonlog", font = ctk.CTkFont("Arial"))
-        
-        self.confirm = ctk.CTkButton(self, text = "ELIZA", font = ctk.CTkFont("Arial BLACK"), fg_color = "darkgreen", command = self.eliza_call_back)
-        
-        self.final = ctk.CTkButton(self, text = "Quitter", command = self.final_call_back,
-                                     font = ctk.CTkFont("Arial BLACK"), fg_color = "darkred")
-        
-        self.synonextend = ctk.CTkCheckBox(self, text = "SynonExtend", font = ctk.CTkFont("Arial"), fg_color="darkorange")
-        
+        ## Spécification du fichier Word2Vec ##
         self.header = ctk.CTkSwitch(self, text = "header", font = ctk.CTkFont("Arial"), state = "disabled")
         self.entity = ctk.CTkSwitch(self, text = "entity", font = ctk.CTkFont("Arial"), state = "disabled")
         
+        ## Définition du seuil entre 0 et 1 ##      
+        self.seuil = ctk.CTkEntry(self, placeholder_text = "Seuil", font = ctk.CTkFont("Arial"))
+        
+        ## Utilisation de PWE ou WE, PWE par défaut ##
+        self.weighted = ctk.CTkSwitch(self, text = "Pondérer", font = ctk.CTkFont("Arial"))
+        self.weighted.select()
+        
+        ## Titre, partie 2 ##
+        self.labelsubmenue = ctk.CTkLabel(self, text = "Show", font = ctk.CTkFont("Arial BLACK"))
+        
+        ## Utilisation des logs, par défaut on n'enregistre pas les informations détaillé dans les logs ##
+        self.log = ctk.CTkCheckBox(self, text = "logging", font = ctk.CTkFont("Arial"))
+        self.matchlog = ctk.CTkCheckBox(self, text = "matching", font = ctk.CTkFont("Arial"))
+        self.synonlog = ctk.CTkCheckBox(self, text = "synonlog", font = ctk.CTkFont("Arial"))
+        
+        ## Si on utilise la version modifié des synonymes ##
+        self.synonextend = ctk.CTkCheckBox(self, text = "SynonExtend", font = ctk.CTkFont("Arial"), fg_color="darkorange")
+        
+        ## Lancement d'ELIZA ##
+        self.confirm = ctk.CTkButton(self, text = "ELIZA", font = ctk.CTkFont("Arial BLACK"), fg_color = "darkgreen", command = self.eliza_call_back)
+        
+        ## Quitter ELIZA ##
+        self.final = ctk.CTkButton(self, text = "Quitter", command = self.final_call_back,
+                                     font = ctk.CTkFont("Arial BLACK"), fg_color = "darkred")
+        
+        ## On affiche tout sur l'interface
         self.labelmenue.pack()
         self.target.pack()
         self.optionmenue.pack()
@@ -71,15 +82,18 @@ class App(ctk.CTk):
         self.confirm.pack()
         self.final.pack()
         
+    ## Fonction pour quitter l'interface ##    
     def final_call_back(self):
         self.destroy()
     
+    ## Si le nom du fichier source commence par SE, on sélectionne l'extension de synonymes ##
     def target_call_back(self, buffer): #buffer ne sert à rien, juste à éviter une erreur
         if self.target.get().startswith("SE"):
             self.synonextend.select()
         else:
             self.synonextend.deselect()
-            
+    
+    ## Paramétrage automatique des fichier Word2Vec par défaut ##
     def WE_call_back(self, buffer):
         self.header.configure(state = "normal")
         self.entity.configure(state = "normal")
@@ -95,7 +109,7 @@ class App(ctk.CTk):
             self.header.configure(state = "disabled")
             self.entity.configure(state = "disabled")
             
-    
+    ## Lancement d'ELIZA ##
     def eliza_call_back(self):
         if self.seuil.get() == "":
             seuil = 0
@@ -116,10 +130,8 @@ class App(ctk.CTk):
             except:
                 if input("Error : do you want to restart ? (y/n) : ") == "y":
                     self.eliza_call_back()
-            '''
-            
-        
+            '''   
     
-    
-app = App()
-app.mainloop()
+if __name__ == "__main__":    
+    app = App()
+    app.mainloop()

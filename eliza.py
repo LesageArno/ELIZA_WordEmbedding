@@ -274,7 +274,7 @@ class Eliza:
         text = re.sub(r'\s*\.+\s*', ' . ', text) #Transforme les ",,;;;...." en " ,  ;  . "
         text = re.sub(r'\s*,+\s*', ' , ', text)
         text = re.sub(r'\s*;+\s*', ' ; ', text)
-        text = text.replace(".","")
+        text = text.replace(".","") # Evite que word! ne soit pas interprété comme word
         text = text.replace(",","")
         text = text.replace(";","")
         text = text.replace("?","")
@@ -296,12 +296,12 @@ class Eliza:
        
         subject_string = ""
         subject = False
-        words_save = words[:]
+        words_save = words[:] #Copie des mots
         for w in words:
             if w.startswith("~"): #Si c'est un sujet, alors on enregistre le sujet et on évalue le sujet plutôt que mots par mots
                 wordindex = words.index(w)
                 subject_string += w[1:]
-                words_save.pop(wordindex)
+                words_save.pop(wordindex) #On remplace avec les pop et les insert à la même place la phrase au lieu du mot
                 subject = True
                 continue
             elif w.endswith("~"):
@@ -397,8 +397,8 @@ class Eliza:
                 f.write(str(self.synonlist)+"\n")
         
 def main(WEdict = "glove", TARGET = "doctor.txt", SEUIL = 0.7, WEIGHTED = True, LOG = False, 
-         MATCHLOGS = False, SYNON_EXTENT = False, SYNONLOGS = False, 
-         entity_form = False, header = False): #Lancement d'Eliza
+         MATCHLOGS = False, SYNON_EXTENT = False, SYNONLOGS = False, entity_form = False, header = False): #Lancement d'Eliza
+    
     logging.basicConfig(filename="Logs\\Elizalog.log",level=logging.DEBUG,encoding='utf-8') #On génère un log d'eliza
     eliza = Eliza(TARGET = TARGET, SEUIL = SEUIL, WEIGHTED = WEIGHTED, LOG = LOG, 
                   MATCHLOGS = MATCHLOGS, SYNON_EXTENT = SYNON_EXTENT, SYNONLOGS = SYNONLOGS) #LOG = True pour avoir les log (il y en a beaucoups)

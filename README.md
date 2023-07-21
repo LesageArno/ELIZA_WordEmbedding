@@ -2,14 +2,14 @@
 
 Based on Wade Brainerd's version in Python, at https://github.com/wadetb/eliza
 
-In the initial README.md Wade Brainerd said about ELIZA in Python : 
+In the initial README.md Wade Brainerd said about ELIZA in Python :  
 
         I feel that it is fairly complete. However there are some holes, as the library was written immediately prior to my discovery of Joseph Weizenbaum's own description of the original program, which is quite detailed, along with the original "doctor" script. Oh well. A copy of that article is provided in the repo as a reference to the correct behavior.  
   
 This project has as a goal to adapt Eliza to the modern technique of the Chatbot using Word Embedding, it's not complete, we could note some *grammatical or syntactical error* in the chatbot responses (especially if the setting SYNON_EXTENT is True). This can be explained either by how the word embeddings were calculated (with enwiki and glove, *glove is better* because his definition of "near" is more linked with the natural definition) or the source (doctor.txt, ...).
 
 ## Before using ##
-Before using, you must either download the __GloVe WordEmbeding__ (recommended), available at *http://web.archive.org/web/20230410222048/https://downloads.cs.stanford.edu/nlp/data/glove.6B.zip*   
+Before using, you must either download the __GloVe WordEmbeding__ (recommended), available at *http://web.archive.org/web/20230410222048/https://downloads.cs.stanford.edu/nlp/data/glove.6B.zip*,   
 or the __ENwiki WordEmbeding__, available at *http://wikipedia2vec.s3.amazonaws.com/models/en/2018-04-20/enwiki_20180420_100d.txt.bz2*.
 
 After unpacking one of these WordEmbeding, put the file (enwiki_20180420_100d.txt|glove.6B.100d.txt) in the ELIZA\Initializer\Word2Vec (you have to keep the name of the file, see ```Architecture```), then just execute __launcher.bat__ or run __main.py__|__eliza.py__
