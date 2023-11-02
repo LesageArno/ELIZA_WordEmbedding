@@ -12,6 +12,8 @@ This project has as a goal to adapt Eliza to the modern technique of the Chatbot
 Before using, you must either download the __GloVe WordEmbeding__ (recommended), available at *http://web.archive.org/web/20230410222048/https://downloads.cs.stanford.edu/nlp/data/glove.6B.zip*,   
 or the __ENwiki WordEmbeding__, available at *http://wikipedia2vec.s3.amazonaws.com/models/en/2018-04-20/enwiki_20180420_100d.txt.bz2*.
 
+If you don't want install theses files, you can still use the GPT-2 WE under devlopment, but downloading theses files takes around 20 minutes.
+
 After unpacking one of these WordEmbeding, put the file (enwiki_20180420_100d.txt|glove.6B.100d.txt) in the ELIZA\Initializer\Word2Vec (you have to keep the name of the file, see ```Architecture```), then just execute __launcher.bat__ or run __main.py__|__eliza.py__
 
 ```
