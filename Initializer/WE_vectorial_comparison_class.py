@@ -73,7 +73,7 @@ class VecorialComparison:
         return np.array(list(map(float,self.dicVec.get(word).split(" ")))) if self.dicVec.get(word) is not None else None
 
 def main():
-    test = VecorialComparison("glove")
+    test = VecorialComparison("gpt-2")
     while True:
         text = input("Expression 1 : ")
         if text == "--0--":

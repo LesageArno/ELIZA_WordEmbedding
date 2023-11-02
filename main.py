@@ -25,6 +25,11 @@ class App(ctk.CTk):
             optionmenuevalue.insert(1,"enwiki")
         except:
             ...
+        try:
+            optionmenuevalue.remove("gpt-2.txt")
+            optionmenuevalue.insert(1,"gpt-2")
+        except:
+            ...
         
         ## Liste des Word2Vec ##
         self.optionmenue = ctk.CTkOptionMenu(self,values = optionmenuevalue, anchor = "w", font = ctk.CTkFont("Arial"), command = self.WE_call_back)

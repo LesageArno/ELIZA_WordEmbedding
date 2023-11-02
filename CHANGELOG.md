@@ -171,3 +171,15 @@ keys = {}
 ```
 [1.] main.py commenté
 ```
+#### 02/11/2023 ####
+```
+[1.] Ajout du Word Embedding de GPT-2 :
+```
+- Création de GPT2WEGetter.py, qui a pour objectif de récupérer le Word Embedding depuis transformers
+- Modification du WEdict_creator pour prendre en charge différents types d'encodages pour le texte.
+- Modification de main.py pour rajouter l'accès au Word Embedding de gpt-2
+```
+[2.] Détection de problème avec le WE de GPT-2 :
+```
+- Le lien entre des élement proches sont du même ordre de grandeur que ceux qui ne le sont pas
+- Potentielle solution par une correction de (cos(θ)-0.99)*100 pour gpt-2

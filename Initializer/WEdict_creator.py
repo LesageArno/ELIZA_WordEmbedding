@@ -11,7 +11,7 @@ countline = 0
 dictionary = dict()
 
 class Creator():
-    def __init__(self, Word2Vec = "glove", entity_form = False, header = False) -> None:
+    def __init__(self, Word2Vec = "glove", entity_form = False, header = False, encoding = "utf-8") -> None:
         """_summary_
         Args:
             Word2Vec (str, optional): Word2Vec files from ["glove","enwiki"] or specify the path. Defaults to "glove".
@@ -22,10 +22,13 @@ class Creator():
             file_path = __file__.removesuffix("WEdict_creator.py")+"Word2Vec\\glove.6B.100d.txt" #__file__+... permet de récupérer le fichier depuis Initializer et non ELIZA_APP
         elif Word2Vec == "enwiki":
             file_path = __file__.removesuffix("WEdict_creator.py")+"Word2Vec\\enwiki_20180420_100d.txt"
+        elif Word2Vec == "gpt-2":
+            file_path = __file__.removesuffix("WEdict_creator.py")+"Word2Vec\\gpt-2.txt"
+            encoding = "raw_unicode_escape" #L'encodage pour gpt-2 est différent
         else:
             file_path = __file__.removesuffix("WEdict_creator.py")+"Word2Vec\\"+Word2Vec
         
-        with open(file = file_path, mode = "r", encoding = "utf-8") as file: #On lit le fichier de word_embeding 
+        with open(file = file_path, mode = "r", encoding = encoding) as file: #On lit le fichier de word_embeding 
             if header == True:
                 file.readline() #On retire la première ligne
             countline = 0
@@ -55,5 +58,6 @@ class Creator():
         #format : {mot <str>:vecteur <str>}
 
 if __name__ == "__main__":
-    Creator("glove",False,False)
-    Creator("enwiki",True,True)
+    Creator("glove",False,False,"utf-8")
+    Creator("enwiki",True,True,"utf-8")
+    Creator("gpt-2",False,False,"raw_unicode_escape")
