@@ -38,7 +38,7 @@ class Action:
 
 class Eliza:
     def __init__(self, TARGET = "doctor.txt",SEUIL = 0.7, WEIGHTED = True, LOG = False, 
-                 MATCHLOGS = False, SYNON_EXTENT = False, SYNONLOGS = True):
+                 MATCHLOGS = False, SYNON_EXTENT = False, SYNONLOGS = True, cosineCorrection = None):
         self.initials = []
         self.finals = []
         self.quits = []
@@ -48,6 +48,7 @@ class Eliza:
         self.synons = {}
         self.keys = {}
         self.memory = []
+        self.cosineCorrection = cosineCorrection
         self.LOG = LOG
         self.SEUIL = SEUIL
         self.MATCHLOGS = MATCHLOGS
@@ -69,6 +70,9 @@ class Eliza:
         if WEdict == "enwiki":
             entity_form = True
             header = True
+        elif WEdict == "gpt-2":
+            #self.cosineCorrection = "Y = (X-0.99)*100 I X > 0.99 E X" #Correction fausse car il y a en dessous de 0.99
+            self.cosineCorrection = None
         
         #Initialisation WE : 
         if not osp.exists(f"Initializer\\Word2VecPreloaded\\WE{WEdict}_dict.pkl"):
@@ -166,9 +170,9 @@ class Eliza:
             if not root in self.synons: #Si la famille de mot est inconnu, on renvoie une erreur si'lon est pas sur un paramètre étendu
                 if not self.SYNON_EXTENT:
                     raise ValueError("Unknown synonym root {}".format(root))
-                elif (self.word2vec.cosineSimilarity(root.lower(), words[0]) if self.word2vec.cosineSimilarity(root.lower(), words[0]) is not None else 0) >= self.SEUIL:
+                elif (self.word2vec.cosineSimilarity(root.lower(), words[0],self.cosineCorrection) if self.word2vec.cosineSimilarity(root.lower(), words[0], self.cosineCorrection) is not None else 0) >= self.SEUIL:
                     if self.SYNONLOGS:
-                        self.synonlist.append((root, words[0], round(self.word2vec.cosineSimilarity(root.lower(), words[0]),3)))
+                        self.synonlist.append((root, words[0], round(self.word2vec.cosineSimilarity(root.lower(), words[0], self.cosineCorrection),3)))
                 else:
                     #...
                     return False
@@ -314,7 +318,7 @@ class Eliza:
                 subject_string += " " + w
                 continue
             
-            cosin = self.word2vec.maxCosineSimilarity(list(self.keys.keys()), w.lower()) #Pour chaque mot, on calcule le maxCosSi,
+            cosin = self.word2vec.maxCosineSimilarity(list(self.keys.keys()), w.lower(), self.cosineCorrection) #Pour chaque mot, on calcule le maxCosSi,
             if (not cosin is None) and cosin[1] >= self.SEUIL: 
                 if self.MATCHLOGS:
                     with open("Logs\\Matchslog.txt","a",encoding="utf-8") as matchslog: #On indique dans les logs que le matchs est validé
@@ -399,9 +403,10 @@ class Eliza:
 def main(WEdict = "glove", TARGET = "doctor.txt", SEUIL = 0.7, WEIGHTED = True, LOG = False, 
          MATCHLOGS = False, SYNON_EXTENT = False, SYNONLOGS = False, entity_form = False, header = False): #Lancement d'Eliza
     
-    logging.basicConfig(filename="Logs\\Elizalog.log",level=logging.DEBUG,encoding='utf-8') #On génère un log d'eliza
+    logging.basicConfig(filename = "Logs\\Elizalog.log", level = logging.DEBUG,encoding = 'utf-8') #On génère un log d'eliza
     eliza = Eliza(TARGET = TARGET, SEUIL = SEUIL, WEIGHTED = WEIGHTED, LOG = LOG, 
-                  MATCHLOGS = MATCHLOGS, SYNON_EXTENT = SYNON_EXTENT, SYNONLOGS = SYNONLOGS) #LOG = True pour avoir les log (il y en a beaucoups)
+                  MATCHLOGS = MATCHLOGS, SYNON_EXTENT = SYNON_EXTENT, SYNONLOGS = SYNONLOGS,
+                  cosineCorrection = None) #LOG = True pour avoir les log (il y en a beaucoups)
     eliza.load()
     eliza.initialize(WEdict, entity_form = entity_form, header = header)
     eliza.run()

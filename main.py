@@ -27,7 +27,7 @@ class App(ctk.CTk):
             ...
         try:
             optionmenuevalue.remove("gpt-2.txt")
-            optionmenuevalue.insert(1,"gpt-2")
+            optionmenuevalue.insert(2,"gpt-2")
         except:
             ...
         
@@ -102,7 +102,7 @@ class App(ctk.CTk):
     def WE_call_back(self, buffer):
         self.header.configure(state = "normal")
         self.entity.configure(state = "normal")
-        if self.optionmenue.get() not in ["glove","enwiki"] :
+        if self.optionmenue.get() not in ["glove","enwiki","gpt-2"] :
             ...
         else:
             if self.optionmenue.get() == "enwiki":

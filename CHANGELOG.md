@@ -183,3 +183,11 @@ keys = {}
 ```
 - Le lien entre des élement proches sont du même ordre de grandeur que ceux qui ne le sont pas
 - Potentielle solution par une correction de (cos(θ)-0.99)*100 pour gpt-2
+
+#### 05/11/2023 ####
+```
+[1.] Word Embedding de GPT-2 quasiment fonctionnel (il faut trouver le bon seuil)
+[2.] Ajout d'un mécanisme de correction du cosinus de similarité (qui ne sert pas à grand chose car il existe finalement des cos(θ) < 0.99 pour GPT-2) :
+```
+- Le mécanisme de correction permet de faire un changement de variable sur le cos(θ), exemple : Y = 3.5*X I X <=0.2 E 0
+- Y : résultat, X : cos(θ), I : if, E : else, A : and, O : or 
