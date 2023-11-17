@@ -191,3 +191,12 @@ keys = {}
 ```
 - Le mécanisme de correction permet de faire un changement de variable sur le cos(θ), exemple : Y = 3.5*X I X <=0.2 E 0
 - Y : résultat, X : cos(θ), I : if, E : else, A : and, O : or 
+
+#### 13/11/2023 ####
+```
+[1.] Implémentation de la distance de manhattan, euclidienne et jacard
+```
+#### 17/11/2023 ####
+```
+[1.] Refonte complète du système de comparaisons de vecteurs, optimisations.
+```

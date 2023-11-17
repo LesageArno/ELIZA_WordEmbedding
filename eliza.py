@@ -170,9 +170,9 @@ class Eliza:
             if not root in self.synons: #Si la famille de mot est inconnu, on renvoie une erreur si'lon est pas sur un paramètre étendu
                 if not self.SYNON_EXTENT:
                     raise ValueError("Unknown synonym root {}".format(root))
-                elif (self.word2vec.cosineSimilarity(root.lower(), words[0],self.cosineCorrection) if self.word2vec.cosineSimilarity(root.lower(), words[0], self.cosineCorrection) is not None else 0) >= self.SEUIL:
+                elif (self.word2vec.computeDistance(root.lower(), words[0], "cosine", self.cosineCorrection) if self.word2vec.computeDistance(root.lower(), words[0], "cosine", self.cosineCorrection) is not None else 0) >= self.SEUIL:
                     if self.SYNONLOGS:
-                        self.synonlist.append((root, words[0], round(self.word2vec.cosineSimilarity(root.lower(), words[0], self.cosineCorrection),3)))
+                        self.synonlist.append((root, words[0], round(self.word2vec.computeDistance(root.lower(), words[0], "cosine", self.cosineCorrection),3)))
                 else:
                     #...
                     return False
