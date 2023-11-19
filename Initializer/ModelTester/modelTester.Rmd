@@ -1,0 +1,34 @@
+---
+title: "modelTester"
+author: "Arno LESAGE"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Model importation
+
+```{r echo=TRUE}
+model <- read.csv2("generatedDump.csv",dec = ".")
+```
+
+## Comparison between Manhattan distance and Cosinus of similarity
+
+```{r echo=TRUE}
+plot(model$Cosine,model$Manhattan, pch = 20, main = "Manhattan distance compared\nto Cosine distance",
+     ylab = "Manhattan distance", xlab = "Cosinus of similarity")
+
+coloredPlot = 1
+for (chatmodel in model$Model) {
+  points(model$Cosine[which(model$Model == chatmodel)],
+         model$Manhattan[which(model$Model == chatmodel)], 
+         pch = 20, col = coloredPlot)
+  coloredPlot = coloredPlot + 1
+}
+
+legend("topleft",legend = unique(model$Model),col = 1:3, pch = 20)
+
+```

@@ -1,0 +1,30 @@
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/11/11 20:53:26
+INFO:__main__:Loading files...
+INFO:__main__:Succes
+INFO:__main__:Session du 2023/11/11 20:54:50
+INFO:__main__:[('you', 0.885), ('are', 0.878)]
+INFO:__main__:Decomp matched: ['*', 'you', '*', 'me', '*']
+INFO:__main__:Reasmb match : ['Why', 'do', 'you', 'think', 'I', '(2)', 'you', '?']
+INFO:__main__:[('because', 1), ('your', 1)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['Is', 'that', 'the', 'real', 'reason', '?']
+INFO:__main__:[('no', 1)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['Are', 'you', 'saying', 'no', 'just', 'to', 'be', 'negative?']
+INFO:__main__:[('no', 1)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['You', 'are', 'being', 'a', 'bit', 'negative.']
+INFO:__main__:[('no', 1)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['Why', 'not', '?']
+INFO:__main__:[('no', 1)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['Why', "'no'", '?']
+INFO:__main__:[('no', 1)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['Are', 'you', 'saying', 'no', 'just', 'to', 'be', 'negative?']
+INFO:__main__:[('yes', 1)]
+INFO:__main__:Decomp matched: ['*']
+INFO:__main__:Reasmb match : ['You', 'seem', 'to', 'be', 'quite', 'positive.']

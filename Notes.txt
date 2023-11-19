@@ -1,0 +1,4 @@
+Faire un comparatif des différentes distances
+-> Trouver une liste de mots clés pertinents pour tester les distances
+-> Faire un graphiques avec les mots clés pour chaque modèle, exemple : Modèle GPT-2 -> cos θ par rapport à la distance de manhattan
+-> Rapport sur R markdown.

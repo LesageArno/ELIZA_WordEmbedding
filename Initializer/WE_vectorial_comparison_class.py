@@ -12,7 +12,6 @@ class VecorialComparison:
             WEdict (str, optional): Word2Vec dict files from ["glove","enwiki"] or specify the path. Defaults to "glove".
         """
         if WEdict == "glove":
-            
             dict_path = __file__.removesuffix("WE_vectorial_comparison_class.py")+"Word2VecPreloaded\\WEglove_dict.pkl"  #__file__+... permet de récupérer le fichier depuis Initializer et non ELIZA_APP
         elif WEdict == "enwiki":
             dict_path = __file__.removesuffix("WE_vectorial_comparison_class.py")+"Word2VecPreloaded\\WEenwiki_dict.pkl"
@@ -126,20 +125,44 @@ class VecorialComparison:
     def getVector(self,word):
         return np.array(list(map(float,self.dicVec.get(word).split(" ")))) if self.dicVec.get(word) is not None else None
 
+
+def generateDumpComparisonCsv(path = __file__.removesuffix("WE_vectorial_comparison_class.py")+"ModelTester\\generatedDump.csv", 
+                              listOfModel = ["enwiki","glove","gpt-2"], listOfWord1 = None, listOfWord2 = None):
+    
+    if listOfWord1 is None or listOfWord2 is None:
+        listOfWord1 = ["brother","nephew","uncle","man","sir","heir","king","earl","emperor","duke",
+                       "slow","short","strong","loud","clear","soft","dark"]
+        listOfWord2 = ["sister","niece","aunt","woman","madam","heiress","queen","countess","empress","duchess",
+                       "slower","shorter","stronger","louder","clearer","softer","darker"]
+    
+    dictOfModel = {model:VecorialComparison(model) for model in listOfModel}
+   
+    with open(path,"w") as file:
+        file.write("Word1;Word2;Model;Cosine;Manhattan;Euclidean;Jaccard\n")
+        for key in dictOfModel:
+            for i in range(len(listOfWord1)):
+                cos = dictOfModel[key].computeDistance(listOfWord1[i],listOfWord2[i],"cosine")
+                manhattan = dictOfModel[key].computeDistance(listOfWord1[i],listOfWord2[i],"manhattan")
+                euclidean = dictOfModel[key].computeDistance(listOfWord1[i],listOfWord2[i],"euclidean")
+                jaccard = dictOfModel[key].computeDistance(listOfWord1[i],listOfWord2[i],"jaccard")
+                file.write(f"{listOfWord1[i]};{listOfWord2[i]};{key};{cos if cos is not None else 'NA'};{manhattan if manhattan is not None else 'NA'};{euclidean if euclidean is not None else 'NA'};{jaccard if jaccard is not None else 'NA'}\n")
+    
 def main():
-    test = VecorialComparison("gpt-2")
+    #comparison = VecorialComparison("gpt-2")
+    generateDumpComparisonCsv()
+    """
     while True:
         text = input("Expression 1 : ")
         if text == "--0--":
             break
         else:
             text2 = input("Expression 2 : ")
-            cos = test.computeDistance(text, text2, "cosine")
-            euclidean = test.computeDistance(text, text2, "euclidean")
-            manhattan = test.computeDistance(text, text2, "manhattan")
-            jaccard = test.computeDistance(text, text2,"jaccard")
+            cos = comparison.computeDistance(text, text2, "cosine")
+            euclidean = comparison.computeDistance(text, text2, "euclidean")
+            manhattan = comparison.computeDistance(text, text2, "manhattan")
+            jaccard = comparison.computeDistance(text, text2,"jaccard")
             
             print(f"Link between {text} and {text2} : \n- Cosinus de similarité : {cos}\n- Distance euclidienne : {euclidean}\n- Distance de Manhattan : {manhattan}\n- Distance de Jaccard : {jaccard}")
-
+    """
 if __name__ == "__main__":
     main()
