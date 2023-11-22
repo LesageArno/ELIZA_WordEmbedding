@@ -37,8 +37,8 @@ class Action:
         Action.no += 1
 
 class Eliza:
-    def __init__(self, TARGET = "doctor.txt",SEUIL = 0.7, WEIGHTED = True, LOG = False, 
-                 MATCHLOGS = False, SYNON_EXTENT = False, SYNONLOGS = True, cosineCorrection = None):
+    def __init__(self, TARGET = "doctor.txt", DISTANCE_MODEL = "cosine", SEUIL = 0.7, WEIGHTED = True, LOG = False, 
+                 MATCHLOGS = False, SYNON_EXTENT = False, SYNONLOGS = True, DISTANCE_CORRECTION = None):
         self.initials = []
         self.finals = []
         self.quits = []
@@ -48,7 +48,8 @@ class Eliza:
         self.synons = {}
         self.keys = {}
         self.memory = []
-        self.cosineCorrection = cosineCorrection
+        self.DISTANCE_CORRECTION = DISTANCE_CORRECTION
+        self.DISTANCE_MODEL = DISTANCE_MODEL
         self.LOG = LOG
         self.SEUIL = SEUIL
         self.MATCHLOGS = MATCHLOGS
@@ -70,9 +71,6 @@ class Eliza:
         if WEdict == "enwiki":
             entity_form = True
             header = True
-        elif WEdict == "gpt-2":
-            #self.cosineCorrection = "Y = (X-0.99)*100 I X > 0.99 E X" #Correction fausse car il y a en dessous de 0.99
-            self.cosineCorrection = None
         
         #Initialisation WE : 
         if not osp.exists(f"Initializer\\Word2VecPreloaded\\WE{WEdict}_dict.pkl"):
@@ -91,7 +89,7 @@ class Eliza:
         log.info(f"Session du {time.localtime().tm_year}/{time.localtime().tm_mon}/{time.localtime().tm_mon} {time.localtime().tm_hour}:{time.localtime().tm_min}:{time.localtime().tm_sec}")
         if self.MATCHLOGS:
             with open("Logs\\Matchslog.txt","a",encoding="utf-8") as matchslog:
-                sentence = f"∙ Poids {'pondérés' if self.WEIGHTED else 'non pondérés'}, seuil = {round(self.SEUIL,2)}, WE = {WEdict}, source = {self.TARGET}, SynonExtent = {self.SYNON_EXTENT} ∙"
+                sentence = f"∙ Poids {'pondérés' if self.WEIGHTED else 'non pondérés'}, seuil = {round(self.SEUIL,4)}, WE = {WEdict}, source = {self.TARGET}, SynonExtent = {self.SYNON_EXTENT} ∙"
                 matchslog.write(f"{'∙'*len(sentence)}\n{sentence}\n{'∙'*len(sentence)}\n")
 
     def load(self): 
@@ -159,7 +157,7 @@ class Eliza:
             return False
         if parts[0] == '*': #Si le premier élement du patron est un joker
             for index in range(len(words), -1, -1): #Pour chaque mot dans la liste de mots
-                if self.LOG: log.debug("%s",index)
+                if self.LOG: log.debug("index _match_decomp_r : %s",index)
                 results.append(words[:index]) #On ajoute à results tous les mots de la liste de mot (jusqu'à l'index)
                 if self._match_decomp_r(parts[1:], words[index:], results): #Nous faisons une récursion pour savoir si le paterne suivant (avec tout le paterne sans le premier élement) match
                     return True #Si c'est le cas, on renvoie True
@@ -168,11 +166,12 @@ class Eliza:
         elif parts[0].startswith('@'): #Si le mot est un synonyme
             root = parts[0][1:] #On prend la famille de mot @family -> family
             if not root in self.synons: #Si la famille de mot est inconnu, on renvoie une erreur si'lon est pas sur un paramètre étendu
+                tempCondition = self.word2vec.computeDistance(root.lower(), words[0], self.DISTANCE_MODEL, self.DISTANCE_CORRECTION) if self.word2vec.computeDistance(root.lower(), words[0], self.DISTANCE_MODEL, self.DISTANCE_CORRECTION) is not None else 0
                 if not self.SYNON_EXTENT:
                     raise ValueError("Unknown synonym root {}".format(root))
-                elif (self.word2vec.computeDistance(root.lower(), words[0], "cosine", self.cosineCorrection) if self.word2vec.computeDistance(root.lower(), words[0], "cosine", self.cosineCorrection) is not None else 0) >= self.SEUIL:
+                elif ((tempCondition >= self.SEUIL and self.DISTANCE_MODEL == "cosine") or (tempCondition <= self.SEUIL and self.DISTANCE_MODEL in ["manhattan","jaccard","euclidean"])):
                     if self.SYNONLOGS:
-                        self.synonlist.append((root, words[0], round(self.word2vec.computeDistance(root.lower(), words[0], "cosine", self.cosineCorrection),3)))
+                        self.synonlist.append((root, words[0], round(self.word2vec.computeDistance(root.lower(), words[0], self.DISTANCE_MODEL, self.DISTANCE_CORRECTION),3)))
                 else:
                     #...
                     return False
@@ -205,7 +204,7 @@ class Eliza:
         return result
 
     def _reassemble(self, reasmb, results): #Fonction de réassamblage
-        if self.LOG: log.debug("%s | %s",reasmb,results)
+        if self.LOG: log.debug("_reassemble - reasmb and reslut : %s | %s",reasmb,results)
         output = []
         for reword in reasmb: #Pour chaque mot dans la clé d'assemblage
             if not reword: #Si elle est vide, on passe au mot suivant dans la clé d'assembalge
@@ -318,19 +317,23 @@ class Eliza:
                 subject_string += " " + w
                 continue
             
-            cosin = self.word2vec.maxCosineSimilarity(list(self.keys.keys()), w.lower(), self.cosineCorrection) #Pour chaque mot, on calcule le maxCosSi,
-            if (not cosin is None) and cosin[1] >= self.SEUIL: 
+            nearestDist = self.word2vec.nearestDistance(keys_list = list(self.keys.keys()), 
+                                                  word = w.lower(),
+                                                  method = self.DISTANCE_MODEL,
+                                                  correction = self.DISTANCE_CORRECTION) #Pour chaque mot, on calcule la distance selon le model,
+
+            if (nearestDist is not None) and ((nearestDist[1] >= self.SEUIL and self.DISTANCE_MODEL == "cosine") or (self.DISTANCE_MODEL in ["manhattan", "jaccard", "euclidean"] and nearestDist[1] <= self.SEUIL)) : 
                 if self.MATCHLOGS:
                     with open("Logs\\Matchslog.txt","a",encoding="utf-8") as matchslog: #On indique dans les logs que le matchs est validé
                         matchslog.write(f"[o]")
                 
                 #Si None n'est pas renvoyé, c'est que le mot est bien dans le dictionnaire et que le seuil est vérifié
                 if self.WEIGHTED:
-                    keys[cosin[0]] = round(cosin[1]*self.keys[cosin[0]].weight,3) #Dans ce cas on enregistre le mot, le poids adapté, si l'option est enclenché
+                    keys[nearestDist[0]] = round(nearestDist[1]*self.keys[nearestDist[0]].weight,3) #Dans ce cas on enregistre le mot, le poids adapté, si l'option est enclenché
                 else:
-                    keys[cosin[0]] = round(cosin[1],3) # Si ce n'est pas pondéré alors, nous arrondissons juste le résultat  
+                    keys[nearestDist[0]] = round(nearestDist[1],3) # Si ce n'est pas pondéré alors, nous arrondissons juste le résultat  
             
-            elif cosin is None: #Si le mot (principalement groupement de mot) n'est pas reconnu
+            elif nearestDist is None: #Si le mot (principalement groupement de mot) n'est pas reconnu
                 for root, synon in self.synons.items(): #Mais qu'il est dans les synonymes
                     if w in synon:
                         keys[root] = self.SEUIL #Alors on l'enregistre quand même sous son root et on lui attribut le poid du seuil
@@ -340,12 +343,15 @@ class Eliza:
                         break
             if self.MATCHLOGS:    
                 with open("Logs\\Matchslog.txt","a",encoding="utf-8") as matchslog: #On enregistre dans les logs le matchs
-                    matchslog.write(f"{w} {cosin[0] if not cosin is None else ''} ({round(cosin[1],3) if not cosin is None else ''}) [{round(keys[cosin[0]],3) if not cosin is None and cosin[1] >= self.SEUIL else ''}]\n")
+                    matchslog.write(f"{w} {nearestDist[0] if not nearestDist is None else ''} ({round(nearestDist[1],3) if not nearestDist is None else ''}) [{round(keys[nearestDist[0]],3) if (nearestDist is not None) and ((nearestDist[1] >= self.SEUIL and self.DISTANCE_MODEL == 'cosine') or (nearestDist[1] <= self.SEUIL and self.DISTANCE_MODEL in ['manhattan','jaccard','euclidean'])) else ''}]\n")
 
-        keys = list(map(tuple,sorted(keys.items(), key=lambda x: x[1], reverse=True))) #Finalement on met en ordre
-        log.info("%s",keys)
+        if self.DISTANCE_MODEL in ["manhattan", "jaccard", "euclidean"]:
+            keys = list(map(tuple,sorted(keys.items(), key=lambda x: x[1], reverse=False))) #Finalement on met en ordre
+        elif self.DISTANCE_MODEL == "cosine":
+            keys = list(map(tuple,sorted(keys.items(), key=lambda x: x[1], reverse=True)))
+        log.info("keys : %s",keys)
         keys = [self.keys[key[0]] for key in keys if key[0].lower() in self.keys] #On associe la clé à sa clé de classe Key
-        if self.LOG: log.debug("%s",keys)
+        if self.LOG: log.debug("keys : %s",keys)
         
         
         """#Ancienne version
@@ -401,12 +407,13 @@ class Eliza:
                 f.write(str(self.synonlist)+"\n")
         
 def main(WEdict = "glove", TARGET = "doctor.txt", SEUIL = 0.7, WEIGHTED = True, LOG = False, 
-         MATCHLOGS = False, SYNON_EXTENT = False, SYNONLOGS = False, entity_form = False, header = False): #Lancement d'Eliza
+         MATCHLOGS = False, SYNON_EXTENT = False, SYNONLOGS = False, DISTANCE_CORRECTION = None,
+         DISTANCE_MODEL = "cosine", entity_form = False, header = False): #Lancement d'Eliza
     
     logging.basicConfig(filename = "Logs\\Elizalog.log", level = logging.DEBUG,encoding = 'utf-8') #On génère un log d'eliza
     eliza = Eliza(TARGET = TARGET, SEUIL = SEUIL, WEIGHTED = WEIGHTED, LOG = LOG, 
                   MATCHLOGS = MATCHLOGS, SYNON_EXTENT = SYNON_EXTENT, SYNONLOGS = SYNONLOGS,
-                  cosineCorrection = None) #LOG = True pour avoir les log (il y en a beaucoups)
+                  DISTANCE_MODEL = DISTANCE_MODEL, DISTANCE_CORRECTION = DISTANCE_CORRECTION) #LOG = True pour avoir les log (il y en a beaucoups)
     eliza.load()
     eliza.initialize(WEdict, entity_form = entity_form, header = header)
     eliza.run()

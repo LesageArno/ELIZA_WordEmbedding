@@ -1,14 +1,12 @@
 import customtkinter as ctk
 import eliza
-import Initializer.WE_vectorial_comparison_class as WEVec
 import os
-import inspect
 
 class App(ctk.CTk):
     def __init__(self):
         ## Configutation de base de l'application ##
         super().__init__() 
-        self.geometry("300x450")
+        self.geometry("300x400")
         self.title("ELIZA APP")
         self.wm_resizable(width = False, height = False)
         
@@ -40,24 +38,15 @@ class App(ctk.CTk):
         self.target = ctk.CTkOptionMenu(self,values = os.listdir("Initializer\\Target"), anchor = "w", font = ctk.CTkFont("Arial"), command = self.target_call_back)
         self.target.set("doctor.txt")
         
-        ## Détection et listage automatique des distance ##
-        self.distmenue = ctk.CTkOptionMenu(self,
-                                           values = [i.removesuffix("Distance") for i in dir(WEVec.VecorialComparison) if i.endswith("Distance") and i.removesuffix("Distance") not in ["init","nearest","compute"]],
-                                           anchor = "w", font = ctk.CTkFont("Arial"))
-        self.distmenue.set("cosine")
-        
         ## Spécification du fichier Word2Vec ##
         self.header = ctk.CTkSwitch(self, text = "header", font = ctk.CTkFont("Arial"), state = "disabled")
         self.entity = ctk.CTkSwitch(self, text = "entity", font = ctk.CTkFont("Arial"), state = "disabled")
         
         ## Définition du seuil entre 0 et 1 ##      
-        self.seuil = ctk.CTkEntry(self, placeholder_text = "Threshold", font = ctk.CTkFont("Arial"))
-        
-        ## Définition de la correction ##
-        self.correction = ctk.CTkEntry(self, placeholder_text = "Correction (None)", font = ctk.CTkFont("Arial"))
+        self.seuil = ctk.CTkEntry(self, placeholder_text = "Seuil", font = ctk.CTkFont("Arial"))
         
         ## Utilisation de PWE ou WE, PWE par défaut ##
-        self.weighted = ctk.CTkSwitch(self, text = "Weighted", font = ctk.CTkFont("Arial"))
+        self.weighted = ctk.CTkSwitch(self, text = "Pondérer", font = ctk.CTkFont("Arial"))
         self.weighted.select()
         
         ## Titre, partie 2 ##
@@ -75,20 +64,18 @@ class App(ctk.CTk):
         self.confirm = ctk.CTkButton(self, text = "ELIZA", font = ctk.CTkFont("Arial BLACK"), fg_color = "darkgreen", command = self.eliza_call_back)
         
         ## Quitter ELIZA ##
-        self.final = ctk.CTkButton(self, text = "Quit", command = self.final_call_back,
+        self.final = ctk.CTkButton(self, text = "Quitter", command = self.final_call_back,
                                      font = ctk.CTkFont("Arial BLACK"), fg_color = "darkred")
         
         ## On affiche tout sur l'interface
         self.labelmenue.pack()
         self.target.pack()
         self.optionmenue.pack()
-        self.distmenue.pack()
         
         self.header.pack()
         self.entity.pack()
         
         self.seuil.pack()
-        self.correction.pack()
         self.weighted.pack()
         
         self.labelsubmenue.pack()
@@ -133,29 +120,22 @@ class App(ctk.CTk):
             seuil = 0
         else:
             seuil = float(self.seuil.get())
-        
-        if self.correction.get() == "": 
-            correction = None
-        else:
-            correction = self.correction.get()
-        
-        eliza.main(WEdict = self.optionmenue.get(), SEUIL = seuil, WEIGHTED = bool(self.weighted.get()),
-                    LOG = bool(self.log.get()), MATCHLOGS = bool(self.matchlog.get()),
-                   TARGET = self.target.get(), SYNON_EXTENT = bool(self.synonextend.get()),
-                   SYNONLOGS = bool(self.synonlog.get()), header = bool(self.header.get()), 
-                   entity_form = bool(self.entity.get()), DISTANCE_CORRECTION = correction,
-                   DISTANCE_MODEL = self.distmenue.get())
-        '''try:
-            seuil = float(self.seuil.get())
             eliza.main(WEdict = self.optionmenue.get(), SEUIL = seuil, WEIGHTED = bool(self.weighted.get()),
-                   LOG = bool(self.log.get()), MATCHLOGS = bool(self.matchlog.get()),
-                   TARGET = self.target.get(), SYNON_EXTENT = bool(self.synonextend.get()),
-                    SYNONLOGS = bool(self.synonlog.get()), header = bool(self.header.get()), 
-                   entity_form = bool(self.entity.get()))
-        except:
-            if input("Error : do you want to restart ? (y/n) : ") == "y":
-                self.eliza_call_back()
-        '''   
+                       LOG = bool(self.log.get()), MATCHLOGS = bool(self.matchlog.get()),
+                       TARGET = self.target.get(), SYNON_EXTENT = bool(self.synonextend.get()),
+                       SYNONLOGS = bool(self.synonlog.get()), header = bool(self.header.get()), 
+                       entity_form = bool(self.entity.get()))
+            '''try:
+                seuil = float(self.seuil.get())
+                eliza.main(WEdict = self.optionmenue.get(), SEUIL = seuil, WEIGHTED = bool(self.weighted.get()),
+                       LOG = bool(self.log.get()), MATCHLOGS = bool(self.matchlog.get()),
+                       TARGET = self.target.get(), SYNON_EXTENT = bool(self.synonextend.get()),
+                       SYNONLOGS = bool(self.synonlog.get()), header = bool(self.header.get()), 
+                       entity_form = bool(self.entity.get()))
+            except:
+                if input("Error : do you want to restart ? (y/n) : ") == "y":
+                    self.eliza_call_back()
+            '''   
     
 if __name__ == "__main__":    
     app = App()

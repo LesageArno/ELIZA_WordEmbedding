@@ -1,0 +1,60 @@
+---
+title: "modelTester"
+author: "Arno LESAGE"
+date: "`r Sys.Date()`"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(shiny)
+```
+
+```{r echo=FALSE}
+model <- read.csv2("generatedDump.csv",dec = ".")
+```
+
+#### UI
+
+```{r echo=FALSE}
+
+ui <- fluidPage(
+  sidebarLayout(
+    sidebarPanel =  sidebarPanel(
+    checkboxGroupInput("model","Select a Model", choices = unique(model$Model), selected = unique(model$Model)),
+    selectInput("x","Select a measure X", choices = names(model[4:7])),
+    selectInput("y","Select a measure Y", choices = names(model[4:7]))
+    ),
+    mainPanel = mainPanel(
+      plotOutput("plotComparison")
+    )
+  ),
+)
+```
+
+#### Server
+
+```{r echo=FALSE}
+server <- function(input, output, session) {
+  output$plotComparison <- renderPlot({
+    plot(model[,input$x][which(model$Model %in% input$model)],
+         model[,input$y][which(model$Model %in% input$model)], pch = 20, 
+         main = paste(input$x,"distance compared to\n",input$y),
+         ylab = paste(input$y, "distance"), xlab = paste(input$x, "distance"
+                                                         )
+         )
+    coloredPlot = 1
+    for (chatmodel in input$model) {
+      points(model[,input$x][which(model$Model == chatmodel)],
+           model[,input$y][which(model$Model == chatmodel)], 
+           pch = 20, col = coloredPlot)
+      coloredPlot = coloredPlot + 1
+    }
+
+    legend("topleft",legend = input$model,col = 1:length(input$model), pch = 20)
+    })
+  }
+
+shinyApp(ui, server)
+```

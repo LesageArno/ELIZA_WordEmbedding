@@ -200,3 +200,9 @@ keys = {}
 ```
 [1.] Refonte complète du système de comparaisons de vecteurs, optimisations.
 ```
+#### 22/11/2023 ####
+```
+[1.] Commentaire dans le comparateur de distance
+[2.] Ajout de la possibilité de correction, des différentes distances dans l'interface
+[3.] Modification du code de Eliza en fonction de certaines distances (0 étant le meilleur pour Manhattant et Euclidienne mais le pire pour cosθ)
+```
