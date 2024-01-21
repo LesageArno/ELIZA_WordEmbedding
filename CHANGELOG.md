@@ -206,3 +206,13 @@ keys = {}
 [2.] Ajout de la possibilité de correction, des différentes distances dans l'interface
 [3.] Modification du code de Eliza en fonction de certaines distances (0 étant le meilleur pour Manhattant et Euclidienne mais le pire pour cosθ)
 ```
+
+#### 16/01/2024 ####
+```
+[1.] Ajout de la distance de Tanimoto, fonctionne comparée à la distance de Jaccard, mais possède le même problème que le cosinus de similarité pour le modèle de GPT-2 (les valeurs sont anormalement hautes)
+```
+
+#### 21/01/2024 ####
+```
+[1.] Implémentation complète du WE de GPT-2
+```

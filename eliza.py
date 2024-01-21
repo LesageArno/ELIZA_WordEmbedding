@@ -77,7 +77,7 @@ class Eliza:
             #On créer le dictionnaire s'il n'existe pas
             log.info("Downloading additional files...")
             print("Downloading additional files...")
-            time.sleep(0.5)
+            #time.sleep(0.5)
             Creator(WEdict, entity_form, header)
             print("###############################################################################\n\n###############################################################################") 
             log.info("Succes")
@@ -343,7 +343,7 @@ class Eliza:
                         break
             if self.MATCHLOGS:    
                 with open("Logs\\Matchslog.txt","a",encoding="utf-8") as matchslog: #On enregistre dans les logs le matchs
-                    matchslog.write(f"{w} {nearestDist[0] if not nearestDist is None else ''} ({round(nearestDist[1],3) if not nearestDist is None else ''}) [{round(keys[nearestDist[0]],3) if (nearestDist is not None) and ((nearestDist[1] >= self.SEUIL and self.DISTANCE_MODEL == 'cosine') or (nearestDist[1] <= self.SEUIL and self.DISTANCE_MODEL in ['manhattan','jaccard','euclidean'])) else ''}]\n")
+                    matchslog.write(f"{w} {nearestDist[0] if not nearestDist is None else ''} ({round(nearestDist[1],3) if not nearestDist is None else 'None'}) [{round(keys[nearestDist[0]],3) if (nearestDist is not None) and ((nearestDist[1] >= self.SEUIL and self.DISTANCE_MODEL == 'cosine') or (nearestDist[1] <= self.SEUIL and self.DISTANCE_MODEL in ['manhattan','jaccard','euclidean'])) else ''}]\n")
 
         if self.DISTANCE_MODEL in ["manhattan", "jaccard", "euclidean"]:
             keys = list(map(tuple,sorted(keys.items(), key=lambda x: x[1], reverse=False))) #Finalement on met en ordre
@@ -419,4 +419,10 @@ def main(WEdict = "glove", TARGET = "doctor.txt", SEUIL = 0.7, WEIGHTED = True, 
     eliza.run()
 
 if __name__ == '__main__':
-    main()
+    #Général :
+    #main()
+    
+    #Debug :
+    main(WEdict = "gpt-2", TARGET = "doctor.txt", SEUIL = 65, WEIGHTED = False, LOG = False, MATCHLOGS = True,
+         SYNON_EXTENT = False, SYNONLOGS = True, DISTANCE_CORRECTION = None, DISTANCE_MODEL = "manhattan", entity_form = False,
+         header = False)

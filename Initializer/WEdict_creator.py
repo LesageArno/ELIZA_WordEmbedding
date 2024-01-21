@@ -43,7 +43,7 @@ class Creator():
                 else:
                     countline += 1
                 if (countline%10000 == 0):
-                    print(countline,time.time()-begin) #On compte les lignes et on fait un retout utilisateur
+                    print(countline,time.time()-begin) #On compte les lignes et on fait un retour utilisateur
 
                 
                 if entity_form == True and form[0].startswith("ENTITY/"):

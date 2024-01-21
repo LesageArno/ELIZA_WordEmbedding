@@ -5,7 +5,7 @@ import time
 import pickle
 
 class VecorialComparison:
-    def __init__(self, WEdict = "glove") -> None:
+    def __init__(self, WEdict:str = "glove") -> None:
         """Class to compare word and vector distance
 
         Args:
@@ -18,6 +18,8 @@ class VecorialComparison:
         else:
             dict_path = __file__.removesuffix("WE_vectorial_comparison_class.py")+"Word2VecPreloaded\\"+"WE"+WEdict+"_dict.pkl"
         
+        self.model = WEdict #Stockage de l'attribut WEdict
+        
         print("Loading files...")
         time.sleep(0.5)
         begin = time.time()
@@ -25,8 +27,8 @@ class VecorialComparison:
         with open(dict_path,"rb") as f:
             self.dicVec = pickle.load(f)
         print("Loaded in",round(time.time()-begin,3),"seconds") #5 secondes pour charger les données
-        
-    def computeDistance(self, word1, word2, method = "cosine", correction = None) -> float:
+    
+    def computeDistance(self, word1:str, word2:str, method:str = "cosine", correction:str = None) -> float:
         """Compute distance between two word using the loaded word-embedding 
 
         Args:
@@ -43,7 +45,7 @@ class VecorialComparison:
             return None
         vec1, vec2 = self.initDistance(word1, word2)
         
-        if method == "cosine":
+        if method == "cosine": #Calcul de la distance
             computedDistance = self.cosineDistance(vec1, vec2)
         elif method == "manhattan":
             computedDistance = self.manhattanDistance(vec1, vec2)
@@ -51,6 +53,8 @@ class VecorialComparison:
             computedDistance = self.euclideanDistance(vec1, vec2)
         elif method == "jaccard":
             computedDistance = self.jaccardDistance(vec1, vec2)
+        elif method == "tanimoto":
+            computedDistance = self.tanimotoDistance(vec1, vec2)
         else: return None
         
         if correction is None:
@@ -88,7 +92,7 @@ class VecorialComparison:
         vec2 = np.array(list(map(float,self.dicVec[word2].split(" "))))
         return (vec1, vec2)
     
-    def manhattanDistance(self, word1, word2) -> float:
+    def manhattanDistance(self, word1:np.ndarray, word2:np.ndarray) -> float:
         """Compute the Manhattant distance between two word/vector.
 
         Args:
@@ -97,15 +101,9 @@ class VecorialComparison:
         Returns:
             float: Computed Manhattan distance.
         """
-        if isinstance(word1, str) and isinstance(word2, str):  
-            vec1, vec2 = self.initDistance(word1, word2)
-        elif isinstance(word1, np.ndarray) and isinstance(word2, np.ndarray):
-            vec1, vec2 = word1, word2
-        else: 
-            return None
-        return distance.cityblock(vec1, vec2)
+        return distance.cityblock(word1, word2)
     
-    def euclideanDistance(self, word1, word2) -> float:
+    def euclideanDistance(self, word1:np.ndarray, word2:np.ndarray) -> float:
         """Compute the Euclidean distance between two word/vector.
 
         Args:
@@ -115,15 +113,9 @@ class VecorialComparison:
         Returns:
             float: Computed Euclidean distance.
         """
-        if isinstance(word1, str) and isinstance(word2, str):  
-            vec1, vec2 = self.initDistance(word1, word2)
-        elif isinstance(word1, np.ndarray) and isinstance(word2, np.ndarray):
-            vec1, vec2 = word1, word2
-        else: 
-            return None
-        return distance.euclidean(vec1, vec2)
+        return distance.euclidean(word1, word2)
     
-    def jaccardDistance(self, word1, word2) -> float:
+    def jaccardDistance(self, word1:np.ndarray, word2:np.ndarray) -> float:
         """Compute the Jaccard distance between two word/vector.
 
         Args:
@@ -133,15 +125,21 @@ class VecorialComparison:
         Returns:
             float: Computed Jaccard distance.
         """
-        if isinstance(word1, str) and isinstance(word2, str):  
-            vec1, vec2 = self.initDistance(word1, word2)
-        elif isinstance(word1, np.ndarray) and isinstance(word2, np.ndarray):
-            vec1, vec2 = word1, word2
-        else: 
-            return None     
-        return distance.jaccard(vec1, vec2)
+        return distance.jaccard(word1, word2)
     
-    def cosineDistance(self, word1, word2) -> float:
+    def tanimotoDistance(self, word1:np.ndarray, word2:np.ndarray) -> float:
+        """Compute the Tanimoto distance between two word/vector. 
+
+        Args:
+            `word1` (str|numpy.ndarray): First word or vector.
+            `word2` (str|numpy.ndarray): Second word or vector.
+        Returns:
+            float: Computed Manhattan distance.
+        """
+        returnedDistance = np.dot(word1, word2) / (np.linalg.norm(word1)**2 + np.linalg.norm(word2)**2 - np.dot(word1, word2))
+        return returnedDistance
+          
+    def cosineDistance(self, word1:np.ndarray, word2:np.ndarray) -> float:
         """Compute the Cosine similarity between two word/vector.
 
         Args:
@@ -151,16 +149,9 @@ class VecorialComparison:
         Returns:
             float: Computed Cosine similarity.
         """
-        if isinstance(word1, str) and isinstance(word2, str):  
-            vec1, vec2 = self.initDistance(word1, word2)
-        elif isinstance(word1, np.ndarray) and isinstance(word2, np.ndarray):
-            vec1, vec2 = word1, word2
-        else: 
-            return None
-        return 1 - distance.cosine(vec1, vec2) #La commande fait comme calcul 1 - cos(θ) donc on corrige
+        return 1 - distance.cosine(word1, word2) #La commande fait comme calcul 1 - cos(θ) donc on corrige
     
-    
-    def nearestDistance(self, keys_list, word, method = "cosine", correction = None, ignore = ["xnone","xforeign"]):
+    def nearestDistance(self, keys_list:list[str], word:str, method:str = "cosine", correction:str = None, ignore:list[str] = ["xnone","xforeign"]):
         """Compute the nearest distance between each element of a list and a word.
 
         Args:
@@ -168,31 +159,37 @@ class VecorialComparison:
             `word` (str): The word compared to each element of the list.\n
             `method` (str, optional): Distance Method between `cosine, manhattan, euclidean, jaccard`. Defaults to `"cosine"`.\n
             `correction` (str, optional): String interpreted as a formula of correction. Defaults to `None`.\n
-            `ignore` (list(str), optional): Ignore key in the list but present in keys_list. Defaults to `["xnone","xforeign"]`.\n
+            `ignore` (list[str], optional): Ignore key in the list but present in keys_list. Defaults to `["xnone","xforeign"]`.\n
 
         Returns:
-            list(str,floar): First element the bestKey of the list having the lowest distance with the word to compare. 
+            list(str,float): First element the bestKey of the list having the lowest distance with the word to compare. 
         """
         nearestDistance = None
         bestKey = ""
+        countNone = 0
         
         for pop_elem in ignore:
-            keys_list.pop(keys_list.index(pop_elem))
+            keys_list.pop(keys_list.index(pop_elem)) #Retire les élement non-intéressant dans la liste
         
         for key in keys_list:
-            keyDistance = self.computeDistance(word1 = key.rstrip(), word2 = word, method = method, correction = correction)
+            keyDistance = self.computeDistance(word1 = key.rstrip(), word2 = word, method = method, correction = correction) #Calcul la distance entre le mot de la liste et le mot de comparaison
             
-            if keyDistance is None:
-                return None
+            if keyDistance is None: #Si le mot n'est pas dans le word embeding, on passe au suivant
+                countNone += 1
+                continue
+                
             if nearestDistance is None:
-                nearestDistance = keyDistance
+                nearestDistance = keyDistance #Si c'est le premier résultat, il s'agit du plus proche par défaut
             if method in ["manhattan","euclidean"]:
-                nearestDistance = keyDistance if keyDistance < nearestDistance else nearestDistance
+                nearestDistance = keyDistance if keyDistance < nearestDistance else nearestDistance #On garde le plus petit nombre pour manhattan et euclidienne
             else:
-                nearestDistance = keyDistance if keyDistance > nearestDistance else nearestDistance
+                nearestDistance = keyDistance if keyDistance > nearestDistance else nearestDistance #On garde la plus grande pour cosinus et tanimoto
             bestKey = key if keyDistance == nearestDistance else bestKey
-            
-        return [bestKey, nearestDistance]
+        
+        if countNone == len(keys_list): #Si la liste de tous les mots ne sont pas présents dans le word embedding, alors on retourne None
+            return None
+        
+        return [bestKey, nearestDistance] #On retourne la meilleure clée accompagnée de sa distance
 
     def maxCosineSimilarity(self, keys_list, word, correction):
         maxCosine = 0
@@ -211,12 +208,11 @@ class VecorialComparison:
 
         return [bestKey, maxCosine]
 
-    def getVector(self,word):
+    def getVector(self, word:str) -> np.ndarray:
         return np.array(list(map(float,self.dicVec.get(word).split(" ")))) if self.dicVec.get(word) is not None else None
 
-
-def generateDumpComparisonCsv(path = __file__.removesuffix("WE_vectorial_comparison_class.py")+"ModelTester\\generatedDump.csv", 
-                              listOfModel = ["enwiki","glove","gpt-2"], listOfWord1 = None, listOfWord2 = None):
+def generateDumpComparisonCsv(path:str = __file__.removesuffix("WE_vectorial_comparison_class.py")+"ModelTester\\generatedDump.csv", 
+                              listOfModel:list[str] = ["enwiki","glove","gpt-2"], listOfWord1:list[str] = None, listOfWord2:list[str] = None):
     """Create a csv file to compare each model and distance. 
     The distance is computed pairwise between listOfWord1[i] and listOfWord2[i], this imply that the size of both
     list MUST be the same.
@@ -224,8 +220,8 @@ def generateDumpComparisonCsv(path = __file__.removesuffix("WE_vectorial_compari
     Args:
         path (str, optional): Path to csv. Defaults to `__file__.removesuffix("WE_vectorial_comparison_class.py")+"ModelTester\generatedDump.csv"`.\n
         listOfModel (list, optional): List of model to compare. Defaults to `["enwiki","glove","gpt-2"]`.\n
-        listOfWord1 (list(str), optional): List of word to compare. Defaults to `None`.\n
-        listOfWord2 (list(str), optional): _description_. Defaults to `None`.\n
+        listOfWord1 (list[str], optional): List of word to compare. Defaults to `None`.\n
+        listOfWord2 (list[str], optional): _description_. Defaults to `None`.\n
     """
     
     if listOfWord1 is None or listOfWord2 is None:
@@ -247,22 +243,30 @@ def generateDumpComparisonCsv(path = __file__.removesuffix("WE_vectorial_compari
                 file.write(f"{listOfWord1[i]};{listOfWord2[i]};{key};{cos if cos is not None else 'NA'};{manhattan if manhattan is not None else 'NA'};{euclidean if euclidean is not None else 'NA'};{jaccard if jaccard is not None else 'NA'}\n")
     
 def main():
-    comparison = VecorialComparison("gpt-2")
+    comparisonGPT2 = VecorialComparison("gpt-2")
+    comparisonGlove = VecorialComparison("glove")
     
     #generateDumpComparisonCsv()
-    """
+    
     while True:
         text = input("Expression 1 : ")
         if text == "--0--":
             break
         else:
             text2 = input("Expression 2 : ")
-            cos = comparison.computeDistance(text, text2, "cosine")
-            euclidean = comparison.computeDistance(text, text2, "euclidean")
-            manhattan = comparison.computeDistance(text, text2, "manhattan")
-            jaccard = comparison.computeDistance(text, text2,"jaccard")
+            cosGPT2 = comparisonGPT2.computeDistance(text, text2, "cosine")
+            euclideanGPT2 = comparisonGPT2.computeDistance(text, text2, "euclidean")
+            manhattanGPT2 = comparisonGPT2.computeDistance(text, text2, "manhattan")
+            jaccardGPT2 = comparisonGPT2.computeDistance(text, text2, "jaccard")
+            tanimotoGPT2 = comparisonGPT2.computeDistance(text, text2, "tanimoto")
             
-            print(f"Link between {text} and {text2} : \n- Cosinus de similarité : {cos}\n- Distance euclidienne : {euclidean}\n- Distance de Manhattan : {manhattan}\n- Distance de Jaccard : {jaccard}")
-    """
+            cosGlove = comparisonGlove.computeDistance(text, text2, "cosine")
+            euclideanGlove = comparisonGlove.computeDistance(text, text2, "euclidean")
+            manhattanGlove = comparisonGlove.computeDistance(text, text2, "manhattan")
+            jaccardGlove = comparisonGlove.computeDistance(text, text2, "jaccard")
+            tanimotoGlove = comparisonGlove.computeDistance(text, text2, "tanimoto")
+            
+            print(f"Link between {text} and {text2} : \n- Cosinus de similarité : {cosGPT2} [{comparisonGPT2.model}] {cosGlove} [{comparisonGlove.model}]\n- Distance euclidienne : {euclideanGPT2} [{comparisonGPT2.model}] {euclideanGlove} [{comparisonGlove.model}]\n- Distance de Manhattan : {manhattanGPT2} [{comparisonGPT2.model}] {manhattanGlove} [{comparisonGlove.model}]\n- Distance de Jaccard : {jaccardGPT2} [{comparisonGPT2.model}] {jaccardGlove} [{comparisonGlove.model}]\n- Distance de Tanimoto : {tanimotoGPT2} [{comparisonGPT2.model}] {tanimotoGlove} [{comparisonGlove.model}]")
+    
 if __name__ == "__main__":
     main()

@@ -1,2 +1,5 @@
 -> Faire fonctionner GPT-2:
    - observation : ne rentre pas dans match decomp
+
+-> nearestDistance n'est pas adapté à GPT-2
+   - deutsch n'est pas un mot reconnu

@@ -140,7 +140,7 @@ class App(ctk.CTk):
             correction = self.correction.get()
         
         eliza.main(WEdict = self.optionmenue.get(), SEUIL = seuil, WEIGHTED = bool(self.weighted.get()),
-                    LOG = bool(self.log.get()), MATCHLOGS = bool(self.matchlog.get()),
+                   LOG = bool(self.log.get()), MATCHLOGS = bool(self.matchlog.get()),
                    TARGET = self.target.get(), SYNON_EXTENT = bool(self.synonextend.get()),
                    SYNONLOGS = bool(self.synonlog.get()), header = bool(self.header.get()), 
                    entity_form = bool(self.entity.get()), DISTANCE_CORRECTION = correction,

@@ -42,7 +42,8 @@ server <- function(input, output, session) {
          model[,input$y][which(model$Model %in% input$model)], pch = 20, 
          main = paste(input$x,"distance compared to\n",input$y),
          ylab = paste(input$y, "distance"), xlab = paste(input$x, "distance"
-                                                         )
+                                                         ),
+         type = "n"
          )
     coloredPlot = 1
     for (chatmodel in input$model) {
